@@ -1,0 +1,30 @@
+content {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    gap: 590px;
+    flex-direction: row;
+    align-items: center;
+    padding: 37px 100px;
+    box-sizing: border-box;
+
+    img {
+        width: 150px;
+        height: 35px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 92px;
+        width: 524px;
+        height: 35.03px;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+}
