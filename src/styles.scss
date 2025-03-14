@@ -1,20 +1,40 @@
 @import 'fonts.scss';
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    //overflow-x: hidden;
+    background-color: #1c263b;
+  }
+
 body {
     margin: 0;
-    width: 100vw;
-    overflow-x: hidden;
+    width: 100%;
+    background-color: #1c263b;
+    display: flex;
+    flex-direction: column;
 }
 
 app-header {
     width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 590px;
-    position: absolute;
     height: 109.03px;
-    left: 0px;
-    top: 0px;
     background-color: rgb(20, 29, 47);
+}
+
+app-here-iam {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    background-color: rgb(20, 29, 47);
+    height: calc(100vh - 109.02px);
+    position: relative;
 }
