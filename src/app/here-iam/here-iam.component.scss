@@ -25,7 +25,8 @@ svg {
     bottom: 0;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: space-between;
     padding: 0px;
     gap: 35px;
     margin-right: 90px;
@@ -57,10 +58,20 @@ svg {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 0px;
     gap: 3px;
     width: 28px;
     height: 160px;
-    background-color: white;
+    color: white;
+
+    p {
+        all: unset;
+        font-family: 'Poppins';
+        white-space: nowrap;
+        font-size: 23px;
+        font-weight: 300;
+        margin-block-start: 5.5px;
+        writing-mode: vertical-lr;
+    }
 }
