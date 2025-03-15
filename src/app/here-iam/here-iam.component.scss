@@ -2,18 +2,65 @@ svg {
     position: absolute;
     top: 377.6px;
     left: 0;
+    min-width: 100%;
+    height: auto;
+}
+
+.mainPicture {
+    position: absolute;
+    height: 705px;
+    left: 3.26%;
+    right: 51.88%;
+    top: 106px;
+    background-color: white;
 }
 
 .textWrapper {
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 35px;
-position: absolute;
-width: 718px;
-height: 172px;
-right: 100px;
-top: 297px;
-background-color: white;
+    position: absolute;
+    max-width: 1344px;
+    width: 100%;
+    max-height: 646px;
+    height: 100%;
+    left: 0px;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 35px;
+    margin-right: 90px;
+}
+
+.textbox {
+    position: absolute;
+    background-color: blue;
+    width: 718px;
+    height: 172px;
+    right: 90px;
+    top: 297px;
+    z-index: 1;
+}
+
+.socials {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+    width: 566px;
+    height: 40px;
+
+}
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 3px;
+    width: 28px;
+    height: 160px;
+    background-color: white;
 }

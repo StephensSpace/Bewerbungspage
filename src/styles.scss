@@ -4,7 +4,6 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    //overflow-x: hidden;
     background-color: #1c263b;
   }
 
@@ -24,7 +23,6 @@ app-header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 590px;
     height: 109.03px;
     background-color: rgb(20, 29, 47);
 }
@@ -35,6 +33,6 @@ app-here-iam {
     width: 100%;
     display: flex;
     background-color: rgb(20, 29, 47);
-    height: calc(100vh - 109.02px);
+    min-height: calc(100vh - 109.03px);
     position: relative;
 }
