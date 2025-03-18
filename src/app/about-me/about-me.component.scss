@@ -1,27 +1,87 @@
 .aboutMeWrapper {
-    position: relative;
-    top: 50px;
     width: 100%;
     max-width: 1440px;
     height: auto;
     display: flex;
-    margin-left: 90px;
+    margin-left: 100px;
 
     .textAndPic {
         display: flex;
         justify-content: space-between;
-        width: 80%;
-        align-items: flex-start;
-        margin-top: 200px;
+        max-width: 1440px;
+        width: 100%;
+        align-items: center;
+        margin-top: 90px;
     }
 
-    img {
-        width: 37.5%;
-        height: 453px;
+    .imgPortrait {
+        width: 100%;
+        height: auto;
+        max-width: 65%;
+        min-width: 295px;
     }
 
     .text {
-        width: 471px;
-        height: 532px;
+
+        h1 {
+            all: unset;
+            font-family: 'Poppins';
+            font-size: 90px;
+            font-weight: 800;
+            color: white;
+        }
+
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        max-width: 45%;
+        width: 100%;
+        height: 487px;
+
+        p {
+            all: unset;
+            margin-bottom: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Poppins';
+            font-size: 16px;
+            font-weight: 400;
+            color: white;
+            img {
+                width: 36px;
+                height: 36px;
+                margin-right: 36px;
+            }
+        }
     }
+}
+
+.rightPurpleShadow {
+    position: absolute;
+    right: 0;
+    top: -155px;
+    width: auto;
+    height: 670px;
+}
+
+.greenLine {
+    max-width: 35%;
+    width: 100%;
+    height: 0px;
+    left: 1173px;
+    top: 1333px;
+
+
+    border: 3px solid #70E61C;
+}
+
+.picWithLine {
+    display: flex;
+    align-items: center;
+    max-width: 45%;
+    width: 100%;
+    z-index: 2;
 }
