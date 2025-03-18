@@ -1,0 +1,27 @@
+.aboutMeWrapper {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    display: flex;
+    margin-left: 90px;
+
+    .textAndPic {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        align-items: flex-start;
+        margin-top: 200px;
+    }
+
+    img {
+        width: 37.5%;
+        height: 453px;
+    }
+
+    .text {
+        width: 471px;
+        height: 532px;
+    }
+}
