@@ -1,0 +1,77 @@
+.portfolioHeader {
+    margin-top: 150px;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+
+    .purpleLine1 {
+        max-width: 10%;
+        width: 100%;
+        height: 0px;
+        border: 2px solid #9747FF;
+    }
+
+    h1 {
+        all: unset;
+        width: fit-content;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 90px;
+        line-height: 120%;
+        text-align: center;
+        margin: 0 40px;
+        color: #FFFFFF;
+    }
+
+    .purpleLine2 {
+        max-width: 50%;
+        width: 100%;
+        height: 0px;
+        border: 2px solid #9747FF;
+    }
+}
+
+p {
+    all: unset;
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 16px;
+    color: #FFFFFF;
+    max-width: 80%;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.projectWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1168px;
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    background-color: white;
+
+    .projectBox {
+        display: flex;
+        gap: 35px;
+        max-width: 1168px;
+        width: 100%;
+        img {
+            max-width: 620px;
+            width: 100%;
+            height: 339.19px;
+        }
+
+        .infobox {
+            display: flex;
+            align-items: flex-end;
+            max-width: 513px;
+            width: 100%;
+            height: 339.19px;
+            background-color: #FFFFFF;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<div class="skillAndTextWrap">
+    <div class="skillSymbols">
+        <div *ngFor="let skill of skillset; let last = last" class="tooltip-container">
+            <div class="image-wrapper">
+                <img [src]="skill.img" alt="" [ngClass]="last ? 'last-image' : 'skill-image'"
+                    (mouseover)="onMouseOver(last)" (mouseleave)="onMouseLeave()">
+                <p *ngIf="skill.text" [ngStyle]="{'margin-left': skill.margin ? skill.margin + 'px' : '0px'}">
+                    {{ skill.text }}
+                </p>
+            </div>
+            <!-- Tooltip wird nur für das letzte Element gerendert -->
+            <div class="tooltip" *ngIf="last" [ngClass]="{ 'visible': hover }">
+                <img src="/assets/skills/learningHover.svg" alt="Tooltip-Bild">
+            </div>
+        </div>
+    </div>
+    <div class="textAndButton">
+        <div class="h1AndLine">
+            <h1>My Skills</h1>
+            <div class="dividingVector"></div>
+        </div>
+        <div class="undertitle">
+            <p>From CRUD to gaming to social apps –
+                I have the skills to tackle challenges across all of them.
+            </p>
+        </div>
+        <div class="h2AndButton">
+            <div class="secondHeader">
+                <h2>Looking for</h2>
+                <h2 class="purpleH2">another Skill?</h2>
+            </div>
+            <p>
+                Always learning, always improving. <br>
+                Excited to master new skills. Just ask!
+            </p>
+            <button>Let's Talk</button>
+        </div>
+    </div>
+
+
+</div>
+<img src="/assets/shadows/greenShadow2.svg" alt="" class="leftGreenShadow">
