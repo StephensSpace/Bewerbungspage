@@ -6,7 +6,19 @@
 <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
 <div class="projectWrapper" *ngFor="let project of projects">
     <div class="projectBox" [ngStyle]="project.reverseRow ? {'flex-direction': 'row-reverse'} : {}">
-        <img [src]="project.imgPath" alt="">
-        <div class="infobox"></div>
+        <img [src]="project.imgPath" alt="" class="imgProject">
+        <div class="infobox" [ngStyle]="project.reverseRow ? {'align-items': 'flex-end'} : {}">
+            <p class="projectName">{{project.name}}</p>
+            <p class="usedSkills">{{project.skills}}</p>
+            <p class="description" [ngStyle]="project.reverseRow ? {'text-align': 'end'} : {}">
+                {{project.description}}
+            </p>
+            <div class="btnBox">
+                <a [href]="project.link" [ngClass]="project.commingSoon ? 'BtnDisabled' : 'linkBtn'">Live test</a>
+                <a [href]="project.linkGit" [ngClass]="project.commingSoon ? 'BtnDisabled' : 'gitBtn'">Github</a>
+            </div>
+        </div>
     </div>
 </div>
+
+<img src="assets/shadows/purpleShadow3.svg" class="purpleShadow3">
