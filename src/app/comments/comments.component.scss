@@ -1,0 +1,144 @@
+.commentBox {
+    max-width: 1340px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.commentWrapper {
+    position: relative;
+    max-width: 1340px;
+    width: 100%;
+    height: 378px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 128px;
+    display: flex;
+
+    .buttonBox {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        max-width: 184px;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        img {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+        }
+
+        .points {
+            width: 8px !important;
+            height: 8px !important;
+        }
+    }
+
+    .twoLines {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 10px;
+        position: absolute;
+        width: 96.9px;
+        height: 68.1px;
+        left: 0;
+        top: 20px;
+
+    }
+
+    .picAndFrame {
+        max-width: 1171.5px;
+        width: 100%;
+        height: 272px;
+        display: flex;
+        justify-content: space-between;
+
+        .frame {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 48px 96px;
+            gap: 44px;
+            max-width: 851.5px;
+            width: 100%;
+            height: 272px;
+            border: 4px solid #70E61C;
+            border-radius: 32px;
+
+            p {
+                all: unset;
+            }
+
+            .comment {
+                max-width: 659.5px;
+                width: 100%;
+                height: 112px;
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 120%;
+                color: #FFFFFF;
+            }
+
+            .seperatorAndName {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 16px;
+                max-width: 659.5px;
+                width: 100%;
+                height: 22px;
+            }
+
+            .separatorLong {
+                max-width: 404.5px;
+                width: 100%;
+                height: 0;
+                border: solid 1px #9747FF;
+            }
+
+            .nameAndJob {
+                width: fit-content;
+                height: 22px;
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 120%;
+                color: #FFFFFF;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .rundes-bild {
+        max-width: 272px;
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        border: solid 2px #9747FF;
+        object-fit: cover;
+    }
+
+    .separator {
+        max-width: 104px;
+        width: 100%;
+        height: 0;
+        border: solid 2px #9747FF;
+    }
+
+
+}
