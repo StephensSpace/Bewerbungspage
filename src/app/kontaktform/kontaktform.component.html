@@ -1,0 +1,41 @@
+<div class="contactHeader">
+    <div class="purpleLine1"></div>
+    <h1>Contact</h1>
+</div>
+
+<div class="formAndTextWrap">
+    <div class="textWrap">
+        <p class="contactTextHeader">
+            Got a problem to solve?
+        </p>
+
+        <p class="formDescripText">
+            Encourage people to contact you and describe what role you are interested in.
+            Show that you will add value to their projects through your work.<br><br>
+            Need a Frontend developer?<span class="highlighted"> Contact me!</span>
+        </p>
+    </div>
+    <div class="formWrap">
+        <form [formGroup]="contactForm" (ngSubmit)="sendMail()">
+            <input type="text" formControlName="name" placeholder="Your Name">
+            <p *ngIf="submitted && contactForm.controls['name'].invalid">Name ist erforderlich (min. 3 Zeichen).</p>
+
+            <input type="email" formControlName="email" placeholder="Your Mail">
+            <p *ngIf="submitted && contactForm.controls['email'].invalid">Bitte eine gültige E-Mail eingeben.</p>
+
+            <textarea formControlName="message" placeholder="Your Message"></textarea>
+            <p *ngIf="submitted && contactForm.controls['message'].invalid">Nachricht muss mindestens 10 Zeichen lang
+                sein.</p>
+                <label class="privacyPolicy">
+                    <input type="checkbox" class="checkBox">
+                    <img class="unchecked" src="/assets/buttons/unchecked.svg" alt="Unchecked">
+                    <img class="checked" src="/assets/buttons/checked.svg" alt="Checked">
+                    <span>Ich stimme der Datenschutzerklärung zu</span>
+                  </label>
+
+            <button type="submit">Senden</button>
+        </form>
+    </div>
+
+
+</div>

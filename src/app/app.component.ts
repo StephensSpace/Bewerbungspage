@@ -5,6 +5,8 @@ import { HereIamComponent } from './here-iam/here-iam.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { CommentsComponent } from './comments/comments.component';
+import { KontaktformComponent } from './kontaktform/kontaktform.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +14,7 @@ import { CommentsComponent } from './comments/comments.component';
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent,
     HereIamComponent, AboutMeComponent,
-    PortfolioComponent, CommentsComponent],
+    PortfolioComponent, CommentsComponent, KontaktformComponent, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
