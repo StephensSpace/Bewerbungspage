@@ -1,18 +1,18 @@
 @import 'fonts.scss';
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    
-  }
+html {
+    background-color: bisque;
+}
+
 
 body {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1440px;
     width: 100%;
     background-color: rgb(20, 29, 47);
     display: flex;
     flex-direction: column;
+    padding: 0;
 }
 
 app-header {
@@ -91,4 +91,16 @@ app-kontaktform {
     align-items: flex-start;
     overflow: hidden;
     color: white !important;
+}
+
+app-footer {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    background-color: rgb(20, 29, 47);
+    border-top: solid 4px #70E61C;
+    justify-content: center;
+    align-items: center;
+    height: 291px;
 }
