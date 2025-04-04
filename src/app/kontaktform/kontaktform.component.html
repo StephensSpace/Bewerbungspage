@@ -15,25 +15,53 @@
             Need a Frontend developer?<span class="highlighted"> Contact me!</span>
         </p>
     </div>
+
+
     <div class="formWrap">
-        <form [formGroup]="contactForm" (ngSubmit)="sendMail()">
-            <input type="text" formControlName="name" placeholder="Your Name">
-            <p *ngIf="submitted && contactForm.controls['name'].invalid">Name ist erforderlich (min. 3 Zeichen).</p>
+        <form (ngSubmit)="sendMail(contactForm)" #contactForm="ngForm">
+            <div class="input-wrapper">
+                <input [(ngModel)]="contactData.name" 
+                name="name" type="text" 
+                placeholder="Your Name"
+                minlength="3" 
+                required>
+                <p class="error-message">Name ist erforderlich (min. 3 Zeichen).</p>
+            </div>
+            <div class="input-wrapper">
+                <input [(ngModel)]="contactData.email" name="email" type="email" 
+                placeholder="Your Mail" 
+                required
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <p class="error-message">Bitte eine gültige E-Mail eingeben.</p>
+            </div>
 
-            <input type="email" formControlName="email" placeholder="Your Mail">
-            <p *ngIf="submitted && contactForm.controls['email'].invalid">Bitte eine gültige E-Mail eingeben.</p>
-
-            <textarea formControlName="message" placeholder="Your Message"></textarea>
-            <p *ngIf="submitted && contactForm.controls['message'].invalid">Nachricht muss mindestens 10 Zeichen lang
-                sein.</p>
+            <div class="input-wrapper">
+                <textarea [(ngModel)]="contactData.message" 
+                name="message" 
+                placeholder="Your Message" 
+                required
+                minlength="10"></textarea>
+                <p class="error-message">Nachricht muss mindestens 10 Zeichen lang
+                    sein.</p>
+            
+            </div>
+            <div class="input-wrapper">
                 <label class="privacyPolicy">
-                    <input type="checkbox" class="checkBox">
+                    <input type="checkbox" class="checkBox"  name="privacyPolicy"  #checkbox="ngModel" [(ngModel)]="contactData.privacyPolicy" required>
                     <img class="unchecked" src="/assets/buttons/unchecked.svg" alt="Unchecked">
                     <img class="checked" src="/assets/buttons/checked.svg" alt="Checked">
                     <span>Ich stimme der Datenschutzerklärung zu</span>
-                  </label>
 
-            <button type="submit">Senden</button>
+                </label>
+                <p class="error-message2" *ngIf="checkbox.invalid && checkbox.touched">Bitte der Datenschutzerklärung zustimmen.</p>
+            </div>
+
+            <button type="submit" class="submitDisabled"
+            [ngClass]="{
+                'submitDisabled': contactForm.invalid, 
+                'submitEnabled': contactForm.valid
+            }" 
+            [disabled]="contactForm.invalid">Send message :) </button>
         </form>
     </div>
 
