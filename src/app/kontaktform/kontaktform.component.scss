@@ -27,6 +27,13 @@
     }
 }
 
+.shadowPurpleLeft {
+    position: absolute;
+    bottom: -306px;
+    left: 0;
+    z-index: 1;
+}
+
 .formAndTextWrap {
     display: flex;
     max-width: 1250px;
@@ -36,6 +43,42 @@
     height: auto;
     margin: 0 auto;
     margin-bottom: 64px;
+    position: relative;
+    z-index: 2;
+
+    .svg-hover-icon {
+        all: unset;
+        position: absolute;
+        width: 39px;
+        height: 39px;
+        cursor: pointer;
+        bottom: -38px;
+        right: 0px;
+        
+      
+        svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity 0.2s ease;
+        }
+      
+        .svg-default {
+          opacity: 1;
+        }
+      
+        .svg-hover {
+          opacity: 0;
+        }
+      
+        &:hover .svg-default {
+          opacity: 0;
+        }
+      
+        &:hover .svg-hover {
+          opacity: 1;
+        }
+      }
 
     .textWrap {
         p {
@@ -192,6 +235,15 @@
     flex-direction: column;
     max-width: 617px;
     width: 100%;
+
+    .warning {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 12px;
+        right: 24px;
+        display: none;
+    }
 }
 
 .error-message {
@@ -230,6 +282,13 @@
 .input-wrapper textarea:invalid:focus {
     border-color: red;
     /* Setzt nur die Border-Farbe auf rot */
+}
+
+.input-wrapper input:invalid.ng-touched ~ .warning,
+.input-wrapper textarea:invalid.ng-touched ~ .warning,
+.input-wrapper input:invalid:focus ~ .warning,
+.input-wrapper textarea:invalid:focus ~ .warning {
+    display: block;
 }
 
 .input-wrapper:has(input:invalid) .error-message2 {

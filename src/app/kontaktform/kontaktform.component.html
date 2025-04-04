@@ -20,50 +20,76 @@
     <div class="formWrap">
         <form (ngSubmit)="sendMail(contactForm)" #contactForm="ngForm">
             <div class="input-wrapper">
-                <input [(ngModel)]="contactData.name" 
-                name="name" type="text" 
-                placeholder="Your Name"
-                minlength="3" 
-                required>
+                <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your Name" minlength="3"
+                    required>
                 <p class="error-message">Name ist erforderlich (min. 3 Zeichen).</p>
+                <img src="/assets/signs/warning.svg" class="warning" alt="">
             </div>
             <div class="input-wrapper">
-                <input [(ngModel)]="contactData.email" name="email" type="email" 
-                placeholder="Your Mail" 
-                required
-                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <input [(ngModel)]="contactData.email" name="email" type="email" placeholder="Your Mail" required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 <p class="error-message">Bitte eine gültige E-Mail eingeben.</p>
+                <img src="/assets/signs/warning.svg" class="warning" alt="">
             </div>
 
             <div class="input-wrapper">
-                <textarea [(ngModel)]="contactData.message" 
-                name="message" 
-                placeholder="Your Message" 
-                required
-                minlength="10"></textarea>
+                <textarea [(ngModel)]="contactData.message" name="message" placeholder="Your Message" required
+                    minlength="10"></textarea>
                 <p class="error-message">Nachricht muss mindestens 10 Zeichen lang
                     sein.</p>
-            
+                <img src="/assets/signs/warning.svg" class="warning" alt="">
             </div>
             <div class="input-wrapper">
                 <label class="privacyPolicy">
-                    <input type="checkbox" class="checkBox"  name="privacyPolicy"  #checkbox="ngModel" [(ngModel)]="contactData.privacyPolicy" required>
+                    <input type="checkbox" class="checkBox" name="privacyPolicy" #checkbox="ngModel"
+                        [(ngModel)]="contactData.privacyPolicy" required>
                     <img class="unchecked" src="/assets/buttons/unchecked.svg" alt="Unchecked">
                     <img class="checked" src="/assets/buttons/checked.svg" alt="Checked">
                     <span>Ich stimme der Datenschutzerklärung zu</span>
 
                 </label>
-                <p class="error-message2" *ngIf="checkbox.invalid && checkbox.touched">Bitte der Datenschutzerklärung zustimmen.</p>
+                <p class="error-message2" *ngIf="checkbox.invalid && checkbox.touched">Bitte der Datenschutzerklärung
+                    zustimmen.</p>
             </div>
 
-            <button type="submit" class="submitDisabled"
-            [ngClass]="{
+            <button type="submit" class="submitDisabled" [ngClass]="{
                 'submitDisabled': contactForm.invalid, 
                 'submitEnabled': contactForm.valid
-            }" 
-            [disabled]="contactForm.invalid">Send message :) </button>
+            }" [disabled]="contactForm.invalid">Send message :) </button>
         </form>
     </div>
 
+    <button (click)="scrollToTop()" class="svg-hover-icon">
+        <svg class="svg-default" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39"
+            fill="none">
+            <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
+            <path
+                d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 19.4615 11.929 19.071L18.2929 12.7071C18.6834 12.3166 19.3166 12.3166 19.7071 12.7071L26.071 19.071C26.4615 19.4615 26.4615 20.0945 26.071 20.485C25.6806 20.8755 25.0475 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5523 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z"
+                fill="white" />
+        </svg>
 
+        <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39"
+            fill="none">
+            <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="#70E61C" stroke-width="2" />
+            <path
+                d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 19.4615 11.929 19.071L18.2929 12.7071C18.6834 12.3166 19.3166 12.3166 19.7071 12.7071L26.071 19.071C26.4615 19.4615 26.4615 20.0945 26.071 20.485C25.6806 20.8755 25.0475 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5523 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z"
+                fill="#70E61C" />
+        </svg>
+    </button>
 </div>
+
+<svg class="shadowPurpleLeft" width="678" height="805" viewBox="0 0 678 805" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_f_167_882)">
+        <path
+            d="M405.303 708.084C405.978 652.277 391.433 576.961 355.658 477.524C392.332 395.035 819.289 789.943 405.303 708.084C402.116 971.425 60.0189 800.324 10.5824 679.228C-64.3086 495.779 -88.3907 486.259 -163.612 451.197C-238.833 416.135 -395.212 306.44 -256.876 259.465C-250.43 257.277 -244.646 255.383 -239.467 253.763C-257.883 224.722 -263.193 188.223 -209.085 151.446C69.8372 -38.137 423.098 291.151 321.492 413.181C228.333 525.066 358.304 698.791 405.303 708.084Z"
+            fill="#9747FF" />
+    </g>
+    <defs>
+        <filter id="filter0_f_167_882" x="-405.043" y="0.902832" width="1082.79" height="938.802"
+            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="46.5" result="effect1_foregroundBlur_167_882" />
+        </filter>
+    </defs>
+</svg>
