@@ -1,26 +1,23 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './shared/header/header.component';
-import { HereIamComponent } from './here-iam/here-iam.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { CommentsComponent } from './comments/comments.component';
-import { KontaktformComponent } from './kontaktform/kontaktform.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FooterComponent } from './shared/footer/footer.component';
-
-
+import { Component, OnInit } from '@angular/core';
+import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent,
-    HereIamComponent, AboutMeComponent,
-    PortfolioComponent, CommentsComponent,
-    KontaktformComponent, ReactiveFormsModule,
-    FooterComponent],
+  standalone: true,
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    // Hört auf NavigationEnd-Ereignisse
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0); // Scrollt zum Anfang der Seite
+      }
+    });
+  }
 }

@@ -1,5 +1,6 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-comments',
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './comments.component.scss'
 })
 export class CommentsComponent {
+
+  constructor(public languageService: LanguageService) {}
   currentIndex = 0;
   comments: {
     img: string,

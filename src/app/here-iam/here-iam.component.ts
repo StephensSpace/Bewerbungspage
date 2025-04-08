@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-here-iam',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './here-iam.component.scss'
 })
 export class HereIamComponent {
+  constructor(public languageService: LanguageService) { }
 
 }

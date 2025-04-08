@@ -1,5 +1,6 @@
 import { NgClass, NgFor, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
+  constructor(public languageService: LanguageService) {}
+
   projects: {
     imgPath: string;
     link: string;

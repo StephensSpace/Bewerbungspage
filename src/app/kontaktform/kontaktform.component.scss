@@ -137,6 +137,12 @@
             height: 52px;
             width: 100%;
 
+            a {
+                font-family: 'Poppins';
+                font-size: 16px;
+                text-decoration: none;
+            }
+
             input {
                 max-width: unset;
                 width: unset;
@@ -158,18 +164,24 @@
 
         .unchecked {
             opacity: 1;
+            margin-top: 2.5px;
+            cursor: pointer;
         }
 
         .checked {
             opacity: 0;
+            margin-top: 2.5px;
+            cursor: pointer;
         }
 
         .checkBox:checked~.unchecked {
             opacity: 0;
+            margin-top: 2.5px;
         }
 
         .checkBox:checked~.checked {
             opacity: 1;
+            margin-top: 2.5px;
         }
 
         input {

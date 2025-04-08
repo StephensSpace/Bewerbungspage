@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
+import { LanguageService } from '../services/language.service';
+
 
 @Component({
   selector: 'app-skills',
@@ -8,6 +10,17 @@ import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+  constructor(public languageService: LanguageService) { }
+
+  scrollToFragment(event: Event, fragment: string) {
+    event.preventDefault(); // Verhindert das Neuladen der Seite
+
+    const element = document.getElementById(fragment); // Holt das Element mit der ID des Fragments
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); // Scrollt sanft zu dem Element
+    }
+  }
 
   skillset = [
     {

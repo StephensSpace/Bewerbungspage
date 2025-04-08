@@ -45,7 +45,7 @@
                         [(ngModel)]="contactData.privacyPolicy" required>
                     <img class="unchecked" src="/assets/buttons/unchecked.svg" alt="Unchecked">
                     <img class="checked" src="/assets/buttons/checked.svg" alt="Checked">
-                    <span>Ich stimme der Datenschutzerklärung zu</span>
+                    <span>Ich stimme der <a [routerLink]="['/legal-notice']" target="_blank">Datenschutzerklärung</a> zu</span>
 
                 </label>
                 <p class="error-message2" *ngIf="checkbox.invalid && checkbox.touched">Bitte der Datenschutzerklärung
