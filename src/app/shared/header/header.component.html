@@ -2,13 +2,24 @@
     <img src="/assets/Bewerbungslogo.png" alt="">
     <nav>
         <div class="links">
-            <a href="#aboutMe" (click)="scrollToFragment($event, 'aboutMe')">About me</a>
+            <a href="#aboutMe" (click)="scrollToFragment($event, 'aboutMe')">
+                {{ 
+                    (languageService.isGerman$ | async) ? 
+                    texts.header.aboutMe.de : texts.header.aboutMe.en 
+                }}
+            </a>
             <a href="#skills" (click)="scrollToFragment($event, 'skills')">Skills</a>
             <a href="#portfolio" (click)="scrollToFragment($event, 'portfolio')">Portfolio</a>
         </div>
         <div class="languageBtns">
-            <button class="langBtnOff">DE</button>
-            <button class="langBtnOn">EN</button>
+            <button [ngClass]="(languageService.isGerman$ | async) ? 'langBtnOn' : 'langBtnOff'"
+                (click)="languageService.setLanguage(true)">
+                DE
+            </button>
+            <button [ngClass]="(languageService.isGerman$ | async) ? 'langBtnOff' : 'langBtnOn'"
+            (click)="languageService.setLanguage(false)">
+                EN
+            </button>
         </div>
     </nav>
 </content>

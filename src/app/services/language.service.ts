@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs'; // <-- korrekt!
 
 @Injectable({
-    providedIn: 'root',
+  providedIn: 'root',
 })
 export class LanguageService {
-    public isGerman = false; // Standard: Englisch
+  private isGermanSubject = new BehaviorSubject<boolean>(false);
+  public isGerman$ = this.isGermanSubject.asObservable();
 
-    constructor() { }
-
-    toggleLanguage() {
-        this.isGerman = !this.isGerman;
-    }
-
+  setLanguage(german: boolean) {
+    this.isGermanSubject.next(german);
+    console.log(this.isGermanSubject.getValue())
+  }
 }

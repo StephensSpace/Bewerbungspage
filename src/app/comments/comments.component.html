@@ -13,7 +13,7 @@
             <div class="picAndFrame">
                 <div class="frame">
                     <p class="comment">
-                        {{comment.commentDE}}
+                        {{ (languageService.isGerman$ | async) ? comment.commentDE : comment.commentEN }}
                     </p>
                     <div class="seperatorAndName">
                         <div class="separatorLong"></div>

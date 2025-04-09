@@ -11,7 +11,7 @@
             <p class="projectName">{{project.name}}</p>
             <p class="usedSkills">{{project.skills}}</p>
             <p class="description" [ngStyle]="project.reverseRow ? {'text-align': 'end'} : {}">
-                {{project.description}}
+                {{ (languageService.isGerman$ | async) ? project.description : project.descriptionEN }}
             </p>
             <div class="btnBox">
                 <a [href]="project.link" [ngClass]="project.commingSoon ? 'BtnDisabled' : 'linkBtn'">Live test</a>
