@@ -2,31 +2,38 @@
 
     <div class="textAndPic">
         <div class="text">
-            <h1>About me</h1>
+            <h1>
+                {{
+                (languageService.isGerman$ | async) ?
+                texts.header.aboutMe.de : texts.header.aboutMe.en
+                }}
+            </h1>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nam, iure odio voluptate nulla aliquid
-                sint.
-                Tempora molestiae soluta blanditiis expedita nobis. Enim doloribus cum quos nihil suscipit provident
-                dolor?
+                {{
+                (languageService.isGerman$ | async) ?
+                texts.aboutMeText.de : texts.aboutMeText.en
+                }}
             </p>
             <p>
-                <img src="/assets/signs/locate1.svg" alt="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut perspiciatis quasi commodi delectus, vitae
-                autem quibusdam nemo ad dolorem incidunt voluptate officiis ducimus nulla fugiat animi at sapiente ab
-                adipisci.
+                <img src="/assets/signs/puzzle.svg" alt="">
+                {{
+                    (languageService.isGerman$ | async) ?
+                    texts.aboutMeLocation.de : texts.aboutMeLocation.en
+                    }}
             </p>
+            
             <p>
                 <img src="/assets/signs/light.svg" alt="">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut perspiciatis quasi commodi delectus, vitae
                 autem quibusdam nemo ad dolorem incidunt voluptate officiis ducimus nulla fugiat animi at sapiente ab
                 adipisci.
             </p>
+
             <p>
-                <img src="/assets/signs/puzzle.svg" alt="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut perspiciatis quasi commodi delectus, vitae
-                autem quibusdam nemo ad dolorem incidunt voluptate officiis ducimus nulla fugiat animi at sapiente ab
-                adipisci.
+                <img src="/assets/signs/locate1.svg" alt="">
+                
             </p>
+            
         </div>
         <div class="picWithLine">
             <img src="/assets/SchazStephen2Rund.png" alt="facePicture" class="imgPortrait">
