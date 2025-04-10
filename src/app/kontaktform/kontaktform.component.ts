@@ -1,17 +1,19 @@
-import { NgClass, NgIf } from '@angular/common';
+import { NgClass, NgIf, CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import {  FormsModule, NgForm,  } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LanguageService } from '../services/language.service';
+import { texts } from '../languageData/languageTexts';
 
 @Component({
   selector: 'app-kontaktform',
-  imports: [NgIf, FormsModule, NgClass, RouterModule],
+  imports: [NgIf, FormsModule, NgClass, RouterModule, CommonModule],
   templateUrl: './kontaktform.component.html',
   styleUrl: './kontaktform.component.scss'
 })
 export class KontaktformComponent {
+  public texts = texts;
   constructor(public languageService: LanguageService) {}  
 
   http = inject(HttpClient)

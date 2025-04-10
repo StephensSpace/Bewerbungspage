@@ -1,18 +1,21 @@
 <div class="contactHeader">
     <div class="purpleLine1"></div>
-    <h1>Contact</h1>
+    <h1>
+        {{ (languageService.isGerman$ | async) ? texts.header.contact.de : texts.header.contact.en }}
+    </h1>
 </div>
 
 <div class="formAndTextWrap">
     <div class="textWrap">
         <p class="contactTextHeader">
-            Got a problem to solve?
+            {{ (languageService.isGerman$ | async) ? texts.kontaktformH2.de : texts.kontaktformH2.en }}
         </p>
 
         <p class="formDescripText">
-            Encourage people to contact you and describe what role you are interested in.
-            Show that you will add value to their projects through your work.<br><br>
-            Need a Frontend developer?<span class="highlighted"> Contact me!</span>
+            {{ (languageService.isGerman$ | async) ? texts.contactDescripText.de : texts.contactDescripText.en }}
+            <span class="highlighted">
+                {{ (languageService.isGerman$ | async) ? texts.contactDescriphigh.de : texts.contactDescriphigh.en }}
+            </span>
         </p>
     </div>
 
@@ -20,23 +23,34 @@
     <div class="formWrap">
         <form (ngSubmit)="sendMail(contactForm)" #contactForm="ngForm">
             <div class="input-wrapper">
-                <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your Name" minlength="3"
+                <input [(ngModel)]="contactData.name" name="name" type="text"
+                    [placeholder]="(languageService.isGerman$ | async) ? 'Ihr Name' : 'Your Name'" minlength="3"
                     required>
-                <p class="error-message">Name ist erforderlich (min. 3 Zeichen).</p>
+                <p class="error-message">
+                    {{ (languageService.isGerman$ | async) ? texts.contactErrors.name.de : texts.contactErrors.name.en
+                    }}
+                </p>
                 <img src="/assets/signs/warning.svg" class="warning" alt="">
             </div>
             <div class="input-wrapper">
-                <input [(ngModel)]="contactData.email" name="email" type="email" placeholder="Your Mail" required
+                <input [(ngModel)]="contactData.email" name="email" type="email"
+                    [placeholder]="(languageService.isGerman$ | async) ? 'Ihre Mail' : 'Your Mail'" required
                     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                <p class="error-message">Bitte eine gültige E-Mail eingeben.</p>
+                <p class="error-message">
+                    {{ (languageService.isGerman$ | async) ? texts.contactErrors.email.de : texts.contactErrors.email.en
+                    }}
+                </p>
                 <img src="/assets/signs/warning.svg" class="warning" alt="">
             </div>
 
             <div class="input-wrapper">
-                <textarea [(ngModel)]="contactData.message" name="message" placeholder="Your Message" required
+                <textarea [(ngModel)]="contactData.message" name="message"
+                    [placeholder]="(languageService.isGerman$ | async) ? 'Ihre Nachricht' : 'Your Message'" required
                     minlength="10"></textarea>
-                <p class="error-message">Nachricht muss mindestens 10 Zeichen lang
-                    sein.</p>
+                <p class="error-message">
+                    {{ (languageService.isGerman$ | async) ? texts.contactErrors.message.de :
+                    texts.contactErrors.message.en }}
+                </p>
                 <img src="/assets/signs/warning.svg" class="warning" alt="">
             </div>
             <div class="input-wrapper">
@@ -45,17 +59,26 @@
                         [(ngModel)]="contactData.privacyPolicy" required>
                     <img class="unchecked" src="/assets/buttons/unchecked.svg" alt="Unchecked">
                     <img class="checked" src="/assets/buttons/checked.svg" alt="Checked">
-                    <span>Ich stimme der <a [routerLink]="['/legal-notice']" target="_blank">Datenschutzerklärung</a> zu</span>
+                    <span>
+                        {{ (languageService.isGerman$ | async) ? texts.contactPrivacy.de : texts.contactPrivacy.en }}
+                        <a [routerLink]="['/legal-notice']" target="_blank">
+                            {{ (languageService.isGerman$ | async) ? texts.contactPrivacyLink.de :
+                            texts.contactPrivacyLink.en }}
+                        </a>
+                        {{ (languageService.isGerman$ | async) ? 'zu' : '' }}</span>
 
                 </label>
-                <p class="error-message2" *ngIf="checkbox.invalid && checkbox.touched">Bitte der Datenschutzerklärung
-                    zustimmen.</p>
+                <p class="error-message2" *ngIf="checkbox.invalid && checkbox.touched">
+                    {{ (languageService.isGerman$ | async) ? texts.contactErrors.privacy.de :
+                    texts.contactErrors.privacy.en }}
+                </p>
             </div>
 
             <button type="submit" class="submitDisabled" [ngClass]="{
-                'submitDisabled': contactForm.invalid, 
-                'submitEnabled': contactForm.valid
-            }" [disabled]="contactForm.invalid">Send message :) </button>
+            'submitDisabled': contactForm.invalid, 
+            'submitEnabled': contactForm.valid}" [disabled]="contactForm.invalid">
+            {{ (languageService.isGerman$ | async) ? texts.contactBtn.de : texts.contactBtn.en }} 
+            </button>
         </form>
     </div>
 
@@ -78,7 +101,8 @@
     </button>
 </div>
 
-<svg class="shadowPurpleLeft" width="678" height="715" viewBox="0 0 678 805" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="shadowPurpleLeft" width="678" height="715" viewBox="0 0 678 805" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
     <g filter="url(#filter0_f_167_882)">
         <path
             d="M405.303 708.084C405.978 652.277 391.433 576.961 355.658 477.524C392.332 395.035 819.289 789.943 405.303 708.084C402.116 971.425 60.0189 800.324 10.5824 679.228C-64.3086 495.779 -88.3907 486.259 -163.612 451.197C-238.833 416.135 -395.212 306.44 -256.876 259.465C-250.43 257.277 -244.646 255.383 -239.467 253.763C-257.883 224.722 -263.193 188.223 -209.085 151.446C69.8372 -38.137 423.098 291.151 321.492 413.181C228.333 525.066 358.304 698.791 405.303 708.084Z"

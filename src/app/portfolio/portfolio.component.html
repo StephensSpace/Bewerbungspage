@@ -3,7 +3,8 @@
     <h1>Portfolio</h1>
     <div class="purpleLine2"></div>
 </div>
-<p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+<p [innerHTML]="(languageService.isGerman$ | async) ? texts.portfolioText.de : texts.portfolioText.en">
+    </p>
 <div class="projectWrapper" *ngFor="let project of projects">
     <div class="projectBox" [ngStyle]="project.reverseRow ? {'flex-direction': 'row-reverse'} : {}">
         <img [src]="project.imgPath" alt="" class="imgProject">

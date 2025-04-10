@@ -1,6 +1,7 @@
 import { CommonModule, NgClass, NgFor, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { LanguageService } from '../services/language.service';
+import { texts } from '../languageData/languageTexts';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,6 +10,7 @@ import { LanguageService } from '../services/language.service';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
+  public texts = texts;
   constructor(public languageService: LanguageService) { }
 
   projects: {

@@ -11,8 +11,20 @@ export const texts: {
     hereIAmBtn: TranslatedText,
     scrollDown: TranslatedText,
     aboutMeText: TranslatedText,
-    aboutMeLocation: TranslatedText
-
+    aboutMeLocation: TranslatedText,
+    portfolioText: TranslatedText,
+    kontaktformH2: TranslatedText,
+    contactDescripText: TranslatedText,
+    contactDescriphigh: TranslatedText,
+    contactPrivacy: TranslatedText,
+    contactPrivacyLink: TranslatedText,
+    contactErrors: {
+        name: TranslatedText,
+        email: TranslatedText,
+        message: TranslatedText,
+        privacy: TranslatedText
+    },
+    contactBtn: TranslatedText
 } = {
     header: {
         aboutMe: {
@@ -51,6 +63,57 @@ export const texts: {
         en: `I come from the sunny south of Germany – Messkirch, a small town about 30 
         kilometers from Lake Constance and 100 kilometers from Stuttgart, located in 
         what's known as the "Badischer Geniewinkel" (Baden's Genius Region).`
+    },
+    portfolioText: {
+        de: `Entdecken Sie eine Auswahl meiner Arbeiten – erleben Sie meine Fähigkeiten 
+        in Aktion <br> indem Sie meine Applikationen ausprobieren.`,
+        en: `Explore a selection of my work here - Interact with projects to see my 
+        skills in action.`
+    },
+    kontaktformH2: {
+        de: `Probleme zu lösen?`,
+        en: `Got a problem to solve?`
+    },
+    contactDescripText: {
+        de: `Bereit, Ihr Projekt voranzubringen? Ich bin Frontend Developer mit Leidenschaft 
+        – offen für neue Herausforderungen und immer auf der Suche nach spannenden Projekten.
+        Schreiben Sie mir – ich freue mich auf`,
+        en: `Ready to take your project to the next level? I’m a passionate Frontend Developer 
+        – open to new challenges and always eager for exciting projects.
+        Get in touch – I’m looking forward to read`
+    },
+    contactDescriphigh: {
+        de: `ihre Nachricht`,
+        en: `your message`,
+    },
+    contactPrivacy: {
+        de: `Ich stimme der`,
+        en: `I agree to the`
+    },
+    contactPrivacyLink: {
+        de: `Datenschutzerklärung`,
+        en: `Privacy policy`
+    },
+    contactErrors: {
+        name: {
+            de: `Name ist erforderlich (min. 3 Zeichen).`,
+            en: `Name is required (min 3 characters)`
+        },
+        email: {
+            de: `Bitte eine gültige E-Mail eingeben.`,
+            en: `Please enter a valid email`
+        },
+        message: {
+            de: `Ihre Nachricht muss mindestens 10 Zeichen lang sein.`,
+            en: `Your message must contain at least 10 characters`
+        },
+        privacy: {
+            de: `Bitte der Datenschutzerklärung zustimmen.`,
+            en: `Please accept the Privacy Policy`
+        }
+    },
+    contactBtn: {
+        de: `Absenden :)`,
+        en: `Send Message :)`
     }
-    
-  };
+};
