@@ -1,40 +1,146 @@
 svg {
     position: absolute;
-    top: 377.6px;
+    top: 260.6px;
     left: 0;
-    min-width: 100%;
     height: auto;
     z-index: 2;
 }
 
-.mainPicture {
-    position: relative;
-    height: 705px;
-    left: 30px;
-    top: 193px;
-    width: fit-content;
-    //background-color: #70E61C;
+.topPartWrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
 
-    .portraitImg {
-        max-width: 630px;
-        width: 100%;
-        height: auto;
+    .mainPicture {
         position: relative;
-        z-index: 1;
-
-    }
-
-    .backgroundShades {
-        position: absolute;
-        top: 48px;
-        left: -50px;
-        width: 800px;
+        max-height: 705px;
         height: 100%;
-        z-index: 0;
+        margin-top: 100px;
+        max-width: 700px;
+        width: 100%;
+    
+        .portraitImg {
+            max-width: 600px;
+            width: 100%;
+            min-width: 500px;
+            height: auto;
+            position: relative;
+            z-index: 1;
+    
+        }
+    
+        .backgroundShades {
+            position: absolute;
+            right: -128px;
+            width: 849px;
+            z-index: 0;
+        }
     }
 
+    .textboxAndBtn {
+        display: flex;
+        flex-direction: column;
+        margin-left: -65px;
+        align-items: center;
+        z-index: 3;
+        margin-top: -83px;
+
+
+        button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 30px;
+            gap: 10px;       
+            width: 165px;
+            height: 58px;
+            background: #70E61C;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 23px;
+            line-height: 120%;
+            color: #FFFFFF;
+            white-space: nowrap;
+            cursor: pointer;
+            z-index: 3;
+            transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+        
+            &:hover {
+                background: #9747FF;
+                transform: scale(1.1);
+                box-shadow: none;
+                border: unset;
+            }
+        }
+
+    }
+    
+    .textbox {
+        
+        width: fit-content;
+        height: 172px;
+        z-index: 1;
+        display: flex;
+    
+        p {
+            all: unset;
+            font-family: 'Poppins';
+            white-space: nowrap;
+            color: white;
+            font-size: 64px;
+            font-weight: 300;
+            display: inline-block;
+            transform: rotate(-90deg);
+            white-space: nowrap;
+            padding-left: 12px;
+        }
+    
+        .nameBox {
+            display: flex;
+            flex-direction: column;
+            margin-left: -64px;
+    
+            p {
+                all: unset;
+            }
+    
+            .name {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 81px;
+                line-height: 120%;
+                color: #FFFFFF;
+                margin: -6px 0px;
+                white-space: nowrap;
+    
+            }
+    
+            .job {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 59px;
+                line-height: 120%;
+                color: #9747FF;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+                white-space: nowrap;
+            }
+        }
+    }
 
 }
+
+
 
 .textWrapper {
     position: absolute;
@@ -53,63 +159,10 @@ svg {
     margin-right: 90px;
 }
 
-.textbox {
-    position: absolute;
-    width: 718px;
-    height: 172px;
-    right: 90px;
-    top: 297px;
-    z-index: 1;
-    display: flex;
 
-    p {
-        all: unset;
-        font-family: 'Poppins';
-        white-space: nowrap;
-        color: white;
-        font-size: 64px;
-        font-weight: 300;
-        display: inline-block;
-        transform: rotate(-90deg);
-        white-space: nowrap;
-        padding-left: 12px;
-    }
 
-    .nameBox {
-        display: flex;
-        flex-direction: column;
-        margin-left: -64px;
 
-        p {
-            all: unset;
-        }
 
-        .name {
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 800;
-            font-size: 81px;
-            line-height: 120%;
-            color: #FFFFFF;
-            margin: -6px 0px;
-            white-space: nowrap;
-
-        }
-
-        .job {
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 59px;
-            line-height: 120%;
-            color: #9747FF;
-            flex: none;
-            order: 1;
-            flex-grow: 0;
-            white-space: nowrap;
-        }
-    }
-}
 
 .socials {
     display: flex;
@@ -173,36 +226,3 @@ svg {
     }
 }
 
-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 30px;
-    gap: 10px;
-    position: absolute;
-    width: 165px;
-    height: 58px;
-    left: calc(50% - 165px/2 + 254.5px);
-    top: 513px;
-    background: #70E61C;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 23px;
-    line-height: 120%;
-    color: #FFFFFF;
-    white-space: nowrap;
-    cursor: pointer;
-    z-index: 3;
-    transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-
-    &:hover {
-        background: #9747FF;
-        transform: scale(1.1);
-        box-shadow: none;
-        border: unset;
-    }
-}

@@ -61,7 +61,7 @@
                     <img class="checked" src="/assets/buttons/checked.svg" alt="Checked">
                     <span>
                         {{ (languageService.isGerman$ | async) ? texts.contactPrivacy.de : texts.contactPrivacy.en }}
-                        <a [routerLink]="['/legal-notice']" target="_blank">
+                        <a [routerLink]="['/datenschutz']" target="_blank">
                             {{ (languageService.isGerman$ | async) ? texts.contactPrivacyLink.de :
                             texts.contactPrivacyLink.en }}
                         </a>

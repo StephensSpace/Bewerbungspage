@@ -35,6 +35,7 @@ app-here-iam {
     margin: 0 auto;
     width: 100%;
     display: flex;
+    flex-direction: column;
     background-color: rgb(20, 29, 47);
     min-height: calc(100vh - 109.03px);
     position: relative;

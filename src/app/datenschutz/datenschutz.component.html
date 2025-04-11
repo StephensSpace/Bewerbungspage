@@ -1,5 +1,6 @@
 <app-header></app-header>
-<div class="datenschutz">
+<div class="datenschutz" [innerHTML]="(languageService.isGerman$ | async) ?
+datenschutz.de : datenschutz.en">
     <h1>Datenschutzerklärung zur Nutzung des Kontaktformulars</h1>
 
     <p>Mit dem Absenden des Kontaktformulars erklärst du dich damit einverstanden, dass die von dir eingegebenen Daten
