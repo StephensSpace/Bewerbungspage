@@ -20,20 +20,43 @@
             <div class="dividingVector"></div>
         </div>
         <div class="undertitle">
-            <p>From CRUD to gaming to social apps –
-                I have the skills to tackle challenges across all of them.
+            <p> 
+                {{
+                    (languageService.isGerman$ | async) ?
+                    texts.skillsUndertitle.de : texts.skillsUndertitle.en
+                    }}
             </p>
         </div>
         <div class="h2AndButton">
             <div class="secondHeader">
-                <h2>Looking for</h2>
-                <h2 class="purpleH2">another Skill?</h2>
+                <h2>{{
+                    (languageService.isGerman$ | async) ?
+                    texts.skillTextH2.de : texts.skillTextH2.en
+                    }}
+                </h2>
+                <h2 class="purpleH2">
+                    {{
+                        (languageService.isGerman$ | async) ?
+                        texts.skillTextH2High.de : texts.skillTextH2High.en
+                        }}
+                </h2>
             </div>
             <p>
-                Always learning, always improving. <br>
-                Excited to master new skills. Just ask!
+                {{
+                    (languageService.isGerman$ | async) ?
+                    texts.skillText1.de : texts.skillText1.en
+                    }}
+                    <br>
+                    {{
+                        (languageService.isGerman$ | async) ?
+                        texts.skillText2.de : texts.skillText2.en
+                        }}
             </p>
-            <a href="#contact" (click)="scrollToFragment($event, 'contact')">Let's Talk</a>
+            <a href="#contact" (click)="scrollToFragment($event, 'contact')">{{
+                (languageService.isGerman$ | async) ?
+                texts.hereIAmBtn.de : texts.hereIAmBtn.en
+                }}
+            </a>
         </div>
     </div>
 

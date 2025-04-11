@@ -17,23 +17,27 @@
             <p>
                 <img src="/assets/signs/puzzle.svg" alt="">
                 {{
-                    (languageService.isGerman$ | async) ?
-                    texts.aboutMeLocation.de : texts.aboutMeLocation.en
-                    }}
-            </p>
-            
-            <p>
-                <img src="/assets/signs/light.svg" alt="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut perspiciatis quasi commodi delectus, vitae
-                autem quibusdam nemo ad dolorem incidunt voluptate officiis ducimus nulla fugiat animi at sapiente ab
-                adipisci.
+                (languageService.isGerman$ | async) ?
+                texts.aboutMeLocation.de : texts.aboutMeLocation.en
+                }}
             </p>
 
             <p>
-                <img src="/assets/signs/locate1.svg" alt="">
-                
+                <img src="/assets/signs/light.svg" alt="">
+                {{
+                (languageService.isGerman$ | async) ?
+                texts.aboutMeMotivation.de : texts.aboutMeMotivation.en
+                }}
             </p>
-            
+                
+            <p>
+                <img src="/assets/signs/locate1.svg" alt="">
+                {{
+                    (languageService.isGerman$ | async) ?
+                    texts.aboutMeLogic.de : texts.aboutMeLogic.en
+                    }}
+            </p>
+
         </div>
         <div class="picWithLine">
             <img src="/assets/SchazStephen2Rund.png" alt="facePicture" class="imgPortrait">

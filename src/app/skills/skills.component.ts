@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
-import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
+import { NgClass, NgFor, NgIf, NgStyle, CommonModule } from '@angular/common';
 import { LanguageService } from '../services/language.service';
+import { texts } from '../languageData/languageTexts';
 
 
 @Component({
   selector: 'app-skills',
-  imports: [NgFor, NgIf, NgClass, NgStyle],
+  imports: [NgFor, NgIf, NgClass, NgStyle, CommonModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-
+  public texts = texts;
   constructor(public languageService: LanguageService) { }
 
   scrollToFragment(event: Event, fragment: string) {
+    
     event.preventDefault(); // Verhindert das Neuladen der Seite
 
     const element = document.getElementById(fragment); // Holt das Element mit der ID des Fragments
