@@ -97,3 +97,9 @@ app-skills {
     margin: 0 auto;
     background-color: rgb(20, 29, 47);
 }
+
+@media (max-width: 1170px) {
+    h1 {
+        font-size: 70px !important;
+    }
+}

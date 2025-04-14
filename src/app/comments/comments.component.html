@@ -1,23 +1,29 @@
 <div class="commentBox">
     <ng-container *ngFor="let comment of comments; let i = index">
         <div class="commentWrapper" *ngIf="i === currentIndex">
-            <div class="buttonBox">
-                <img src="/assets/buttons/arrow_back.svg" alt="" (click)="showPrevious()">
-                <img [src]="currentIndex === 0 ? '/assets/signs/Ellipse2.svg' : '/assets/signs/Ellipse3.svg'" alt="Bild" class="points">
-                <img [src]="currentIndex === 1 ? '/assets/signs/Ellipse2.svg' : '/assets/signs/Ellipse3.svg'" alt="Bild" class="points">
-                <img [src]="currentIndex === 2 ? '/assets/signs/Ellipse2.svg' : '/assets/signs/Ellipse3.svg'" alt="Bild" class="points">
-                <img src="/assets/buttons/arrow_forward.svg" alt="" (click)="showNext()">
-            </div>
+
             <img src="/assets/signs/twoLines.svg" alt="" class="twoLines">
             <img src="/assets/shadows/greenShadow1.png" alt="" class="rightShadow">
             <div class="picAndFrame">
-                <div class="frame">
-                    <p class="comment">
-                        {{ (languageService.isGerman$ | async) ? comment.commentDE : comment.commentEN }}
-                    </p>
-                    <div class="seperatorAndName">
-                        <div class="separatorLong"></div>
-                        <p class="nameAndJob">{{comment.name}} - {{comment.job}}</p>
+                <div class="frameAndBtnBox">
+                    <div class="frame">
+                        <p class="comment">
+                            {{ (languageService.isGerman$ | async) ? comment.commentDE : comment.commentEN }}
+                        </p>
+                        <div class="seperatorAndName">
+                            <div class="separatorLong"></div>
+                            <p class="nameAndJob">{{comment.name}} - {{comment.job}}</p>
+                        </div>
+                    </div>
+                    <div class="buttonBox">
+                        <img src="/assets/buttons/arrow_back.svg" alt="" (click)="showPrevious()">
+                        <img [src]="currentIndex === 0 ? '/assets/signs/Ellipse2.svg' : '/assets/signs/Ellipse3.svg'"
+                            alt="Bild" class="points">
+                        <img [src]="currentIndex === 1 ? '/assets/signs/Ellipse2.svg' : '/assets/signs/Ellipse3.svg'"
+                            alt="Bild" class="points">
+                        <img [src]="currentIndex === 2 ? '/assets/signs/Ellipse2.svg' : '/assets/signs/Ellipse3.svg'"
+                            alt="Bild" class="points">
+                        <img src="/assets/buttons/arrow_forward.svg" alt="" (click)="showNext()">
                     </div>
                 </div>
                 <img [src]="comment.img" alt="" class="rundes-bild">

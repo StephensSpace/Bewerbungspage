@@ -199,3 +199,9 @@ p {
     max-height: 748.73px;
     height: 100%;
 }
+
+@media (max-width: 1170px) {
+    h1 {
+        font-size: 70px !important;
+    }
+}
