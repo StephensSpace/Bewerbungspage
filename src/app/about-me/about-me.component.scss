@@ -10,7 +10,7 @@
         max-width: 1440px;
         width: 100%;
         margin-left: 100px;
-        align-items: center;
+        align-items: flex-start;
         margin-top: 60px;
     }
 
@@ -36,7 +36,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        max-width: 45%;
+        max-width: 55%;
         width: 100%;
 
         p {
@@ -101,5 +101,11 @@ app-skills {
 @media (max-width: 1170px) {
     h1 {
         font-size: 70px !important;
+    }
+}
+
+@media (max-width: 903px) {
+    h1 {
+        font-size: 62px !important;
     }
 }
