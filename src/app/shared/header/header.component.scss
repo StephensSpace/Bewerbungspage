@@ -105,5 +105,22 @@ button {
 @media(max-width: 1170px) {
     content {
         padding: 37px 20px;
+
+        nav {
+            max-width: fit-content;
+        }
     }
+
+    
+}
+
+@media(max-width: 970px) {
+    content {
+        padding: 37px 100px;
+        nav {
+            display: none;
+        }
+    }
+
+    
 }
