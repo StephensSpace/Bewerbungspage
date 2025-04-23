@@ -266,7 +266,7 @@ svg {
             }
         }
 
-        
+
     }
 }
 
@@ -321,6 +321,10 @@ svg {
         max-height: 50vh;
         flex-direction: column;
 
+        .nameBox {
+            margin-left: -72px !important;
+        }
+
         .mobile {
             display: block;
         }
@@ -345,9 +349,16 @@ svg {
             align-items: center;
 
             .textbox {
-                margin-left: 0 !important;
+                margin-left: -10px !important;
                 width: 100%;
                 justify-content: center;
+
+
+
+                p {
+                    padding-left: 10px;
+                    margin-bottom: 54px;
+                }
             }
 
             button {
@@ -361,7 +372,7 @@ svg {
             max-width: 96vw !important;
             max-height: 730px;
             height: 100%;
-            
+
         }
     }
 
@@ -376,8 +387,72 @@ svg {
     }
 }
 
+@media (max-width: 800px) {
+
+    svg {
+        height: 750px !important;
+        top: 150.6px;
+    }
+
+    .topPartWrapper {
+
+        .mainPicture {
+            margin-top: 20px;
+
+            .portraitImg {
+                max-width: 480px;
+                height: auto;
+                min-width: 400px;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .textWrapper {
+        .socials {
+            width: 70vw;
+
+            .vector1 {
+                max-width: 100px;
+                min-width: 40px;
+                width: 100%;
+            }
+        }
+    }
+}
+
 @media (max-width: 970px) and (max-height: 1110px) {
     .topPartWrapper .textboxAndBtn {
-      margin-top: max(0px, calc(100vh - 1010px));
+        margin-top: max(20px, calc(100vh - 1010px));
     }
-  }
+}
+
+@media (max-width: 970px) and (max-height: 1000px) {
+    .textWrapper {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 970px) and (max-height: 975px) {
+    .textboxAndBtn {
+
+        .nameBox {
+            margin-left: -59px !important;
+            margin-top: -4px;
+        }
+
+        .textbox {
+            margin-left: -10px !important;
+            p {
+                padding-left: 15px;
+                margin-bottom: 54px;
+            }
+        }
+
+        button {
+            width: 130px !important;
+            height: 45px !important;
+        }
+    }
+}

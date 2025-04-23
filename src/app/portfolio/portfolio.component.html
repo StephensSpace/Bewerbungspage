@@ -6,12 +6,14 @@
 <p [innerHTML]="(languageService.isGerman$ | async) ? texts.portfolioText.de : texts.portfolioText.en">
     </p>
 <div class="projectWrapper" *ngFor="let project of projects">
-    <div class="projectBox" [ngStyle]="project.reverseRow ? {'flex-direction': 'row-reverse'} : {}">
+    <div class="projectBox" [ngClass]="{'reverseRow': project.reverseRow}">
         <img [src]="project.imgPath" alt="" class="imgProject">
-        <div class="infobox" [ngStyle]="project.reverseRow ? {'align-items': 'flex-end'} : {}">
+        <div class="infobox" [ngClass]="{'flexEnd': project.reverseRow}">
             <p class="projectName">{{project.name}}</p>
-            <p class="usedSkills">{{project.skills}}</p>
-            <p class="description" [ngStyle]="project.reverseRow ? {'text-align': 'end'} : {}">
+            <p class="usedSkills" [ngClass]="{'textEnd': project.reverseRow}">
+                {{project.skills}}
+            </p>
+            <p class="description" [ngClass]="{'flexEnd': project.reverseRow}">
                 {{ (languageService.isGerman$ | async) ? project.description : project.descriptionEN }}
             </p>
             <div class="btnBox">

@@ -104,8 +104,24 @@ app-skills {
     }
 }
 
+@media (max-width: 970px) {
+    .picWithLine {
+        display: none;
+    }
+
+    .aboutMeWrapper {
+        .text {
+            max-width: 86%;
+            z-index: 3;
+        }
+    }
+
+}
+
 @media (max-width: 903px) {
     h1 {
         font-size: 62px !important;
     }
+
+  
 }

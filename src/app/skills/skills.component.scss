@@ -1,4 +1,4 @@
-.skillAndTextWrap {
+.skillAndTextWrapDesktop {
     display: flex;
     margin-top: 70px;
     max-width: 1360px;
@@ -8,7 +8,32 @@
     align-items: center;
     margin-left: 90px;
     justify-content: space-between;
-    
+
+}
+
+.skillAndTextWrapMobile {
+    display: none;
+    max-width: 1440px;
+    margin: 70px auto;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexEnd {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 100%;
+}
+
+.linkBox {
+    width: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .textAndButton {
@@ -158,7 +183,7 @@
         width: 100%;
         height: 100%;
         z-index: 3;
-        
+
     }
 
     .skill-image:hover {
@@ -171,7 +196,7 @@
         height: auto;
         z-index: 3;
         margin-left: -17px;
-        
+
     }
 
 
@@ -218,6 +243,7 @@
     }
 
 }
+
 .tooltip.visible {
     visibility: visible;
     opacity: 1;
@@ -261,5 +287,118 @@
 
     .skillAndTextWrap {
         margin-left: 20px !important;
+    }
+
+    .skillSymbols {
+        .skill-image {
+            max-width: 48px;
+            max-height: 48px;
+        }
+
+        .last-image {
+            width: 78px;
+        }
+    }
+}
+
+.placeholder {
+    visibility: hidden;
+    height: 0;
+}
+
+@media(max-width: 970px) {
+
+    .skillAndTextWrapMobile {
+        display: flex;
+    }
+
+    .skillAndTextWrapDesktop {
+        display: none;
+    }
+
+    .tooltip {
+        left: 90px;
+        bottom: 70%;
+        
+    }
+
+    .skillSymbols {
+
+        gap: 32px 0;
+        max-width: 92%;
+        height: auto;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(4, 1fr);
+
+        .last-image {
+            margin-left: 0px;
+        }
+        
+    }
+
+    .textAndButton {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+
+        .h1AndLine {
+            justify-content: flex-end;
+            max-width: 50%;
+            width: 100%;
+            gap: 32px;
+
+            .dividingVector {
+                min-width: 24px;
+            }
+        }
+
+        .undertitle {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                max-width: 71%;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                margin: 50px 0;
+            }
+        }
+
+        .h2AndButton {
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                max-width: 62%;
+                margin-block-start: 20px;
+                margin-block-end: 30px;
+                text-align: center;
+            }
+
+            .secondHeader {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            br {
+                display: none;
+            }
+        }
+
+    }
+}
+
+@media(max-width: 570px) {
+    .skillSymbols {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

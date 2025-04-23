@@ -1,11 +1,11 @@
-import { CommonModule, NgClass, NgFor, NgStyle } from '@angular/common';
+import { CommonModule, NgClass, NgFor,  } from '@angular/common';
 import { Component } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 import { texts } from '../languageData/languageTexts';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [NgFor, NgStyle, NgClass, CommonModule],
+  imports: [NgFor, NgClass, CommonModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })

@@ -1,4 +1,4 @@
-<div class="skillAndTextWrap">
+<div class="skillAndTextWrapDesktop">
     <div class="skillSymbols">
         <div *ngFor="let skill of skillset; let last = last" class="tooltip-container">
             <div class="image-wrapper">
@@ -20,11 +20,11 @@
             <div class="dividingVector"></div>
         </div>
         <div class="undertitle">
-            <p> 
+            <p>
                 {{
-                    (languageService.isGerman$ | async) ?
-                    texts.skillsUndertitle.de : texts.skillsUndertitle.en
-                    }}
+                (languageService.isGerman$ | async) ?
+                texts.skillsUndertitle.de : texts.skillsUndertitle.en
+                }}
             </p>
         </div>
         <div class="h2AndButton">
@@ -36,21 +36,21 @@
                 </h2>
                 <h2 class="purpleH2">
                     {{
-                        (languageService.isGerman$ | async) ?
-                        texts.skillTextH2High.de : texts.skillTextH2High.en
-                        }}
+                    (languageService.isGerman$ | async) ?
+                    texts.skillTextH2High.de : texts.skillTextH2High.en
+                    }}
                 </h2>
             </div>
             <p>
                 {{
-                    (languageService.isGerman$ | async) ?
-                    texts.skillText1.de : texts.skillText1.en
-                    }}
-                    <br>
-                    {{
-                        (languageService.isGerman$ | async) ?
-                        texts.skillText2.de : texts.skillText2.en
-                        }}
+                (languageService.isGerman$ | async) ?
+                texts.skillText1.de : texts.skillText1.en
+                }}
+                <br>
+                {{
+                (languageService.isGerman$ | async) ?
+                texts.skillText2.de : texts.skillText2.en
+                }}
             </p>
             <a href="#contact" (click)="scrollToFragment($event, 'contact')">{{
                 (languageService.isGerman$ | async) ?
@@ -59,7 +59,74 @@
             </a>
         </div>
     </div>
+</div>
+<div class="skillAndTextWrapMobile">
 
-
+    <div class="textAndButton">
+        <div class="flexEnd">
+            <div class="h1AndLine">
+                <h1>My Skills</h1>
+                <div class="dividingVector"></div>
+            </div>
+            <div class="undertitle">
+                <p>
+                    {{
+                    (languageService.isGerman$ | async) ?
+                    texts.skillsUndertitle.de : texts.skillsUndertitle.en
+                    }}
+                </p>
+            </div>
+        </div>
+        
+        <div class="skillSymbols">
+            <div *ngFor="let skill of skillset; let last = last" class="tooltip-container">
+                <div class="image-wrapper">
+                    <img [src]="skill.img" alt="" [ngClass]="last ? 'last-image' : 'skill-image'"
+                        (mouseover)="onMouseOver(last)" (mouseleave)="onMouseLeave()">
+                    <p *ngIf="skill.text" [ngStyle]="{'margin-left': skill.margin ? skill.margin + 'px' : '0px'}">
+                        {{ skill.text }}
+                    </p>
+                </div>
+                <div class="tooltip" *ngIf="last" [ngClass]="{ 'visible': hover }">
+                    <img src="/assets/skills/learningHover.svg" alt="Tooltip-Bild">
+                </div>
+            </div>
+            <div class="placeholder"></div> 
+        </div>
+        <div class="h2AndButton">
+            <div class="secondHeader">
+                <h2>{{
+                    (languageService.isGerman$ | async) ?
+                    texts.skillTextH2.de : texts.skillTextH2.en
+                    }}
+                </h2>
+                <h2 class="purpleH2">
+                    {{
+                    (languageService.isGerman$ | async) ?
+                    texts.skillTextH2High.de : texts.skillTextH2High.en
+                    }}
+                </h2>
+            </div>
+            <p>
+                {{
+                (languageService.isGerman$ | async) ?
+                texts.skillText1.de : texts.skillText1.en
+                }}
+                <br>
+                {{
+                (languageService.isGerman$ | async) ?
+                texts.skillText2.de : texts.skillText2.en
+                }}
+            </p>
+            <div class="linkBox">
+                <a href="#contact" (click)="scrollToFragment($event, 'contact')">{{
+                    (languageService.isGerman$ | async) ?
+                    texts.hereIAmBtn.de : texts.hereIAmBtn.en
+                    }}
+                </a>
+            </div>
+            
+        </div>
+    </div>
 </div>
 <img src="/assets/shadows/greenShadow2.svg" alt="" class="leftGreenShadow">
