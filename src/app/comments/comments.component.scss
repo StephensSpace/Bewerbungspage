@@ -206,13 +206,17 @@
         gap: 24px;
 
         .frameAndBtnBox {
-            max-width: 86% !important;
+            max-width: 80% !important;
 
             .buttonBox {
                 max-width: 100% !important;
                 margin-right: 0;
             }
 
+        }
+
+        .frame {
+            padding: 48px 76px;
         }
 
         .picAndSeperator {
