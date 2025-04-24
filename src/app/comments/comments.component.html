@@ -2,11 +2,12 @@
     <ng-container *ngFor="let comment of comments; let i = index">
         <div class="commentWrapper" *ngIf="i === currentIndex">
 
-            <img src="/assets/signs/twoLines.svg" alt="" class="twoLines">
+            
             <img src="/assets/shadows/greenShadow1.png" alt="" class="rightShadow">
             <div class="picAndFrame">
                 <div class="frameAndBtnBox">
                     <div class="frame">
+                        <img src="/assets/signs/twoLines.svg" alt="" class="twoLines">
                         <p class="comment">
                             {{ (languageService.isGerman$ | async) ? comment.commentDE : comment.commentEN }}
                         </p>
@@ -27,6 +28,7 @@
                     </div>
                 </div>
                 <div class="picAndSeperator">
+                    <div class="mobileDiv"></div>
                     <img [src]="comment.img" alt="" class="rundes-bild">
                     <div class="separator"></div>
                 </div>              

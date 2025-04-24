@@ -346,12 +346,13 @@
 
         .h1AndLine {
             justify-content: flex-end;
-            max-width: 50%;
+            max-width: 70%;
             width: 100%;
-            gap: 32px;
+            gap: 38px;
 
             .dividingVector {
                 min-width: 24px;
+                max-width: 218px;
             }
         }
 
