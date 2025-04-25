@@ -113,6 +113,10 @@ app-skills {
         .text {
             max-width: 86%;
             z-index: 3;
+
+            p{
+                padding-right: 19px !important;
+            }
         }
     }
 
@@ -122,6 +126,16 @@ app-skills {
     h1 {
         font-size: 62px !important;
     }
+}
 
-  
+@media (max-width: 700px) {
+    .textAndPic {
+        margin-left: 8vw !important;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 55px !important;
+    }
 }

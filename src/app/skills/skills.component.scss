@@ -325,7 +325,7 @@
     .skillSymbols {
 
         gap: 32px 0;
-        max-width: 92%;
+        max-width: 90%;
         height: auto;
         align-items: center;
         justify-items: center;
@@ -395,6 +395,18 @@
             }
         }
 
+    }
+}
+
+@media(max-width: 700px) {
+    .skillSymbols {
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 55px !important;
     }
 }
 

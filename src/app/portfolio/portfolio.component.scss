@@ -235,6 +235,10 @@ p {
 
             .infobox {
                 align-items: center !important;
+                .description,
+                .usedSkills {
+                    padding: 0 6vw !important;
+                }
             }
 
             .description {
@@ -246,5 +250,11 @@ p {
 
     .textEnd {
         text-align: center !important;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 55px !important;
     }
 }
