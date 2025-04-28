@@ -1,10 +1,10 @@
 <div class="commentBox">
+    
     <ng-container *ngFor="let comment of comments; let i = index">
         <div class="commentWrapper" *ngIf="i === currentIndex">
-
             
-            <img src="/assets/shadows/greenShadow1.png" alt="" class="rightShadow">
             <div class="picAndFrame">
+                <div class="separator"></div>
                 <div class="frameAndBtnBox">
                     <div class="frame">
                         <img src="/assets/signs/twoLines.svg" alt="" class="twoLines">
@@ -27,12 +27,19 @@
                         <img src="/assets/buttons/arrow_forward.svg" alt="" (click)="showNext()">
                     </div>
                 </div>
-                <div class="picAndSeperator">
+                <img [src]="comment.img" alt="" class="rundes-bild">
+                <div class="picAndSeperator dNone">
                     <div class="mobileDiv"></div>
-                    <img [src]="comment.img" alt="" class="rundes-bild">
-                    <div class="separator"></div>
-                </div>              
+                    <img [src]="comment.img" alt="" class="rundes-bild2">
+                    <div class="separator2"></div>
+                </div>
+                
             </div>
+
+
         </div>
     </ng-container>
+    <img src="/assets/shadows/greenShadow1.svg" alt="" class="rightShadow">
 </div>
+
+

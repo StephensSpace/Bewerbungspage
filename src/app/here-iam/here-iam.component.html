@@ -3,19 +3,19 @@
     <div class="mainPicture">
         <img src="/assets/People/SchazStephen1transparent.png" alt="" class="portraitImg">
         <img src="/assets/shadows/backgroundShadows.png" alt="" class="backgroundShades">
-        <div class="textboxAndBtn">
-            <div class="textbox">
-                <p>I am</p>
-                <div class="nameBox">
-                    <p class="name">Stephen Schaz</p>
-                    <p class="job">FRONTEND DEVELOPER</p>
-                </div>
+    </div>
+    <div class="textboxAndBtn">
+        <div class="textbox">
+            <p>I am</p>
+            <div class="nameBox">
+                <p class="name">Stephen Schaz</p>
+                <p class="job">FRONTEND DEVELOPER</p>
             </div>
-            <button>
-                {{ (languageService.isGerman$ | async) ? texts.hereIAmBtn.de : texts.hereIAmBtn.en }}
-            </button>
-            
         </div>
+        <button>
+            {{ (languageService.isGerman$ | async) ? texts.hereIAmBtn.de : texts.hereIAmBtn.en }}
+        </button>
+        
     </div>
     
     <svg width="100%" class="desktop" max-width="1440px" viewBox="0 0 1440 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
