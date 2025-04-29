@@ -4,24 +4,25 @@
     <div class="purpleLine2"></div>
 </div>
 <p [innerHTML]="(languageService.isGerman$ | async) ? texts.portfolioText.de : texts.portfolioText.en">
-    </p>
-<div class="projectWrapper" *ngFor="let project of projects">
-    <div class="projectBox" [ngClass]="{'reverseRow': project.reverseRow}">
-        <img [src]="project.imgPath" alt="" class="imgProject">
-        <div class="infobox" [ngClass]="{'flexEnd': project.reverseRow}">
-            <p class="projectName">{{project.name}}</p>
-            <p class="usedSkills" [ngClass]="{'textEnd': project.reverseRow}">
-                {{project.skills}}
-            </p>
-            <p class="description" [ngClass]="{'flexEnd': project.reverseRow}">
-                {{ (languageService.isGerman$ | async) ? project.description : project.descriptionEN }}
-            </p>
-            <div class="btnBox">
-                <a [href]="project.link" [ngClass]="project.commingSoon ? 'BtnDisabled' : 'linkBtn'">Live test</a>
-                <a [href]="project.linkGit" [ngClass]="project.commingSoon ? 'BtnDisabled' : 'gitBtn'">Github</a>
+</p>
+<div class="projectDiv">
+    <div class="projectWrapper" *ngFor="let project of projects">
+        <div class="projectBox" [ngClass]="{'reverseRow': project.reverseRow}">
+            <img [src]="project.imgPath" alt="" class="imgProject">
+            <div class="infobox" [ngClass]="{'flexEnd': project.reverseRow}">
+                <p class="projectName">{{project.name}}</p>
+                <p class="usedSkills" [ngClass]="{'textEnd': project.reverseRow}">
+                    {{project.skills}}
+                </p>
+                <p class="description" [ngClass]="{'flexEnd': project.reverseRow}">
+                    {{ (languageService.isGerman$ | async) ? project.description : project.descriptionEN }}
+                </p>
+                <div class="btnBox">
+                    <a [href]="project.link" [ngClass]="project.commingSoon ? 'BtnDisabled' : 'linkBtn'">Live test</a>
+                    <a [href]="project.linkGit" [ngClass]="project.commingSoon ? 'BtnDisabled' : 'gitBtn'">Github</a>
+                </div>
             </div>
         </div>
     </div>
+    <img src="assets/shadows/purpleShadow3.svg" class="purpleShadow3">
 </div>
-
-<img src="assets/shadows/purpleShadow3.svg" class="purpleShadow3">

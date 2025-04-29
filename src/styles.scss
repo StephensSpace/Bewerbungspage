@@ -2,7 +2,6 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 
@@ -65,7 +64,7 @@ app-portfolio {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    align-items: flex-end;
+    align-items: center;
 }
 
 app-comments {
@@ -104,7 +103,8 @@ app-footer {
     border-top: solid 4px #70E61C;
     justify-content: center;
     align-items: center;
-    height: 291px;
+    height: 343px;
     z-index: 5;
     position: relative;
+    bottom: 0;
 }

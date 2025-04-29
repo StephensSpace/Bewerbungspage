@@ -6,9 +6,18 @@
     min-height: 39.8vh;
     height: 470px;
     align-items: center;
-    margin-left: 90px;
+    margin-left: 100px;
     justify-content: space-between;
 
+}
+
+.dividingVector2 {
+    width: calc((100vw - 1221px) / 2);
+    height: 0px;
+    border: 2px solid #9747FF;
+    position: absolute;
+    top: 25.32%;
+    left: calc((100% + 1223px) / 2);
 }
 
 .skillAndTextWrapMobile {
@@ -43,16 +52,19 @@
     max-width: 40%;
     width: 100%;
     margin-top: -50px;
+    position: relative;
 
     .h1AndLine {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 580px;
+        max-width: fit-content;
         width: 100%;
         gap: 5px;
+        
 
         .dividingVector {
+            display: none;
             max-width: 100px;
             width: 100%;
             height: 0px;
@@ -75,12 +87,12 @@
         font-weight: 400;
         font-size: 16px;
         color: white;
-        width: 80%;
+        width: 77%;
         text-align: end;
     }
 
     .h2AndButton {
-        width: 80%;
+        width: 77%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -213,6 +225,7 @@
     bottom: -410px;
     left: 0;
     z-index: 2;
+    overflow: visible;
 }
 
 .tooltip-container {
@@ -247,6 +260,20 @@
 .tooltip.visible {
     visibility: visible;
     opacity: 1;
+}
+
+@media (max-width: 1440px) {
+    .dividingVector {
+        display: block !important;
+    }
+
+    .h1AndLine {
+        max-width: 580px !important;
+    }
+
+    .dividingVector2 {
+        display: none !important;
+    }
 }
 
 @media (max-width: 1170px) {

@@ -29,9 +29,11 @@
 
 .shadowPurpleLeft {
     position: absolute;
-    bottom: -226px;
+    bottom: -346px;
     left: 0;
     z-index: 1;
+    transform: rotate(348deg);
+    overflow: visible;
 }
 
 .formAndTextWrap {
@@ -96,6 +98,7 @@
         flex-direction: column;
         font-family: 'Poppins';
         color: white;
+        z-index: 3;
 
         .contactTextHeader {
             font-size: 32px;
@@ -122,6 +125,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        z-index: 3;
 
 
         form {

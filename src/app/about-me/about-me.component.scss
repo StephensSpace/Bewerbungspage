@@ -69,6 +69,7 @@
     top: -155px;
     width: auto;
     height: 670px;
+    overflow: visible;
 }
 
 .greenLine {
@@ -76,6 +77,17 @@
     width: 100%;
     height: 0px;
     border: 2px solid #70E61C;
+    display: none;
+}
+
+.greenLine2 {   
+    width: calc((100vw - 1037px) / 2);
+    height: 0px;
+    border: 2px solid #70E61C;
+    left: 85.2%;
+    position: absolute;
+    top: 19.9%;
+    z-index: 3;
 }
 
 .picWithLine {
@@ -96,6 +108,16 @@ app-skills {
     height: fit-content;
     margin: 0 auto;
     background-color: rgb(20, 29, 47);
+}
+
+@media (max-width: 1450px) {
+    .greenLine {
+        display: block !important;
+    }
+
+    .greenLine2 {
+        display: none !important;
+    }
 }
 
 @media (max-width: 1170px) {

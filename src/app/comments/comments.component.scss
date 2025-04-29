@@ -39,8 +39,7 @@
     top: 46%;
     transform: translateY(-50%);
     left: 100%;
-    max-width: calc((100vw - 1165px) / 2);
-    width: 100%;
+    width: calc((100vw - 1264px) / 2);
     height: 0px;
     border: solid 2px #9747FF;
     z-index: 3;
@@ -52,10 +51,8 @@
     position: absolute;
     right: -376px;
     top: -387px;
-    width: 818px;
-    height: 720px;
     z-index: 1;
-    transform: rotate(65deg);
+    overflow: visible;
 }
 
 

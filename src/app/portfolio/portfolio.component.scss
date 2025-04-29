@@ -32,7 +32,7 @@
     .purpleLine2 {
         position: absolute;
         left: calc(50% + 230px);
-        width: calc(50vw - 240px);
+        width: calc(50vw - 243px);
         height: 0px;
         border: 2px solid #9747FF;
     }
@@ -61,6 +61,13 @@ p {
     width: 100%;
     margin-top: 16px;
     margin-bottom: 96px;
+    text-align: center;
+}
+
+.projectDiv {
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
 }
 
 .projectWrapper {
@@ -231,7 +238,7 @@ p {
     
         .purpleLine2 {  
             left: calc(50% + 170px) !important;
-            width: calc(50% - 170px);
+            width: calc(50% - 174px);
         }
     }
 }
