@@ -1,5 +1,5 @@
 .portfolioHeader {
-    margin-top: 150px;
+    margin-top: 36px;
     max-width: 100%;
     width: 100%;
     height: fit-content;
@@ -248,7 +248,9 @@ p {
         font-size: 62px !important;
     }
 
-    
+    .purpleShadow3 {
+        top: 54% !important;
+    } 
     
 
     .projectWrapper {
@@ -285,5 +287,9 @@ p {
 @media (max-width: 600px) {
     h1 {
         font-size: 55px !important;
+    }
+
+    .flexEnd {
+        padding-left: unset !important;
     }
 }
