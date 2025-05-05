@@ -132,3 +132,10 @@ button {
         padding-right: calc(8vw);
     }
 }
+
+@media(max-width: 540px) {
+    content {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}

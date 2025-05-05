@@ -112,7 +112,37 @@
         a {
             position: absolute;
             top: 126px;
-            left: 27px;
+            left: 34px !important;
+            margin-left: unset !important;
+        }
+    }
+
+    .socials {
+        justify-content: center !important;
+    }
+}
+
+@media(max-width: 550px) {
+    .footerTextWrap {
+        padding: 0 50px !important;
+    }
+}
+
+@media(max-width: 425px) {
+    .footerTextWrap {
+        padding: 0 18px !important;
+    }
+}
+
+@media(max-width: 375px) {
+    .footerTextWrap {
+        .logoWrap {
+            a {
+                top: 132px;
+                left: 44px !important;
+                margin: unset;
+                font-size: 21px !important;
+            }
         }
     }
 }

@@ -7,6 +7,7 @@
     align-items: center;
     position: relative;
     justify-content: center;
+    z-index: 3;
 
     .purpleLine1 {
         position: absolute;
@@ -62,6 +63,7 @@ p {
     margin-top: 16px;
     margin-bottom: 96px;
     text-align: center;
+    z-index: 3;
 }
 
 .projectDiv {
@@ -113,6 +115,7 @@ p {
                 font-size: 32px;
                 line-height: 120%;
                 color: #9747FF;
+                z-index: 4;
             }
 
             .usedSkills {
@@ -120,6 +123,7 @@ p {
                 font-size: 23px;
                 line-height: 120%;
                 color: #70E61C;
+                z-index: 4;
             }
 
             .description {
@@ -129,6 +133,7 @@ p {
                 font-size: 16px;
                 line-height: 120%;
                 color: #FFFFFF;
+                z-index: 4;
             }
 
             a {
@@ -218,7 +223,7 @@ p {
 
 .purpleShadow3 {
     position: absolute;
-    left: -150px;
+    left: -85px;
     top: 50%;
     max-width: 636px;
     width: 100%;
@@ -235,11 +240,17 @@ p {
         .purpleLine1 {
             left: calc(50% - 240px) !important;
         }
-    
-        .purpleLine2 {  
+
+        .purpleLine2 {
             left: calc(50% + 170px) !important;
             width: calc(50% - 174px);
         }
+    }
+
+    .btnBox {
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 50px !important;
     }
 }
 
@@ -250,8 +261,9 @@ p {
 
     .purpleShadow3 {
         top: 54% !important;
-    } 
-    
+        max-height: 562.73px !important;
+    }
+
 
     .projectWrapper {
         height: fit-content;
@@ -285,11 +297,101 @@ p {
 }
 
 @media (max-width: 600px) {
-    h1 {
-        font-size: 55px !important;
+
+    .portfolioHeader {
+        h1 {
+            font-size: 55px !important;
+        }
+
+        .purpleLine1 {
+            width: calc(50% - 194px) !important;
+            left: 51px !important;
+        }
+
+        .purpleLine2 {
+            left: calc(50% + 138px) !important;
+            width: calc(50% - 142px) !important;
+        }
     }
+
 
     .flexEnd {
         padding-left: unset !important;
     }
+
+}
+
+@media (max-width: 540px) {
+
+    .portfolioHeader {
+
+        h1 {
+            font-size: 45px !important;
+            margin: unset !important;
+        }
+
+        .purpleLine1 {
+            left: 25px !important;
+            max-width: calc(50% - 142px) !important;
+            width: 100% !important;
+            min-width: 20px !important;
+        }
+
+        .purpleLine2 {
+            left: calc(50% + 115px) !important;
+            width: calc(50% - 119px) !important;
+        }
+    }
+
+    .btnBox {
+
+        gap: 24px !important;
+    }
+
+    .linkBtn {
+        padding: 15px 25px !important;
+        max-width: 130px !important;
+        width: 100% !important;
+        height: 48px !important;
+        white-space: nowrap !important;
+
+        &:hover {
+            background: #9747FF !important;
+            transform: none !important;
+            box-shadow: none !important;
+            border: unset !important;
+        }
+
+    }
+
+    .BtnDisabled {
+
+        padding: 15px 25px !important;
+        max-width: 130px !important;
+        width: 100% !important;
+        height: 48px !important;
+        white-space: nowrap !important;
+    }
+
+    .gitBtn {
+        padding: 15px 25px !important;
+        max-width: 130px !important;
+        width: 100% !important;
+        height: 48px !important;
+        white-space: nowrap !important;
+
+        &:hover {
+            background: transparent !important;
+            transform: none !important;
+            box-shadow: none !important;
+            border: 1px solid #70E61C !important;
+        }
+    }
+
+    .infobox {
+        a {
+            font-size: 18px !important;
+        }
+    }
+
 }

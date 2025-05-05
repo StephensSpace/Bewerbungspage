@@ -109,3 +109,9 @@ app-footer {
     position: relative;
     bottom: 0;
 }
+
+@media (max-width: 1435px) {
+    app-here-iam {
+        justify-content: space-between;
+    }
+}

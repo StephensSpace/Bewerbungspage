@@ -3,6 +3,7 @@
     max-width: 1440px;
     height: auto;
     display: flex;
+    
 
     .textAndPic {
         display: flex;
@@ -23,6 +24,14 @@
 
     .text {
 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        max-width: 55%;
+        width: 100%;
+        gap: 32px;
+
         h1 {
             all: unset;
             font-family: 'Poppins';
@@ -30,14 +39,6 @@
             font-weight: 800;
             color: white;
         }
-
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        max-width: 55%;
-        width: 100%;
 
         p {
             all: unset;
@@ -145,6 +146,7 @@ app-skills {
         .text {
             max-width: 86%;
             z-index: 3;
+            gap: 24px !important;
 
             p{
                 padding-right: 19px !important;
@@ -158,6 +160,13 @@ app-skills {
     h1 {
         font-size: 62px !important;
     }
+
+    .leftGreenShadow {
+        bottom: -111px !important;
+        max-width: 190px !important;
+        width: 100% !important;
+        height: auto !important;
+    } 
 }
 
 @media (max-width: 700px) {
@@ -170,6 +179,20 @@ app-skills {
     h1 {
         font-size: 55px !important;
     }
+}
 
-    
+@media(max-width: 540px) {
+    .textAndPic {
+        .text {
+            h1 {
+                font-size: 45px !important;
+            }
+
+            p {
+                img {
+                    margin: unset;
+                }
+            }
+        }
+    }
 }
