@@ -9,6 +9,10 @@ content {
     padding: 37px 100px;
     box-sizing: border-box;
 
+    .menuToggle {
+        display: none;
+    }
+
     img {
         width: 150px;
         height: 35px;
@@ -63,6 +67,19 @@ content {
     height: 32px;
     justify-content: space-between;
     gap: 16px;
+}
+
+app-menu {
+    height: calc(100vh - 109.2px);
+    position: fixed;
+    top: 109.2px;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 29, 47, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .langBtnOff {
@@ -121,6 +138,11 @@ button {
         nav {
             display: none;
         }
+
+        .menuToggle {
+            display: block;
+            cursor: pointer;
+        }
     }
 
 
@@ -139,3 +161,5 @@ button {
         padding-right: 25px !important;
     }
 }
+
+

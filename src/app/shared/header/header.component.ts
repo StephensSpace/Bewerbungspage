@@ -1,47 +1,38 @@
 import { Component } from '@angular/core';
-import { RouterModule, Router } from '@angular/router';
+import { RouterModule, } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
-import { NgClass } from '@angular/common';
+import { ScrollService } from '../../services/scroll.service';
+import { MenuStateService } from '../../services/menuState.service';
+import { NgClass, NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { texts } from '../../languageData/languageTexts';
-
+import { MenuComponent } from '../../menu/menu.component';
+import { Observable } from 'rxjs';
 
 
 @Component({
   selector: 'app-header',
-  imports: [RouterModule, NgClass, CommonModule],
+  imports: [RouterModule, NgClass, CommonModule, NgIf, MenuComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   public texts = texts;
+  menuOpen$: Observable<boolean>;
+
 
   constructor(public languageService: LanguageService,
-    private router: Router
-  ) { }
+    public scrollService: ScrollService,
+    public menuState: MenuStateService
+  ) { 
+    this.menuOpen$ = this.menuState.menuOpen;
+  }
 
-  scrollToFragment(event: Event, fragment: string) {
-    event.preventDefault(); // Verhindert das Neuladen der Seite
+ 
 
-    const currentUrl = window.location.pathname;
 
-    // Wenn nicht auf der Hauptseite, navigiere zurück ohne die Seite neu zu laden
-    if (currentUrl !== '/') {
-      // Navigiere zur Hauptseite, ohne die Seite neu zu laden
-      this.router.navigate(['/']).then(() => {
-        // Warte bis die Navigation abgeschlossen ist und scrolle dann zum Fragment
-        this.scrollToElement(fragment);
-      });
-    } else {
-      this.scrollToElement(fragment);
-    }
-}
+  toggleMenu() {
+    this.menuState.toggleMenu();  // Menü umschalten
+  }
 
-// Hilfsmethode zum Scrollen zum Element
-private scrollToElement(fragment: string) {
-    const element = document.getElementById(fragment);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-    }
-}
 }

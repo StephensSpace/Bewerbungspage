@@ -110,6 +110,10 @@ app-footer {
     bottom: 0;
 }
 
+.noScroll {
+    overflow: hidden;
+}
+
 @media (max-width: 1435px) {
     app-here-iam {
         justify-content: space-between;

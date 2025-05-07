@@ -34,7 +34,7 @@
     z-index: 1;
     max-width: 678px;
     width: 100%;
-    
+
 }
 
 .formAndTextWrap {
@@ -104,7 +104,7 @@
         .contactTextHeader {
             font-size: 32px;
             font-weight: 700;
-            padding-right: 20px; 
+            padding-right: 20px;
         }
 
         .formDescripText {
@@ -385,7 +385,7 @@ button {
         font-size: 62px !important;
     }
 
-   
+
     .formAndTextWrap {
         flex-direction: column;
     }
@@ -402,6 +402,7 @@ button {
 
     .formWrap {
         align-items: flex-start !important;
+
         form {
             gap: 24px;
             margin-top: 20px;
@@ -410,7 +411,8 @@ button {
             .input-wrapper {
                 max-width: 100% !important;
 
-                input, textarea {
+                input,
+                textarea {
                     max-width: 100% !important;
                     margin-bottom: 0 !important;
                 }
@@ -434,7 +436,35 @@ button {
 }
 
 @media (max-width: 600px) {
-    h1 {
-        font-size: 55px !important;
+
+    .contactHeader {
+
+        width: 100%;
+        gap: 16px;
+
+        h1 {
+            font-size: 55px !important;
+            margin-right: calc(50% - 115px) !important;
+            margin-left: unset !important;
+        }
+
+
+    }
+
+}
+
+@media(max-width: 540px) {
+    .contactHeader {
+        h1 {
+            font-size: 45px !important;
+            margin-right: calc(50% - 104px) !important;
+
+        }
+    }
+
+    .textWrap {
+        .contactTextHeader {
+            font-size: 26px !important;
+        }
     }
 }

@@ -424,14 +424,22 @@
 @media (max-width: 600px) {
     h1 {
         font-size: 55px !important;
-        margin-left: 40px !important;
+        margin-left: calc(50% - 120px) !important;
     }
 }
 
-@media(max-width: 570px) {
+@media(max-width: 540px) {
     .skillSymbols {
         grid-template-columns: repeat(3, 1fr);
     }
+    .h1AndLine {
+        gap: 12px !important;
+        h1 {
+            font-size: 45px !important;
+            margin-left: calc(50% - 97px) !important;
+        }
+    }
+    
 }
 
 @media (max-width: 517px) {
@@ -453,5 +461,11 @@
 
 
 
+    }
+}
+
+@media (max-width: 360px) {
+    .tooltip-container {
+        display: contents !important;
     }
 }
