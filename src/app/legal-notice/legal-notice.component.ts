@@ -6,19 +6,19 @@ import { CommonModule } from '@angular/common';
 
 
 @Component({
-  selector: 'app-legal-notice',
-  standalone: true,
-  imports: [HeaderComponent, FooterComponent, CommonModule],
-  templateUrl: './legal-notice.component.html',
-  styleUrl: './legal-notice.component.scss'
+    selector: 'app-legal-notice',
+    standalone: true,
+    imports: [HeaderComponent, FooterComponent, CommonModule],
+    templateUrl: './legal-notice.component.html',
+    styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent {
-  constructor(public languageService: LanguageService) { }
-  public text: {
-    de: string,
-    en: string
-  } = {
-      de: `<h1>Impressum</h1>
+    constructor(public languageService: LanguageService) { }
+    public text: {
+        de: string,
+        en: string
+    } = {
+            de: `<h1>Impressum</h1>
     <p>Angaben gemäß § 5 DDG</p>
     <p>Stephen Schaz<br>
         <br>
@@ -59,9 +59,9 @@ export class LegalNoticeComponent {
         Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von
         Werbeinformationen, etwa durch Spam-Mails, vor.<br>
     </p><br>
-    Impressum von <a href="https://impressum-generator.de" rel="dofollow">Impressum-Generator.de</a>. Powered by <a
-        href="https://www.kanzlei-hasselbach.de/" rel="nofollow">Franziska Hasselbach, Bonn</a>.`,
-      en: `<h1>Imprint</h1>
+    <p>Impressum von <a href="https://impressum-generator.de" rel="dofollow">Impressum-Generator.de</a>. Powered by <a
+        href="https://www.kanzlei-hasselbach.de/" rel="nofollow">Franziska Hasselbach, Bonn</a>.</p>`,
+            en: `<h1>Imprint</h1>
 <p>Details according to § 5 DDG</p>
 <p>Stephen Schaz<br>
     <br>
@@ -97,7 +97,7 @@ export class LegalNoticeComponent {
     the pages reserve the right to take legal action in the event of the unsolicited sending of advertising information, 
     such as through spam emails.<br>
 </p><br>
-Imprint from <a href="https://impressum-generator.de" rel="dofollow">Impressum-Generator.de</a>. Powered by <a
-    href="https://www.kanzlei-hasselbach.de/" rel="nofollow">Franziska Hasselbach, Bonn</a>.`
-    }
+<p>Imprint from <a href="https://impressum-generator.de" rel="dofollow">Impressum-Generator.de</a>. Powered by <a
+    href="https://www.kanzlei-hasselbach.de/" rel="nofollow">Franziska Hasselbach, Bonn</a>.</p>`
+        }
 }

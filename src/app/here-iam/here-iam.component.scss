@@ -198,6 +198,10 @@ svg {
         height: 40px;
         z-index: 3;
 
+        .linkSymbols {
+            height: 30px;
+        }
+
         a {
             text-decoration: none;
             color: white;

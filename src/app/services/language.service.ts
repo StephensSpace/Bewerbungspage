@@ -10,6 +10,6 @@ export class LanguageService {
 
   setLanguage(german: boolean) {
     this.isGermanSubject.next(german);
-    console.log(this.isGermanSubject.getValue())
+    
   }
 }
