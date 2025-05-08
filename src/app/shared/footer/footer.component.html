@@ -1,6 +1,7 @@
 <div class="footerTextWrap">
     <div class="logoWrap">
-        <img src="/assets/Bewerbungslogo.png" alt="">
+        <img src="/assets/Bewerbungslogo.png" alt="Logo"
+        (click)="scrollService.scrollToTop()">
         <a [routerLink]="['/legal-notice']">Legal Notice</a>
     </div>
     <p>&copy; Stephen Schaz 2025</p>

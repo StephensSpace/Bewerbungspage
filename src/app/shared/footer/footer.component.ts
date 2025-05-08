@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ScrollService } from '../../services/scroll.service';
 
 
 @Component({
@@ -9,5 +10,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  constructor(
+      public scrollService: ScrollService,
+      ) {}
 
 }

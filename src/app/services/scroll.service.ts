@@ -38,5 +38,9 @@ export class ScrollService {
   
     observer.observe(element);
   }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
   
 }

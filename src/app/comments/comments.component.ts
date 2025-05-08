@@ -14,13 +14,11 @@ import { slideInOutRight } from '../animations/slideInOut';
 })
 export class CommentsComponent implements AfterViewInit {
   
-  @ViewChild('observerAnchor2', { static: true }) anchor!: ElementRef;
   public showPic: boolean = false;
   constructor(public languageService: LanguageService, public scrollService: ScrollService) {}
   currentIndex = 0;
 
-
-  
+  @ViewChild('observerAnchor2', { static: true }) anchor!: ElementRef;
 
   ngAfterViewInit(): void {
     // Scroll-Tracking
@@ -32,7 +30,7 @@ export class CommentsComponent implements AfterViewInit {
         // Nach 1 Sekunde overflowX wieder auf auto setzen
         setTimeout(() => {
           document.body.style.overflowX = 'auto';
-        }, 1500);
+        }, 1800);
       });
     }
   }

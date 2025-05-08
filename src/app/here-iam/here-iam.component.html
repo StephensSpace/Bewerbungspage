@@ -11,9 +11,9 @@
                 <p class="job">FRONTEND DEVELOPER</p>
             </div>
         </div>
-        <button>
+        <a href="#contact" (click)="scrollService.scrollToFragment($event, 'contact')">
             {{ (languageService.isGerman$ | async) ? texts.hereIAmBtn.de : texts.hereIAmBtn.en }}
-        </button>
+        </a>
 
     </div>
 

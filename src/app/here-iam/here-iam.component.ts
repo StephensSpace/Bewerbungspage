@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 import { texts } from '../languageData/languageTexts';
 import { CommonModule } from '@angular/common';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-here-iam',
@@ -11,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HereIamComponent {
   public texts = texts;
-  constructor(public languageService: LanguageService) { }
+  constructor(public languageService: LanguageService,
+    public scrollService: ScrollService) { }
 
 }

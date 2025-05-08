@@ -16,6 +16,7 @@ content {
     img {
         width: 150px;
         height: 35px;
+        cursor: pointer;
     }
 
     nav {
@@ -52,10 +53,26 @@ content {
         text-decoration: none;
         white-space: nowrap;
         transition: transform 0.2s ease-in-out;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #70E61C;
+            /* Farbe der Linie */
+            transition: width 0.3s ease;
+        }
 
         &:hover {
-            transform: scale(1.07);
             color: #70E61C;
+    
+            &::after {
+                width: 40px;
+            }
         }
     }
 }

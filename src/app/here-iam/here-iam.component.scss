@@ -65,15 +65,14 @@ svg {
         height: 319px;
 
 
-        button {
+        a {
             display: flex;
+            text-decoration: none;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             padding: 15px 30px;
             gap: 10px;
-            width: 165px;
-            height: 58px;
             background: #70E61C;
             box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 8px;
@@ -81,7 +80,6 @@ svg {
             font-style: normal;
             font-weight: 300;
             font-size: 23px;
-            line-height: 120%;
             color: #FFFFFF;
             white-space: nowrap;
             cursor: pointer;
@@ -265,7 +263,7 @@ svg {
         margin-right: calc(678px - 29vw) !important;
         height: unset !important;
 
-        button {
+        a {
             margin-top: 61px;
         }
 
@@ -308,7 +306,7 @@ svg {
         margin-right: unset !important;
         margin-top: 15vh !important;
 
-        button {
+        a {
             margin-inline-end: unset !important;
         }
     }
@@ -383,7 +381,7 @@ svg {
                 }
             }
 
-            button {
+            a {
                 margin-top: 32px !important;
                 margin-left: unset !important;
             }
@@ -580,9 +578,8 @@ svg {
         .textboxAndBtn {
             margin-top: -40px !important;
 
-            button {
-                width: 133px !important;
-                height: 49px !important;
+            a {
+                padding: 10px 20px !important;
                 font-size: 18px !important;
                 margin-top: 16px !important;
             }
