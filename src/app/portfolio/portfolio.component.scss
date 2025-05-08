@@ -66,6 +66,14 @@ p {
     z-index: 3;
 }
 
+#observerAnchor4 {
+    position: absolute;
+    top: 200px;
+    /* z.B. etwas unterhalb der Viewport-Oberkante */
+    width: 1px;
+    height: 1px;
+}
+
 .projectDiv {
     position: relative;
     max-width: 1440px;

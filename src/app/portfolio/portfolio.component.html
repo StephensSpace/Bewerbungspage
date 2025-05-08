@@ -1,8 +1,9 @@
-<div class="portfolioHeader">
+<div class="portfolioHeader" *ngIf="showRightHeadline" @slideInOutRight>
     <div class="purpleLine1"></div>
     <h1>Portfolio</h1>
     <div class="purpleLine2"></div>
 </div>
+<div #observerAnchor4 id="observerAnchor4"></div>
 <p [innerHTML]="(languageService.isGerman$ | async) ? texts.portfolioText.de : texts.portfolioText.en">
 </p>
 <div class="projectDiv">

@@ -28,4 +28,10 @@
         </svg>
     </button>
 </content>
-<app-menu *ngIf="menuState.menuOpen | async"></app-menu>
+<!-- ng-container, um die Animation auf das Menü anzuwenden -->
+<ng-container *ngIf="menuOpen$ | async; else menuClosed">
+    <app-menu @slideInOutMenu></app-menu>
+  </ng-container>
+  
+  <!-- ng-template für den Fall, dass menuOpen false ist -->
+  <ng-template #menuClosed></ng-template>

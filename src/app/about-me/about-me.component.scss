@@ -86,7 +86,7 @@
     height: 0px;
     border: 2px solid #70E61C;
     position: absolute;
-    top: 19.9%;
+    top: 17.9%;
     z-index: 3;
     left: calc((100vw - 722px) / 2 + 861.737px);
 }
@@ -108,6 +108,13 @@
     z-index: 2;
 }
 
+#observerAnchor3 {
+    position: absolute;
+    top: 200px; /* z.B. etwas unterhalb der Viewport-Oberkante */
+    width: 1px;
+    height: 1px;
+  }
+
 app-skills {
     display: flex;
     position: relative;
@@ -119,6 +126,7 @@ app-skills {
     height: fit-content;
     margin: 0 auto;
     background-color: rgb(20, 29, 47);
+    overflow: hidden;
 }
 
 @media (max-width: 1450px) {

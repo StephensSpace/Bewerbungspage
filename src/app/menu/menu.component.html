@@ -2,7 +2,7 @@
     <content>
         <img src="/assets/Bewerbungslogo.png" alt="">
         <button class="menuToggle" (click)="toggleMenu()" aria-label="Menü öffnen">
-            <svg *ngIf="menuState.menuOpen | async" width="35" height="32" viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="35" height="32" viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 5.00024L27.6506 26.7615" stroke="white" stroke-width="2" stroke-linecap="round" />
                 <path d="M7 27L27.46 5.05939" stroke="white" stroke-width="2" stroke-linecap="round" />
             </svg>
@@ -10,7 +10,7 @@
     </content>
 </div>
 
-<div class="navbar" @slideInOut>
+<div class="navbar">
     <div class="links">
         <a href="#" (click)="handleMobileNavigation($event, 'aboutMe')">
             {{ (languageService.isGerman$ | async) ? texts.header.aboutMe.de : texts.header.aboutMe.en }}
@@ -19,17 +19,12 @@
         <a href="#" (click)="handleMobileNavigation($event, 'portfolio')">Portfolio</a>
         <a href="#" (click)="handleMobileNavigation($event, 'contact')">Contact</a>
     </div>
+
     <div class="languageBtns">
         <button [ngClass]="(languageService.isGerman$ | async) ? 'langBtnOn' : 'langBtnOff'"
-            (click)="languageService.setLanguage(true)">
-            DE
-        </button>
+            (click)="languageService.setLanguage(true)">DE</button>
         <p>/</p>
         <button [ngClass]="(languageService.isGerman$ | async) ? 'langBtnOff' : 'langBtnOn'"
-            (click)="languageService.setLanguage(false)">
-            EN
-        </button>
+            (click)="languageService.setLanguage(false)">EN</button>
     </div>
 </div>
-
-

@@ -14,7 +14,8 @@
             </div>
         </div>
     </div>
-    <div class="textAndButton">
+    <div *ngIf="showTextAndButton" @slideInOutRight class="textAndButton">
+        <div class="dividingVector2"></div>
         <div class="h1AndLine">
             <h1>My Skills</h1>
             <div class="dividingVector"></div>
@@ -53,16 +54,20 @@
                 texts.skillText2.de : texts.skillText2.en
                 }}
             </p>
-            <a href="#contact" (click)="scrollToFragment($event, 'contact')">{{
+            <a href="#contact" (click)="scrollService.scrollToFragment($event, 'contact')">{{
                 (languageService.isGerman$ | async) ?
                 texts.hereIAmBtn.de : texts.hereIAmBtn.en
                 }}
             </a>
         </div>
     </div>
+    
 </div>
-<div class="skillAndTextWrapMobile">
 
+<div #observerAnchor></div>
+
+<div class="skillAndTextWrapMobile"  *ngIf="showTextAndButton" @slideInOutRight>
+    
     <div class="textAndButton">
         <div class="flexEnd">
             <div class="h1AndLine">
@@ -120,7 +125,7 @@
                 }}
             </p>
             <div class="linkBox">
-                <a href="#contact" (click)="scrollToFragment($event, 'contact')">{{
+                <a href="#contact" (click)="scrollService.scrollToFragment($event, 'contact')">{{
                     (languageService.isGerman$ | async) ?
                     texts.hereIAmBtn.de : texts.hereIAmBtn.en
                     }}
@@ -130,4 +135,3 @@
         </div>
     </div>
 </div>
-<div class="dividingVector2"></div>

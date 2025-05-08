@@ -1,17 +1,42 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component,ViewChild, ElementRef, AfterViewInit  } from '@angular/core';
 import { LanguageService } from '../services/language.service';
+import { ScrollService } from '../services/scroll.service';
+import { slideInOutRight } from '../animations/slideInOut';
 
 @Component({
   selector: 'app-comments',
   imports: [NgFor, NgIf, AsyncPipe],
   templateUrl: './comments.component.html',
-  styleUrl: './comments.component.scss'
+  styleUrl: './comments.component.scss',
+  animations: [slideInOutRight]
+  
 })
-export class CommentsComponent {
-
-  constructor(public languageService: LanguageService) {}
+export class CommentsComponent implements AfterViewInit {
+  
+  @ViewChild('observerAnchor2', { static: true }) anchor!: ElementRef;
+  public showPic: boolean = false;
+  constructor(public languageService: LanguageService, public scrollService: ScrollService) {}
   currentIndex = 0;
+
+
+  
+
+  ngAfterViewInit(): void {
+    // Scroll-Tracking
+    if (this.anchor?.nativeElement) {
+      this.scrollService.observeElement(this.anchor.nativeElement, () => {
+        // Setze overflowX auf hidden, wenn die Animation startet
+        document.body.style.overflowX = 'hidden';
+        this.showPic = true;
+        // Nach 1 Sekunde overflowX wieder auf auto setzen
+        setTimeout(() => {
+          document.body.style.overflowX = 'auto';
+        }, 1500);
+      });
+    }
+  }
+
   comments: {
     img: string,
     commentDE: string,

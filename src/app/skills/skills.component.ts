@@ -1,29 +1,32 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { NgClass, NgFor, NgIf, NgStyle, CommonModule } from '@angular/common';
 import { LanguageService } from '../services/language.service';
 import { texts } from '../languageData/languageTexts';
+import { ScrollService } from '../services/scroll.service';
+import { slideInOutRight } from '../animations/slideInOut';
 
 
 @Component({
   selector: 'app-skills',
   imports: [NgFor, NgIf, NgClass, NgStyle, CommonModule],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrl: './skills.component.scss',
+  animations: [slideInOutRight]
 })
-export class SkillsComponent {
+export class SkillsComponent implements AfterViewInit {
   public texts = texts;
-  constructor(public languageService: LanguageService) { }
+  public showTextAndButton = false;
+  constructor(public languageService: LanguageService, public scrollService: ScrollService) { }
+  @ViewChild('observerAnchor', { static: true }) anchor!: ElementRef;
 
-  scrollToFragment(event: Event, fragment: string) {
-    
-    event.preventDefault(); // Verhindert das Neuladen der Seite
-
-    const element = document.getElementById(fragment); // Holt das Element mit der ID des Fragments
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' }); // Scrollt sanft zu dem Element
+  ngAfterViewInit(): void {
+    if (this.anchor?.nativeElement) {
+      this.scrollService.observeElement(this.anchor.nativeElement, () => {
+        this.showTextAndButton = true;
+      });
     }
   }
-
+  
   skillset = [
     {
       img: '/assets/skills/skill0.svg',

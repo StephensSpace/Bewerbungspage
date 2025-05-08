@@ -1,20 +1,40 @@
 import { NgClass, NgIf, CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject,ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import {  FormsModule, NgForm,  } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ScrollService } from '../services/scroll.service';
 import { LanguageService } from '../services/language.service';
 import { texts } from '../languageData/languageTexts';
+import { slideInOutRight,  slideInOutLeft} from '../animations/slideInOut';
 
 @Component({
   selector: 'app-kontaktform',
   imports: [NgIf, FormsModule, NgClass, RouterModule, CommonModule],
   templateUrl: './kontaktform.component.html',
-  styleUrl: './kontaktform.component.scss'
+  styleUrl: './kontaktform.component.scss',
+  animations: [slideInOutRight, slideInOutLeft]
 })
 export class KontaktformComponent {
+  showLeftHeader: boolean = false;
   public texts = texts;
-  constructor(public languageService: LanguageService) {}  
+  constructor(public languageService: LanguageService, public scrollService: ScrollService) {} 
+  @ViewChild('observerAnchor5', { static: true }) anchor!: ElementRef; 
+
+  ngAfterViewInit(): void {
+    // Scroll-Tracking
+    if (this.anchor?.nativeElement) {
+      this.scrollService.observeElement(this.anchor.nativeElement, () => {
+        // Setze overflowX auf hidden, wenn die Animation startet
+        document.body.style.overflowX = 'hidden';
+        this.showLeftHeader = true;
+        // Nach 1 Sekunde overflowX wieder auf auto setzen
+        setTimeout(() => {
+          document.body.style.overflowX = 'auto';
+        }, 1800);
+      });
+    }
+  }
 
   http = inject(HttpClient)
 

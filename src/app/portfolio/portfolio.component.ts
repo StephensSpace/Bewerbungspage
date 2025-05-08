@@ -1,17 +1,40 @@
-import { CommonModule, NgClass, NgFor,  } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, NgClass, NgFor, } from '@angular/common';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 import { texts } from '../languageData/languageTexts';
+import { slideInOutRight } from '../animations/slideInOut';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-portfolio',
   imports: [NgFor, NgClass, CommonModule],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+  styleUrl: './portfolio.component.scss',
+  animations: [slideInOutRight]
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements AfterViewInit {
+
+  showRightHeadline: boolean = false;
   public texts = texts;
-  constructor(public languageService: LanguageService) { }
+  constructor(public languageService: LanguageService,
+    public scrollService: ScrollService) { }
+
+  @ViewChild('observerAnchor4', { static: true }) anchor!: ElementRef;
+
+  ngAfterViewInit(): void {
+    // Scroll-Tracking
+    if (this.anchor?.nativeElement) {
+      this.scrollService.observeElement(this.anchor.nativeElement, () => {
+        // Setze overflowX auf hidden, wenn die Animation startet
+        document.body.style.overflowX = 'hidden';
+        this.showRightHeadline = true;
+        // Nach 1 Sekunde overflowX wieder auf auto setzen
+        setTimeout(() => {
+          document.body.style.overflowX = 'auto';
+        }, 1500);
+      });
+    }
+  }
 
   projects: {
     imgPath: string;
