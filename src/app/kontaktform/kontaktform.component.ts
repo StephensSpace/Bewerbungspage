@@ -42,7 +42,7 @@ export class KontaktformComponent implements AfterViewInit {
         this.showLeftHeader = true;
         setTimeout(() => {
           document.body.style.overflowX = 'auto';
-        }, 3600);
+        }, 3800);
       });
     }
   }
@@ -67,11 +67,11 @@ export class KontaktformComponent implements AfterViewInit {
   };
 
   /** Testmodus – verhindert echtes Senden */
-  mailTest = true;
+  mailTest = false;
 
   /** POST-Konfiguration für Mailversand */
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://frontendschaz.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -98,7 +98,6 @@ export class KontaktformComponent implements AfterViewInit {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log(ngForm, "des gooot scho");
       ngForm.resetForm();
     }
   }

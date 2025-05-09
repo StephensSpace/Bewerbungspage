@@ -1,22 +1,22 @@
 .skillAndTextWrapDesktop {
     display: flex;
     margin-top: 70px;
-    max-width: 1360px;
+    max-width: 1440px;
     width: 100%;
     min-height: 39.8vh;
     height: 470px;
     align-items: center;
-    margin-left: 100px;
+    padding: 0 100px;
     justify-content: space-between;
 }
 
 .dividingVector2 {
-    width: calc((100vw - 1258px) / 2);
+    width: calc((100vw - 1506px) / 2);
     height: 0px;
     border: 2px solid #9747FF;
     position: absolute;
-    top: 16.22%;
-    left: calc((100% + 322px) / 2);
+    top: 16.92%;
+    left: calc((100% + 620px) / 2);
 }
 
 .skillAndTextWrapMobile {
@@ -52,12 +52,13 @@
     width: 100%;
     margin-top: -50px;
     position: relative;
+    
 
     .h1AndLine {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        max-width: fit-content;
+        justify-content: flex-end;
+        max-width: 100%;
         width: 100%;
         gap: 5px;
 
@@ -85,12 +86,12 @@
         font-weight: 400;
         font-size: 16px;
         color: white;
-        width: 77%;
+        width: 100%;
         text-align: end;
     }
 
     .h2AndButton {
-        width: 77%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;

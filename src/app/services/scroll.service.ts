@@ -33,6 +33,18 @@ export class ScrollService {
     }
   }
 
+  scrollToFragment2(event: Event, id: string) {
+  event.preventDefault();
+
+  // erster Scroll zu Element
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+
+  // zweiter Scroll mit Delay zum Bottom
+  setTimeout(() => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }, 1500);
+}
+
   /**
    * Scrollt zu einem spezifischen Element auf der Seite, das mit einer Fragment-ID identifiziert wird.
    * @param fragment Die ID des Fragments, zu dem gescrollt werden soll.

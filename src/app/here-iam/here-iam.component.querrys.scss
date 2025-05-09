@@ -31,7 +31,7 @@
     }
 
     svg {
-        top: 20.58vh;
+        top: 14.58vh;
     }
 
     .portraitImg {
@@ -60,6 +60,16 @@
 
     .textbox {
         margin-inline-end: unset !important;
+    }
+
+    svg {
+        top: 19.38vh;
+    }
+}
+
+@media (max-width: 1640px) {
+    .textboxAndBtn a {
+        margin-top: 52.8px;
     }
 }
 
@@ -187,7 +197,7 @@
 @media (max-width: 1070px) {
 
     svg {
-        top: 21vh;
+        top: 20.1vh;
     }
 
     .topPartWrapper {
