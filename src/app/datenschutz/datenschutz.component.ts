@@ -13,6 +13,11 @@ import { CommonModule } from '@angular/common';
 })
 export class DatenschutzComponent {
   constructor(public languageService: LanguageService) { }
+
+  /**
+   Objekt fü das verwalten der Texte des Datenschutzes auf deutsch 
+   und englisch
+   */
   public datenschutz: {
     de: string,
     en: string

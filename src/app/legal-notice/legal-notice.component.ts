@@ -14,6 +14,11 @@ import { CommonModule } from '@angular/common';
 })
 export class LegalNoticeComponent {
     constructor(public languageService: LanguageService) { }
+
+    /**
+   Objekt fü das verwalten der Texte des Legal Notice auf deutsch 
+   und englisch
+   */
     public text: {
         de: string,
         en: string

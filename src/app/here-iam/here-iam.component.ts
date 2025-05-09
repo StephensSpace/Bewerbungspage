@@ -8,11 +8,26 @@ import { ScrollService } from '../services/scroll.service';
   selector: 'app-here-iam',
   imports: [CommonModule],
   templateUrl: './here-iam.component.html',
-  styleUrl: './here-iam.component.scss'
+  styleUrls: ['./here-iam.component.scss',
+              './here-iam.component.querrys.scss']
 })
+/**
+ * Repräsentiert die "Here I am"-Sektion der Seite.
+ * Zeigt Textinhalte abhängig von der aktuellen Sprache.
+ * Optional vorbereitet für Scroll-Animationen oder -Beobachtungen.
+ */
 export class HereIamComponent {
+  /** Enthält die Textinhalte in mehreren Sprachen */
   public texts = texts;
-  constructor(public languageService: LanguageService,
-    public scrollService: ScrollService) { }
 
+  constructor(
+    /** Sprache wird über LanguageService gesteuert */
+    public languageService: LanguageService,
+
+    /**
+     * Optionaler ScrollService, z. B. für spätere Scroll-basierte Effekte
+     * oder Sichtbarkeits-Trigger von DOM-Elementen.
+     */
+    public scrollService: ScrollService
+  ) {}
 }

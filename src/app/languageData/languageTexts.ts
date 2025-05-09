@@ -1,38 +1,103 @@
+/**
+ * Struktur für übersetzte Texte (Deutsch & Englisch)
+ */
 export type TranslatedText = {
     de: string;
     en: string;
 };
 
+/**
+ * Sammlung aller übersetzten Texte für die Website
+ */
 export const texts: {
+    /**
+     * Übersetzte Texte für Navigationspunkte im Header
+     */
     header: {
         aboutMe: TranslatedText,
         contact: TranslatedText
     },
+    /**
+     * Text für den Call-to-Action-Button "Let's Talk!"
+     */
     hereIAmBtn: TranslatedText,
+    /**
+     * Text für den Hinweis zum Runterscrollen
+     */
     scrollDown: TranslatedText,
+    /**
+     * Einführungstext über die eigene Person
+     */
     aboutMeText: TranslatedText,
+    /**
+     * Beschreibung des Wohnorts / Herkunft
+     */
     aboutMeLocation: TranslatedText,
+    /**
+     * Einleitungstext für den Portfolio-Abschnitt
+     */
     portfolioText: TranslatedText,
+    /**
+     * Überschrift im Kontaktformular
+     */
     kontaktformH2: TranslatedText,
+    /**
+     * Einleitungstext im Kontaktbereich
+     */
     contactDescripText: TranslatedText,
+    /**
+     * Hervorgehobener Zusatz zum Einleitungstext im Kontaktbereich
+     */
     contactDescriphigh: TranslatedText,
+    /**
+     * Einleitungstext zur Datenschutz-Zustimmung
+     */
     contactPrivacy: TranslatedText,
+    /**
+     * Text für den Link zur Datenschutzerklärung
+     */
     contactPrivacyLink: TranslatedText,
+    /**
+     * Fehlermeldungen im Kontaktformular
+     */
     contactErrors: {
         name: TranslatedText,
         email: TranslatedText,
         message: TranslatedText,
         privacy: TranslatedText
     },
+    /**
+     * Button-Text im Kontaktformular
+     */
     contactBtn: TranslatedText,
+    /**
+     * Untertitel im Skill-Bereich
+     */
     skillsUndertitle: TranslatedText,
+    /**
+     * Erste Zeile der Skill-Überschrift
+     */
     skillTextH2: TranslatedText,
+    /**
+     * Zweite, hervorgehobene Zeile der Skill-Überschrift
+     */
     skillTextH2High: TranslatedText,
+    /**
+     * Text zu kontinuierlichem Lernen
+     */
     skillText1: TranslatedText,
+    /**
+     * Text zur Bereitschaft, neue Skills zu lernen
+     */
     skillText2: TranslatedText,
+    /**
+     * Motivationstext – Lernbereitschaft und Interesse an neuen Technologien
+     */
     aboutMeMotivation: TranslatedText,
+    /**
+     * Text über Problemlösungsansatz und Teamarbeit
+     */
     aboutMeLogic: TranslatedText
-
 } = {
     header: {
         aboutMe: {
@@ -43,7 +108,6 @@ export const texts: {
             de: `Kontakt`,
             en: `Contact`
         },
-
     },
     hereIAmBtn: {
         de: 'Reden wir!',
@@ -144,14 +208,13 @@ export const texts: {
     skillsUndertitle: {
         de: `Von CRUD über Games bis zu Social Apps – ich 
         bringe das Know-how mit, um jede Herausforderung zu meistern.`,
-        en: `From CRUD to gaming to social apps –
+        en: `From CRUD to gaming to social apps – 
         I have the skills to tackle challenges across all of them.`
     },
     skillTextH2: {
         de: `Sie suchen`,
         en: `Looking for`
     },
-
     skillTextH2High: {
         de: `andere Skill?`,
         en: `another Skill?`
@@ -163,6 +226,5 @@ export const texts: {
     skillText2: {
         de: `Bereit für neue Skills – einfach fragen!`,
         en: `Excited to master new skills. Just ask!`
-    },
-
+    }
 };

@@ -69,7 +69,6 @@ p {
 #observerAnchor4 {
     position: absolute;
     top: 180px;
-    /* z.B. etwas unterhalb der Viewport-Oberkante */
     width: 1px;
     height: 1px;
 }
@@ -87,7 +86,6 @@ p {
     margin: 0 auto;
     width: 100%;
     height: 500px;
-
 
     .projectBox {
         display: flex;
@@ -224,7 +222,6 @@ p {
                     border: unset;
                 }
             }
-
         }
     }
 }
@@ -272,7 +269,6 @@ p {
         max-height: 562.73px !important;
     }
 
-
     .projectWrapper {
         height: fit-content;
 
@@ -305,7 +301,6 @@ p {
 }
 
 @media (max-width: 600px) {
-
     .portfolioHeader {
         h1 {
             font-size: 55px !important;
@@ -322,15 +317,12 @@ p {
         }
     }
 
-
     .flexEnd {
         padding-left: unset !important;
     }
-
 }
 
 @media (max-width: 540px) {
-
     .portfolioHeader {
 
         h1 {
@@ -369,7 +361,6 @@ p {
             box-shadow: none !important;
             border: unset !important;
         }
-
     }
 
     .BtnDisabled {
@@ -401,5 +392,4 @@ p {
             font-size: 18px !important;
         }
     }
-
 }
