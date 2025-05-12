@@ -1,0 +1,29 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Wenn die angeforderte Datei oder das Verzeichnis existiert, nichts tun
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Andernfalls leite alles an index.html weiter
+  RewriteRule ^.*$ index.html [L]
+</IfModule>
+
+# Optional: bessere Fehlerseite
+ErrorDocument 404 /index.html
+
+# Optional: Caching-Header für statische Dateien
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+# Optional: MIME-Typ für .woff2-Fonts (wichtig für manche Browser)
+AddType font/woff2 .woff2

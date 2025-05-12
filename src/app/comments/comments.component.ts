@@ -1,24 +1,20 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 import { ScrollService } from '../services/scroll.service';
-import { slideInOutRight } from '../animations/slideInOut';
+
 
 @Component({
   selector: 'app-comments',
   imports: [NgFor, NgIf, AsyncPipe],
   templateUrl: './comments.component.html',
   styleUrl: './comments.component.scss',
-  animations: [slideInOutRight]
 })
 /**
  * Zeigt Kommentare oder Testimonials über den Entwickler an.
  * Eine kleine Slider-Komponente mit Übersetzungsunterstützung und Scroll-basierter Animation.
  */
-export class CommentsComponent implements AfterViewInit {
-
-  /** Steuert die Sichtbarkeit des aktuellen Kommentarfotos */
-  public showPic: boolean = false;
+export class CommentsComponent  {
 
   /** Aktuell ausgewählter Kommentarindex */
   currentIndex = 0;
@@ -35,25 +31,6 @@ export class CommentsComponent implements AfterViewInit {
   ) {}
 
   /**
-   * Wird aufgerufen, sobald die View-Elemente initialisiert wurden.
-   * Registriert ein Beobachtungselement, um Animationen und Overflow-Anpassungen auszulösen.
-   */
-  ngAfterViewInit(): void {
-    if (this.anchor?.nativeElement) {
-      this.scrollService.observeElement(this.anchor.nativeElement, () => {
-        // Verhindere horizontales Scrollen während der Animation
-        document.body.style.overflowX = 'hidden';
-        this.showPic = true;
-
-        // Setze overflowX nach der Animation zurück
-        setTimeout(() => {
-          document.body.style.overflowX = 'auto';
-        }, 1800);
-      });
-    }
-  }
-
-  /**
    * Datenmodell für die Kommentare – enthält Bild, Text auf Deutsch & Englisch, Namen & Jobtitel.
    */
   comments: {
@@ -64,7 +41,7 @@ export class CommentsComponent implements AfterViewInit {
     job: string;
   }[] = [
     {
-      img: "/assets/People/Andrea.png",
+      img: "/assets/People/Andrea.jpg",
       commentDE: `Stephen hat mir als Web Designerin mit kreativen und lösungsorientierten 
 Ideen bei meinen Projekten weitergeholfen. 
 Seine pragmatische Herangehensweise und Geduld haben mir bereits des öfteren neue Lösungsansätze
@@ -87,7 +64,7 @@ have always been a great support to me within our team.`,
       job: "Frontend, Team Partner"
     },
     {
-      img: "/assets/People/Niclas.png",
+      img: "/assets/People/Niclas.jpg",
       commentDE: `Stephen hat ein gutes Auge für Details und hat uns sehr dabei geholfen, 
 schon in der Planungsphase alle relevanten Aspekte zu berücksichtigen, um das Design 
 benutzerfreundlich und funktional zu gestalten.  

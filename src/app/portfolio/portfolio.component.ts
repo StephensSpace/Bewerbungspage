@@ -44,16 +44,25 @@ export class PortfolioComponent implements AfterViewInit {
    * `overflowX` wird vorübergehend ausgeblendet.
    */
   ngAfterViewInit(): void {
-    if (this.anchor?.nativeElement) {
-      this.scrollService.observeElement(this.anchor.nativeElement, () => {
-        document.body.style.overflowX = 'hidden';
-        this.showRightHeadline = true;
-        setTimeout(() => {
-          document.body.style.overflowX = 'auto';
-        }, 1610);
-      });
-    }
+  if (this.anchor?.nativeElement) {
+    this.scrollService.observeElement(this.anchor.nativeElement, () => {
+      this.tryStartAnimation();
+    });
   }
+}
+
+private tryStartAnimation(): void {
+  // Falls schon blockiert → versuche es später nochmal
+  if (document.body.style.overflowX === 'hidden') {
+    setTimeout(() => this.tryStartAnimation(), 400);
+    return;
+  }
+  document.body.style.overflowX = 'hidden';
+  this.showRightHeadline = true;
+  setTimeout(() => {
+    document.body.style.overflowX = 'auto';
+  }, 1400); 
+}
 
   /**
    * Liste der Projekte, die im Portfolio angezeigt werden
@@ -70,7 +79,7 @@ export class PortfolioComponent implements AfterViewInit {
     commingSoon: boolean;
   }[] = [
     {
-      imgPath: "/assets/projects/Pkedex.svg",
+      imgPath: "/assets/projects/Pkedex.png",
       link: "https://pokedex.frontendschaz.de/",
       linkGit: "https://github.com/StephensSpace/Pokedex",
       descriptionEN:
@@ -84,7 +93,7 @@ export class PortfolioComponent implements AfterViewInit {
       commingSoon: false
     },
     {
-      imgPath: "/assets/projects/PolloLoco.svg",
+      imgPath: "/assets/projects/PolloLoco.png",
       link: "https://elpolloloco.frontendschaz.de",
       linkGit: "https://github.com/StephensSpace/El-Pollo-Loco",
       descriptionEN:
@@ -98,7 +107,7 @@ export class PortfolioComponent implements AfterViewInit {
       commingSoon: false
     },
     {
-      imgPath: "/assets/projects/Join.svg",
+      imgPath: "/assets/projects/Join.png",
       link: "https://joinda.frontendschaz.de/welcome.html",
       linkGit: "https://github.com/StephensSpace/JoinDA",
       descriptionEN:
@@ -112,7 +121,7 @@ export class PortfolioComponent implements AfterViewInit {
       commingSoon: false
     },
     {
-      imgPath: "/assets/projects/Dabubble.svg",
+      imgPath: "/assets/projects/Dabubble.png",
       link: "",
       linkGit: "",
       descriptionEN:

@@ -11,12 +11,12 @@
 }
 
 .dividingVector2 {
-    width: calc((100vw - 1506px) / 2);
+    width: calc((100% - 1508px) / 2);
     height: 0px;
     border: 2px solid #9747FF;
     position: absolute;
-    top: 16.92%;
-    left: calc((100% + 620px) / 2);
+    top: 27.12%;
+    right: 0px;
 }
 
 .skillAndTextWrapMobile {
@@ -52,7 +52,7 @@
     width: 100%;
     margin-top: -50px;
     position: relative;
-    
+
 
     .h1AndLine {
         display: flex;
@@ -243,4 +243,3 @@
     visibility: visible;
     opacity: 1;
 }
-

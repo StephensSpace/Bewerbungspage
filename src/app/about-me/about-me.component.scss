@@ -82,13 +82,13 @@
 }
 
 .greenLine2 {   
-    width: calc((100vw - 1040px) / 2);
+    width: calc((100% - 1024px) / 2);
     height: 0px;
     border: 2px solid #70E61C;
     position: absolute;
     top: 17.9%;
     z-index: 3;
-    left: calc((100vw - 722px) / 2 + 861.737px);
+    right: 0;
 }
 
 .picWithLine {

@@ -12,6 +12,10 @@ const routes: Routes = [
   { path: '', component: HomeComponent }, // Hauptseite
   { path: 'legal-notice', component: LegalNoticeComponent }, // Impressum
   { path: 'datenschutz', component: DatenschutzComponent }, // Datenschutz
+  {
+    path: '**',
+    loadComponent: () => import('./app/not-found/not-found.component').then(m => m.NotFoundComponent)
+  }
 ];
 
 bootstrapApplication(AppComponent, {

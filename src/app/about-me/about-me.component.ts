@@ -27,12 +27,8 @@ export class AboutMeComponent implements AfterViewInit {
   /**
    * Steuert die Sichtbarkeit des rechten Bildes in der Ansicht.
    */
-  showRightPic: boolean = false;
+  showTextAndPic: boolean = false;
 
-  /**
-   * Steuert die Sichtbarkeit des linken Textbereichs in der Ansicht.
-   */
-  showLeftText: boolean = false;
 
   /**
    * Konstruktor zur Initialisierung der benötigten Services.
@@ -55,17 +51,27 @@ export class AboutMeComponent implements AfterViewInit {
    * wenn das beobachtete Element in den Viewport kommt.
    */
   ngAfterViewInit(): void {
-    if (this.anchor?.nativeElement) {
-      this.scrollService.observeElement(this.anchor.nativeElement, () => {
-        // Verhindert horizontales Scrollen während der Animation
-        document.body.style.overflowX = 'hidden';
-        this.showRightPic = true;
-        this.showLeftText = true;
-        // Setzt overflowX nach 1,5 Sekunden wieder zurück
-        setTimeout(() => {
-          document.body.style.overflowX = 'auto';
-        }, 1470);
-      });
-    }
+  if (this.anchor?.nativeElement) {
+    this.scrollService.observeElement(this.anchor.nativeElement, () => {
+      this.tryStartAnimation();
+    });
   }
+}
+
+private tryStartAnimation(): void {
+  // Falls schon blockiert → versuche es später nochmal
+  if (document.body.style.overflowX === 'hidden') {
+    setTimeout(() => this.tryStartAnimation(), 300);
+    return;
+  }
+
+  // Setze overflowX, starte Animation
+  document.body.style.overflowX = 'hidden';
+  this.showTextAndPic = true;
+
+  // Setze overflowX nach individueller Zeit zurück (z. B. 700ms)
+  setTimeout(() => {
+    document.body.style.overflowX = 'auto';
+  }, 700); // Oder deine Komponentenspezifische Zeit
+}
 }

@@ -39,16 +39,29 @@ export class SkillsComponent implements AfterViewInit {
    * Wird nach der Initialisierung der Ansicht aufgerufen, um das Scroll-Verhalten zu überwachen
    */
   ngAfterViewInit(): void {
-    if (this.anchor?.nativeElement) {
-      this.scrollService.observeElement(this.anchor.nativeElement, () => {
-        document.body.style.overflowX = 'hidden';
-        this.showTextAndButton = true;
-        setTimeout(() => {
-          document.body.style.overflowX = 'auto';
-        }, 1450);
-      });
-    }
+  if (this.anchor?.nativeElement) {
+    this.scrollService.observeElement(this.anchor.nativeElement, () => {
+      this.tryStartAnimation();
+    });
   }
+}
+
+private tryStartAnimation(): void {
+  // Falls schon blockiert → versuche es später nochmal
+  if (document.body.style.overflowX === 'hidden') {
+    setTimeout(() => this.tryStartAnimation(), 300);
+    return;
+  }
+
+  // Setze overflowX, starte Animation
+  document.body.style.overflowX = 'hidden';
+  this.showTextAndButton = true;
+
+  // Setze overflowX nach individueller Zeit zurück (z. B. 700ms)
+  setTimeout(() => {
+    document.body.style.overflowX = 'auto';
+  }, 700); // Oder deine Komponentenspezifische Zeit
+}
 
   /** Liste der Fähigkeiten (Skills) mit Bild und Text */
   skillset = [

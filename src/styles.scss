@@ -79,8 +79,8 @@ app-comments {
     justify-content: center;
     align-items: center;
     color: white;
-    
-   
+
+
 }
 
 app-kontaktform {
@@ -119,4 +119,19 @@ app-footer {
     app-here-iam {
         justify-content: space-between;
     }
+}
+
+@media (min-width: 2500px) {
+
+    app-here-iam,
+    app-header,
+    app-about-me,
+    app-portfolio,
+    app-comments,
+    app-kontaktform,
+    app-footer {
+        max-width: 2520px;
+        margin: 0 auto;
+    }
+
 }
