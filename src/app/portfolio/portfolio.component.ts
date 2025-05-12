@@ -61,7 +61,7 @@ private tryStartAnimation(): void {
   this.showRightHeadline = true;
   setTimeout(() => {
     document.body.style.overflowX = 'auto';
-  }, 1400); 
+  }, 1080); 
 }
 
   /**

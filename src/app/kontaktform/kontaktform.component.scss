@@ -27,6 +27,10 @@
     }
 }
 
+.errorTwoLines {
+
+}
+
 .shadowPurpleLeft {
     position: absolute;
     bottom: -280px;
@@ -38,7 +42,7 @@
 
 #observerAnchor5 {
     position: absolute;
-    top: 300px;
+    top: 00px;
     width: 1px;
     height: 1px;
 }
@@ -456,5 +460,11 @@ button {
         .contactTextHeader {
             font-size: 26px !important;
         }
+    }
+}
+
+@media(max-width: 420px) {
+    .errorTwoLines {
+        bottom: -47px !important;
     }
 }

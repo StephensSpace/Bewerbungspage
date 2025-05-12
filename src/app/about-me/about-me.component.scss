@@ -50,6 +50,7 @@
             font-size: 16px;
             font-weight: 400;
             color: white;
+            padding-right: 10px;
             img {
                 width: 48px;
                 height: 48px;
@@ -86,7 +87,7 @@
     height: 0px;
     border: 2px solid #70E61C;
     position: absolute;
-    top: 17.9%;
+    top: 257px;
     z-index: 3;
     right: 0;
 }
@@ -110,6 +111,13 @@
 
 #observerAnchor3 {
     position: absolute;
+    top: 00px; /* z.B. etwas unterhalb der Viewport-Oberkante */
+    width: 1px;
+    height: 1px;
+  }
+
+  #observerAnchor4 {
+    position: absolute;
     top: 200px; /* z.B. etwas unterhalb der Viewport-Oberkante */
     width: 1px;
     height: 1px;
@@ -127,6 +135,7 @@ app-skills {
     margin: 0 auto;
     background-color: rgb(20, 29, 47);
 }
+
 
 @media (max-width: 1450px) {
     .greenLine {

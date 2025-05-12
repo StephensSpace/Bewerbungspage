@@ -69,7 +69,7 @@ content {
 
         &:hover {
             color: #70E61C;
-    
+
             &::after {
                 width: 40px;
             }
@@ -178,5 +178,29 @@ button {
     content {
         padding-left: 25px !important;
         padding-right: 25px !important;
+    }
+}
+
+@media (min-width: 2600px) {
+    content {
+
+        nav {
+            gap: 120px;
+            max-width: 880px;
+            justify-content: space-around;
+        }
+
+        .links {
+            gap: 48px;
+
+            a {
+                font-size: 32px !important;
+            }
+        }
+
+        img {
+            width: 200px !important;
+            height: auto !important;
+        }
     }
 }

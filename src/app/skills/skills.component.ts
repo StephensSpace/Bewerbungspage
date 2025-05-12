@@ -49,7 +49,7 @@ export class SkillsComponent implements AfterViewInit {
 private tryStartAnimation(): void {
   // Falls schon blockiert → versuche es später nochmal
   if (document.body.style.overflowX === 'hidden') {
-    setTimeout(() => this.tryStartAnimation(), 300);
+    setTimeout(() => this.tryStartAnimation(), 450);
     return;
   }
 
@@ -60,7 +60,7 @@ private tryStartAnimation(): void {
   // Setze overflowX nach individueller Zeit zurück (z. B. 700ms)
   setTimeout(() => {
     document.body.style.overflowX = 'auto';
-  }, 700); // Oder deine Komponentenspezifische Zeit
+  }, 990); // Oder deine Komponentenspezifische Zeit
 }
 
   /** Liste der Fähigkeiten (Skills) mit Bild und Text */

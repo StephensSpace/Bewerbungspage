@@ -35,18 +35,26 @@ export class KontaktformComponent implements AfterViewInit {
   @ViewChild('observerAnchor5', { static: true }) anchor!: ElementRef;
 
   /** Beobachtet das Element beim Scrollen und löst Animation aus */
-  ngAfterViewInit(): void {
-    if (this.anchor?.nativeElement) {
-      this.scrollService.observeElement(this.anchor.nativeElement, () => {
-        document.body.style.overflowX = 'hidden';
-        this.showLeftHeader = true;
-        setTimeout(() => {
-          document.body.style.overflowX = 'auto';
-        }, 3800);
-      });
-    }
+ ngAfterViewInit(): void {
+  if (this.anchor?.nativeElement) {
+    this.scrollService.observeElement(this.anchor.nativeElement, () => {
+      this.tryStartAnimation();
+    });
   }
+}
 
+private tryStartAnimation(): void {
+  // Falls schon blockiert → versuche es später nochmal
+  if (document.body.style.overflowX === 'hidden') {
+    setTimeout(() => this.tryStartAnimation(), 250);
+    return;
+  }
+  document.body.style.overflowX = 'hidden';
+  this.showLeftHeader = true;
+  setTimeout(() => {
+    document.body.style.overflowX = 'auto';
+  }, 2000); 
+}
   /** HttpClient für Mailversand */
   http = inject(HttpClient);
 

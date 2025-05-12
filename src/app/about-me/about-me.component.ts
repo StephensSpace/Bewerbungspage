@@ -27,7 +27,8 @@ export class AboutMeComponent implements AfterViewInit {
   /**
    * Steuert die Sichtbarkeit des rechten Bildes in der Ansicht.
    */
-  showTextAndPic: boolean = false;
+  showText: boolean = false;
+  showSkills: boolean = false;
 
 
   /**
@@ -44,6 +45,7 @@ export class AboutMeComponent implements AfterViewInit {
    * Referenz auf das DOM-Element, das als Trigger für die Scroll-Beobachtung dient.
    */
   @ViewChild('observerAnchor3', { static: true }) anchor!: ElementRef;
+  
 
   /**
    * Lifecycle-Hook: Wird aufgerufen, nachdem die View initialisiert wurde.
@@ -61,17 +63,20 @@ export class AboutMeComponent implements AfterViewInit {
 private tryStartAnimation(): void {
   // Falls schon blockiert → versuche es später nochmal
   if (document.body.style.overflowX === 'hidden') {
-    setTimeout(() => this.tryStartAnimation(), 300);
+    setTimeout(() => this.tryStartAnimation(), 400);
     return;
   }
 
   // Setze overflowX, starte Animation
   document.body.style.overflowX = 'hidden';
-  this.showTextAndPic = true;
+  this.showText = true;
+  
 
   // Setze overflowX nach individueller Zeit zurück (z. B. 700ms)
   setTimeout(() => {
     document.body.style.overflowX = 'auto';
-  }, 700); // Oder deine Komponentenspezifische Zeit
+  }, 990); // Oder deine Komponentenspezifische Zeit
+  document.body.style.overflowX = 'hidden';
+  this.showSkills = true;
 }
 }

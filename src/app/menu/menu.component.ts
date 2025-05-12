@@ -47,18 +47,22 @@ export class MenuComponent {
    * @param fragment ID des Ziel-Elements (z. B. "about", "contact")
    */
   handleMobileNavigation(event: Event, fragment: string): void {
-    event.preventDefault();
-    document.body.style.overflow = 'auto';
+  event.preventDefault();
+  document.body.style.overflow = 'auto';
+  this.menuState.toggleMenu();
 
-    this.menuState.toggleMenu(); // Menü schließen
+  setTimeout(() => {
+    const el = document.getElementById(fragment);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
 
-    setTimeout(() => {
-      const el = document.getElementById(fragment);
-      if (el) {
+      // Zweiter Scroll nach z. B. 1 Sekunde
+      setTimeout(() => {
         el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 300); // Zeit für Slide-Out-Animation
-  }
+      }, 1000); // Passe je nach Animationsdauer an
+    }
+  }, 300); // Zeit für Slide-Out-Menü
+}
 
   /**
    * Schließt das Menü manuell und gibt Scrollverhalten zurück frei

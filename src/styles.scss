@@ -46,7 +46,6 @@ app-about-me {
     background-color: rgb(20, 29, 47);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     height: 100%;
     width: 100%;
     max-width: 100%;
@@ -121,17 +120,3 @@ app-footer {
     }
 }
 
-@media (min-width: 2500px) {
-
-    app-here-iam,
-    app-header,
-    app-about-me,
-    app-portfolio,
-    app-comments,
-    app-kontaktform,
-    app-footer {
-        max-width: 2520px;
-        margin: 0 auto;
-    }
-
-}

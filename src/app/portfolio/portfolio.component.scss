@@ -284,6 +284,8 @@ p {
 
             .infobox {
                 align-items: center !important;
+                margin-top: -90px;
+                margin-bottom: 32px;
 
                 .description,
                 .usedSkills {
@@ -324,9 +326,13 @@ p {
         }
     }
 
-    .flexEnd {
-        padding-left: unset !important;
-    }
+    .projectBox {
+            .infobox {
+                align-items: center !important;
+                margin-top: unset !important;
+                margin-bottom: unset !important;
+            }
+        }
 }
 
 @media (max-width: 540px) {

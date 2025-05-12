@@ -1,7 +1,7 @@
 <div class="aboutMeWrapper">
     <div #observerAnchor3 id="observerAnchor3"></div>
     <div class="textAndPic">
-        <div class="text"  *ngIf="showTextAndPic" @slideInOutLeft>
+        <div class="text"  *ngIf="showText" @slideInOutLeft>
             
             <h1>
                 {{
@@ -40,10 +40,11 @@
             </p>
 
         </div>
-        <div class="picWithLine" *ngIf="showTextAndPic" @slideInOutRight>
+        <div class="picWithLine" *ngIf="showSkills" @slideInOutRight>
             <img src="/assets/SchazStephen2Rund.png" alt="facePicture" class="imgPortrait">
             <div class="greenLine"></div>
         </div>
+        <div></div>
     </div>
 
 </div>

@@ -34,16 +34,28 @@ export class ScrollService {
   }
 
   scrollToFragment2(event: Event, id: string) {
-  event.preventDefault();
+    event.preventDefault();
 
-  // erster Scroll zu Element
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    // erster Scroll zu Element
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
-  // zweiter Scroll mit Delay zum Bottom
-  setTimeout(() => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  }, 1500);
-}
+    // zweiter Scroll mit Delay zum Bottom
+    setTimeout(() => {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }, 500);
+  }
+
+  scrollToFragment2Mobile(event: Event, id: string) {
+    event.preventDefault();
+
+    // erster Scroll zu Element
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+
+    // zweiter Scroll mit Delay zum Bottom
+    setTimeout(() => {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }, 1000);
+  }
 
   /**
    * Scrollt zu einem spezifischen Element auf der Seite, das mit einer Fragment-ID identifiziert wird.
@@ -69,7 +81,7 @@ export class ScrollService {
         observer.disconnect();
       }
     }, { threshold });
-  
+
     observer.observe(element);
   }
 

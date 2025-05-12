@@ -47,7 +47,7 @@
                 <textarea [(ngModel)]="contactData.message" name="message"
                     [placeholder]="(languageService.isGerman$ | async) ? 'Ihre Nachricht' : 'Your Message'" required
                     minlength="10"></textarea>
-                <p class="error-message">
+                <p class="error-message errorTwoLines">
                     {{ (languageService.isGerman$ | async) ? texts.contactErrors.message.de :
                     texts.contactErrors.message.en }}
                 </p>

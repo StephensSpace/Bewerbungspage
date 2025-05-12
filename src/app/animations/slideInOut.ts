@@ -9,7 +9,7 @@ export const slideInOutRight = trigger('slideInOutRight', [
   transition(':enter', [
     style({ opacity: 0, transform: 'translateX(100vw)' }),
     animate(
-      '1200ms 200ms cubic-bezier(0.25, 0.8, 0.25, 1)', // Dauer + Verzögerung + Timing-Funktion
+      '800ms 200ms cubic-bezier(0.25, 0.8, 0.25, 1)', // Dauer + Verzögerung + Timing-Funktion
       style({ opacity: 1, transform: 'translateX(0)' })
     )
   ]),
@@ -30,7 +30,7 @@ export const slideInOutLeft = trigger('slideInOutLeft', [
   transition(':enter', [
     style({ opacity: 0, transform: 'translateX(-100vw)' }),
     animate(
-      '1200ms 200ms cubic-bezier(0.25, 0.8, 0.25, 1)',
+      '800ms 200ms cubic-bezier(0.25, 0.8, 0.25, 1)',
       style({ opacity: 1, transform: 'translateX(0)' })
     )
   ]),
@@ -59,16 +59,16 @@ export const slideInOutMenu = trigger('slideInOutMenu', [
 /**
  * Animation zur Steuerung des Body-Overflow-Verhaltens bei Overlay-Effekten.
  * Achtung: Diese Animation verändert nicht direkt CSS-Eigenschaften,
- * sondern dient als Trigger für Logik in `ngOnInit` / `ngOnDestroy`.
+ * sondern dient als Trigger für Logik in `ngOnInit`.
  */
 export const bodyOverflowAnimation = trigger('bodyOverflow', [
   transition(':enter', [
-    animate('200ms ease-in', style({
+    animate('400ms ease-in', style({
       // Overflow wird außerhalb der Animation im Code gesetzt
     }))
   ]),
   transition(':leave', [
-    animate('200ms ease-out', style({
+    animate('400ms ease-out', style({
       // Overflow wird außerhalb der Animation im Code zurückgesetzt
     }))
   ])
