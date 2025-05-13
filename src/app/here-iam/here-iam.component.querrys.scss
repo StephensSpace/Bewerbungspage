@@ -397,6 +397,7 @@
 
     .topPartWrapper {
         margin-top: 16px !important;
+        gap: 32px !important;
 
         .mainPicture {
             .portraitImg {
@@ -407,92 +408,3 @@
     }
 }
 
-@media (max-width: 440px) and (max-height: 700px) {
-    svg {
-        top: 26vh !important;
-    }
-}
-
-@media(min-width: 2200px) and (min-height: 1550px) {
-
-    .topPartWrapper {
-        margin-top: 10% !important;
-
-        .mainPicture {
-            margin: 0 0 0 15% !important;
-            max-width: 1360px !important;
-        }
-    }
-}
-
-@media(min-width: 2600px) {
-    .topPartWrapper {
-        .mainPicture {
-            margin: 40px 0 0 15% !important;
-        }
-
-        .textboxAndBtn {
-            margin-left: -180px !important;
-            margin-top: 150px !important;
-
-            .Iam,
-            .job {
-                font-size: 87px !important;
-            }
-
-            .name {
-                font-size: 120px !important;
-            }
-
-            a {
-                margin-top: 68px !important;
-                    padding: 20px 40px;
-                    font-size: 38px;
-            }
-
-        }
-
-        .scroll {
-            font-size: 32px !important;
-        }
-
-        .socials {
-            a {
-                font-size: 32px !important;
-            }
-        }
-    }
-}
-
-@media(min-width: 3300px) {
-    svg {
-        top: 4.58vh !important;
-    }
-}
-
-@media(min-width: 3400px) and (max-height: 1600px) {
-        svg {
-        top: 0 !important;
-    }
-}
-
-@media(min-width: 3750px) {
-
-    .topPartWrapper {
-        margin-top: unset !important;
-        margin-right: unset !important;
-        max-width: 3820px !important;
-        margin: 0 auto !important;
-    }
-
-    .textWrapper {
-        margin: 0 auto !important;
-        margin-bottom: 50px !important;
-    }
-}
-
-@media(min-width: 3820px) {
-    .vector2 {
-        display: block !important;
-    }
-}

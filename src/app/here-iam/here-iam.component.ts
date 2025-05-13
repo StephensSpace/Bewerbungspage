@@ -9,7 +9,8 @@ import { ScrollService } from '../services/scroll.service';
   imports: [CommonModule],
   templateUrl: './here-iam.component.html',
   styleUrls: ['./here-iam.component.scss',
-              './here-iam.component.querrys.scss']
+    './here-iam.component.querrys.scss',
+    './here-iam.component.querrys2ng.scss']
 })
 /**
  * Repräsentiert die "Here I am"-Sektion der Seite.
@@ -29,5 +30,5 @@ export class HereIamComponent {
      * oder Sichtbarkeits-Trigger von DOM-Elementen.
      */
     public scrollService: ScrollService
-  ) {}
+  ) { }
 }

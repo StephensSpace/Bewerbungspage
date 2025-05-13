@@ -176,7 +176,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding: 48px 24px 48px 48px;
+            padding: 32px 24px 42px 48px;
             transition: padding 0.3s ease;
             gap: 32px;
             max-width: 850.5px;
@@ -326,6 +326,25 @@
     }
 }
 
+@media(max-width: 640px) {
+    .frameAndBtnBox {
+        .frame {
+            height: 320px !important;
+
+        }
+    }
+}
+
+@media(max-width: 540px) {
+    .frameAndBtnBox {
+        .frame {
+            gap: 32px !important;
+            padding: 48px 26px !important;
+            height: 370px !important;
+        }
+    }
+}
+
 @media(max-width: 500px) {
     .picAndFrame {
         .picAndSeperator {
@@ -340,8 +359,6 @@
 
         .frameAndBtnBox {
             .frame {
-                gap: 32px !important;
-                padding: 48px 26px !important;
 
                 .seperatorAndName {
                     .separatorLong {
@@ -359,6 +376,16 @@
         .nameAndJob {
             white-space: pre-line !important;
             font-size: 16px !important;
+        }
+    }
+}
+
+@media(max-width: 408px) {
+    .frameAndBtnBox {
+        .frame {
+            height: 410px !important;
+            padding: 32px 24px !important;
+
         }
     }
 }

@@ -111,7 +111,7 @@
 
 #observerAnchor3 {
     position: absolute;
-    top: 00px; /* z.B. etwas unterhalb der Viewport-Oberkante */
+    top: 0px; /* z.B. etwas unterhalb der Viewport-Oberkante */
     width: 1px;
     height: 1px;
   }
@@ -210,5 +210,9 @@ app-skills {
                 }
             }
         }
+    }
+
+    #observerAnchor3 {
+        top: -100px !important;
     }
 }
