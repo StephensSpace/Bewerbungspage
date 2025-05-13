@@ -9,12 +9,13 @@
 }
 
 .dividingVector2 {
-    width: calc((100dvw - 1171px) / 2);
     height: 0px;
     border: 2px solid #9747FF;
     position: absolute;
     top: 17.12%;
     left: 106%;
+    width: calc((100dvw - 1174px) / 2);
+    min-width: 65px;
 }
 
 .skillAndTextWrapMobile {
@@ -162,6 +163,7 @@
     justify-items: center;
     gap: 0px 32px;
     height: 75%;
+    position: relative;
 
     .image-wrapper {
         height: fit-content;
@@ -194,7 +196,7 @@
     }
 
     .skill-image:hover {
-        transform: translateY(-32px);
+        transform: translateY(-12px);
         transition: transform 0.4s ease-in-out;
     }
 
@@ -217,7 +219,7 @@
 .tooltip {
     position: absolute;
     bottom: 79%;
-    left: 60%;
+    left: 96px;
     transform: translateX(-50%);
     width: 200px;
     color: white;
@@ -226,7 +228,7 @@
     border-radius: 5px;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.1s;
     z-index: 5;
 
     img {

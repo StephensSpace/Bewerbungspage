@@ -79,6 +79,9 @@
             'submitEnabled': contactForm.valid}" [disabled]="contactForm.invalid">
                 {{ (languageService.isGerman$ | async) ? texts.contactBtn.de : texts.contactBtn.en }}
             </button>
+            <div class="confirmation" [ngClass]="{'show': showToast}">
+                {{ (languageService.isGerman$ | async) ? texts.contactConfirm.de : texts.contactConfirm.en }}
+            </div>
         </form>
     </div>
 

@@ -8,6 +8,7 @@ content {
     align-items: center;
     padding: 37px 100px;
     box-sizing: border-box;
+    backdrop-filter: blur(5px);
 
     .menuToggle {
         display: none;
@@ -33,7 +34,6 @@ content {
         color: white;
         font-size: 18px;
     }
-
 }
 
 .links {
@@ -187,7 +187,7 @@ button {
         nav {
             gap: 120px;
             max-width: 880px;
-            justify-content: space-around;
+            justify-content: space-between;
         }
 
         .links {

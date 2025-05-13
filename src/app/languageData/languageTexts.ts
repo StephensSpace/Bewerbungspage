@@ -70,6 +70,8 @@ export const texts: {
      * Button-Text im Kontaktformular
      */
     contactBtn: TranslatedText,
+
+    contactConfirm: TranslatedText,
     /**
      * Untertitel im Skill-Bereich
      */
@@ -204,6 +206,10 @@ export const texts: {
     contactBtn: {
         de: `Absenden :)`,
         en: `Send Message :)`
+    },
+    contactConfirm: {
+        de: `Nachricht versandt!`,
+        en: `Message sent!`
     },
     skillsUndertitle: {
         de: `Von CRUD über Games bis zu Social Apps – ich 

@@ -308,7 +308,7 @@
     .topPartWrapper {
 
         .textboxAndBtn {
-            margin-top: -40px !important;
+            margin-top: unset !important;
 
             a {
                 padding: 10px 20px !important;
@@ -354,6 +354,10 @@
 @media (max-width: 535px) and (max-height: 943px) {
     svg {
         top: 22vh !important;
+    }
+
+    .textboxAndBtn {
+        margin-top: unset !important;
     }
 
     .mainPicture .portraitImg {
@@ -472,3 +476,23 @@
     }
 }
 
+@media(min-width: 3750px) {
+
+    .topPartWrapper {
+        margin-top: unset !important;
+        margin-right: unset !important;
+        max-width: 3820px !important;
+        margin: 0 auto !important;
+    }
+
+    .textWrapper {
+        margin: 0 auto !important;
+        margin-bottom: 50px !important;
+    }
+}
+
+@media(min-width: 3820px) {
+    .vector2 {
+        display: block !important;
+    }
+}

@@ -1,26 +1,44 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs'; // <-- korrekt!
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LanguageService {
   /**
-   * BehaviorSubject, das den aktuellen Zustand der Sprache verwaltet (Deutsch oder nicht)
-   * @private
+   * Speichert den aktuellen Sprachstatus als BehaviorSubject.
+   * Der Wert ist `true`, wenn Deutsch aktiv ist, und `false` für Englisch.
+   * Änderungen können über das Observable `isGerman$` abonniert werden.
    */
   private isGermanSubject = new BehaviorSubject<boolean>(false);
 
   /**
-   * Observable, das den aktuellen Sprachzustand (Deutsch oder nicht) bereitstellt
+   * Öffentliches Observable, das den aktuellen Sprachstatus bereitstellt.
+   * Komponenten können dieses Observable abonnieren, um auf Sprachänderungen zu reagieren.
    */
   public isGerman$ = this.isGermanSubject.asObservable();
 
   /**
-   * Setzt die Sprache auf Deutsch oder Englisch und gibt den neuen Zustand weiter
-   * @param german Boolean-Wert, der angibt, ob Deutsch aktiviert werden soll (true für Deutsch, false für Englisch)
+   * Konstruktor des LanguageService.
+   * Liest den Sprachstatus aus dem localStorage und setzt ihn.
+   * Falls kein Wert vorhanden ist, wird standardmäßig Deutsch aktiviert.
+   */
+  constructor() {
+    const savedLanguage = localStorage.getItem('isGerman');
+
+    if (savedLanguage !== null) {
+      this.isGermanSubject.next(JSON.parse(savedLanguage));
+    } else {
+      this.setLanguage(true); // Standard: Deutsch aktiv
+    }
+  }
+
+  /**
+   * Setzt die aktuelle Sprache und speichert sie im localStorage.
+   * @param german - `true` für Deutsch, `false` für Englisch.
    */
   setLanguage(german: boolean) {
     this.isGermanSubject.next(german);
+    localStorage.setItem('isGerman', JSON.stringify(german));
   }
 }

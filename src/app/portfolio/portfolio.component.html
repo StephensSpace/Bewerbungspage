@@ -19,8 +19,21 @@
                     {{ (languageService.isGerman$ | async) ? project.description : project.descriptionEN }}
                 </p>
                 <div class="btnBox">
-                    <a [href]="project.link" [ngClass]="project.commingSoon ? 'BtnDisabled' : 'linkBtn'">Live test</a>
-                    <a [href]="project.linkGit" [ngClass]="project.commingSoon ? 'BtnDisabled' : 'gitBtn'">Github</a>
+                    <a 
+  [href]="project.link" 
+  [ngClass]="project.commingSoon ? 'BtnDisabled' : 'linkBtn'" 
+  target="_blank" 
+  rel="noopener noreferrer">
+  Live test
+</a>
+
+<a 
+  [href]="project.linkGit" 
+  [ngClass]="project.commingSoon ? 'BtnDisabled' : 'gitBtn'" 
+  target="_blank" 
+  rel="noopener noreferrer">
+  Github
+</a>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 @media (max-width: 1305px) {
     .dividingVector2 {
-        width: 70px;
+        width: 70px !important;
     }
 }
 
@@ -204,5 +204,11 @@
 @media (max-width: 360px) {
     .tooltip-container {
         display: contents !important;
+    }
+
+    .tooltip {
+        left: 200px;
+        bottom: 16%;
+        width: 180px;
     }
 }

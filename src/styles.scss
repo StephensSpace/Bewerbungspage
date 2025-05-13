@@ -17,7 +17,7 @@ body {
 
 app-header {
     width: 100%;
-    max-width: 100%;
+    max-width: 3220px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -36,7 +36,7 @@ app-here-iam {
     display: flex;
     flex-direction: column;
     background-color: rgb(20, 29, 47);
-    min-height: calc(100vh - 109.03px);
+    min-height: calc(100dvh - 109.03px);
     justify-content: center;
     position: relative;
 }

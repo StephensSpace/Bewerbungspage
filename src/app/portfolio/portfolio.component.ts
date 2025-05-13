@@ -119,23 +119,6 @@ private tryStartAnimation(): void {
       name: "Join",
       skills: "JavaScript | HTML | CSS",
       commingSoon: false
-    },
-    {
-      imgPath: "/assets/projects/Dabubble.png",
-      link: "",
-      linkGit: "",
-      descriptionEN:
-        `Comming soon, project starts April 2025. This App is a Slack Clone App. 
-        It revolutionizes team communication and collaboration with its intuitive interface,
-         real-time messaging, and robust channel organization.`,
-      description: `Demnächst verfügbar – Projektstart ist im April 2025.
-                    Diese App ist ein Slack-Clone, der die Teamkommunikation 
-                    und Zusammenarbeit durch seine intuitive Benutzeroberfläche, 
-                    Echtzeitnachrichten und strukturierte Kanalorganisation revolutioniert.`,
-      reverseRow: true,
-      name: "DA Bubble",
-      skills: "Angular | Typescript | Firebase",
-      commingSoon: true
     }
   ];
 }
