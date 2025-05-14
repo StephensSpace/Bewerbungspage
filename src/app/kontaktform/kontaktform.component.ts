@@ -79,7 +79,7 @@ export class KontaktformComponent implements AfterViewInit {
     };
 
   /** Testmodus – verhindert echtes Senden */
-  mailTest = false;
+  
 
   /** POST-Konfiguration für Mailversand */
   post = {
@@ -98,25 +98,23 @@ export class KontaktformComponent implements AfterViewInit {
    * @param ngForm - Referenz auf das Formular
    */
   sendMail(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            // Formular zurücksetzen
-            ngForm.resetForm();
+  if (ngForm.submitted && ngForm.form.valid) {
+    this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      .subscribe({
+        next: (response) => {
+          // Formular zurücksetzen
+          ngForm.resetForm();
 
-            // Toast anzeigen
-            this.showToastMessage();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
-    }
+          // Toast anzeigen
+          this.showToastMessage();
+        },
+        error: (error) => {
+          console.error(error);
+        },
+        complete: () => console.info('send post complete'),
+      });
   }
+}
 
   showToastMessage() {
     this.showToast = true;
