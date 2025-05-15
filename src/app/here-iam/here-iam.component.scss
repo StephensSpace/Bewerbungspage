@@ -155,7 +155,7 @@ svg {
 
 .textWrapper {
     flex-grow: 1;
-    max-width: 3820px;
+    max-width: 2400px;
     width: 100%;
     height: fit-content;
     display: flex;
@@ -229,7 +229,7 @@ svg {
             height: 0px;
             border: 2px solid #9747FF;
             display: none;
-            width: calc((100dvw - 3820px) / 2);
+            width: calc((100dvw - 2400px) / 2);
             right: 100%;
             top: -2px;
         }

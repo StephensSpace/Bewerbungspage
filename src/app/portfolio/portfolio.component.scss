@@ -309,7 +309,16 @@ p {
     }
 }
 
+@media(max-width: 840px) {
+    .purpleShadow3 {
+        top: 50% !important;
+        max-height: 504.73px !important;
+    }
+}
+
 @media (max-width: 600px) {
+
+
     .portfolioHeader {
         h1 {
             font-size: 55px !important;
@@ -327,12 +336,14 @@ p {
     }
 
     .projectBox {
-            .infobox {
-                align-items: center !important;
-                margin-top: unset !important;
-                margin-bottom: unset !important;
-            }
+        .infobox {
+            align-items: center !important;
+            margin-top: unset !important;
+            margin-bottom: unset !important;
         }
+    }
+
+
 }
 
 @media (max-width: 540px) {

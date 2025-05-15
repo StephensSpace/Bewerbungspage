@@ -327,6 +327,11 @@
 }
 
 @media(max-width: 640px) {
+
+    .rightShadow {
+        height: 492px !important;
+        top: -108px !important;
+    }
     .frameAndBtnBox {
         .frame {
             height: 320px !important;

@@ -10,7 +10,7 @@ import { ScrollService } from '../services/scroll.service';
   templateUrl: './here-iam.component.html',
   styleUrls: ['./here-iam.component.scss',
     './here-iam.component.querrys.scss',
-    './here-iam.component.querrys2ng.scss']
+    './here-iam.component.querrys2.scss']
 })
 /**
  * Repräsentiert die "Here I am"-Sektion der Seite.

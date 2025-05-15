@@ -280,6 +280,12 @@
     }
 }
 
+@media (max-width: 400px) and (max-height: 850px) {
+    .topPartWrapper {
+        margin-top: 50px !important;
+    }
+}
+
 @media (max-width: 800px) {
 
     svg {
@@ -365,10 +371,11 @@
     }
 }
 
-@media (max-width: 535px) and (max-height: 850px) {
+@media (max-width: 535px) and (max-height: 680px) {
     .topPartWrapper {
+        gap: 8px !important;
         .textboxAndBtn {
-            margin-top: -15px !important;
+            margin-top: -21px !important;
         }
     }
 }
@@ -378,7 +385,7 @@
 @media(max-width: 440px) {
 
     svg {
-        top: 19vh !important;
+        top: 23vh !important;
     }
 
     .topPartWrapper {
@@ -388,7 +395,7 @@
         .mainPicture {
             .portraitImg {
                 min-width: 290px !important;
-                margin-bottom: 42px !important;
+                margin-top: 48px !important;
             }
         }
     }
@@ -397,8 +404,13 @@
 @media(max-width: 440px) and (max-height: 740px) {
 
     .topPartWrapper {
-        gap: unset !important;
+        gap: 18px !important;
 
     }
+
+    svg {
+        top: 27vh !important;
+    }
+
 }
 
