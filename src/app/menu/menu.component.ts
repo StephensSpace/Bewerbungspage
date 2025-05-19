@@ -53,15 +53,20 @@ export class MenuComponent {
 
   setTimeout(() => {
     const el = document.getElementById(fragment);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    const anchor = document.getElementById(fragment + 'Anchor');
 
-      // Zweiter Scroll nach z. B. 1 Sekunde
-      setTimeout(() => {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }, 1000); // Passe je nach Animationsdauer an
+    if (el) {
+      // Zuerst barrierefreier Scroll zum echten Ziel
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Dann visuelles Fine-Tuning per Anchor
+      if (anchor) {
+        setTimeout(() => {
+          anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 500); // Zeit zum Anpassen, z. B. nach Menüanimation
+      }
     }
-  }, 300); // Zeit für Slide-Out-Menü
+  }, 300);
 }
 
   /**

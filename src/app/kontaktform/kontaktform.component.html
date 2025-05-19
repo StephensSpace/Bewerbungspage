@@ -1,10 +1,11 @@
-<div class="contactHeader" *ngIf="showLeftHeader" @slideInOutLeft>
+<div class="contactHeader">
+    <div id="contactAnchor" style="position: absolute; top: -120px;"></div>
     <div class="purpleLine1"></div>
     <h1>
         {{ (languageService.isGerman$ | async) ? texts.header.contact.de : texts.header.contact.en }}
     </h1>
 </div>
-<div #observerAnchor5 id="observerAnchor5"></div>
+
 <div class="formAndTextWrap">
     <div class="textWrap">
         <p class="contactTextHeader">
@@ -20,7 +21,7 @@
     </div>
 
 
-    <div class="formWrap" *ngIf="showLeftHeader" @slideInOutRight>
+    <div class="formWrap">
         <form (ngSubmit)="sendMail(contactForm)" #contactForm="ngForm">
             <div class="input-wrapper">
                 <input [(ngModel)]="contactData.name" name="name" type="text"

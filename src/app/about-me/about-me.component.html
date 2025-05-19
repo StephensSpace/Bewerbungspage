@@ -1,8 +1,9 @@
 <div class="aboutMeWrapper">
     <div #observerAnchor3 id="observerAnchor3"></div>
-    <div class="textAndPic">
-        <div class="text"  *ngIf="showText" @slideInOutLeft>
-            
+    <div class="textAndPic" id="aboutMe">
+        <div id="aboutMeAnchor" style="position: absolute; top: -100px;"></div>
+        <div class="text" [@slideInOutLeft]="showText ? 'in' : 'out'" [class.invisible]="!showText">
+
             <h1>
                 {{
                 (languageService.isGerman$ | async) ?
@@ -82,4 +83,4 @@
     </defs>
 </svg>
 
-<app-skills id="skills"></app-skills>
+<app-skills></app-skills>

@@ -15,6 +15,13 @@ body {
     padding: 0;
 }
 
+.invisible {
+  opacity: 0;
+  pointer-events: none;
+  display: none !important;
+}
+
+
 app-header {
     width: 100%;
     max-width: 2400px;

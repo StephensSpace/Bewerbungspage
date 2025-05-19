@@ -17,21 +17,38 @@ export class ScrollService {
    * @param fragment Die ID des Fragments, zu dem gescrollt werden soll.
    */
   scrollToFragment(event: Event, fragment: string) {
-    event.preventDefault(); // Verhindert das Neuladen der Seite
+    event.preventDefault();
 
     const currentUrl = window.location.pathname;
 
-    // Wenn nicht auf der Hauptseite, navigiere zurück ohne die Seite neu zu laden
+    const doScroll = () => {
+      this.scrollToElement(fragment);
+
+      // Nach 500ms nochmal scrollen, um eventuelle Verschiebungen durch Animationen auszugleichen
+      setTimeout(() => {
+        this.scrollToElement(fragment+"Anchor");
+      }, 500);
+    };
+
     if (currentUrl !== '/') {
-      // Navigiere zur Hauptseite, ohne die Seite neu zu laden
       this.router.navigate(['/']).then(() => {
-        // Warte bis die Navigation abgeschlossen ist und scrolle dann zum Fragment
-        this.scrollToElement(fragment);
+        doScroll();
       });
     } else {
-      this.scrollToElement(fragment);
+      doScroll();
     }
   }
+
+  scrollToElement(fragment: string) {
+    const element = document.getElementById(fragment);
+    if (!element) return;
+
+    const yOffset = -80; // Beispiel für festen Offset (z.B. Header-Höhe)
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
 
   scrollToFragment2(event: Event, id: string) {
     event.preventDefault();
@@ -41,8 +58,8 @@ export class ScrollService {
 
     // zweiter Scroll mit Delay zum Bottom
     setTimeout(() => {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }, 500);
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }, 1000);
   }
 
   scrollToFragment2Mobile(event: Event, id: string) {
@@ -55,17 +72,6 @@ export class ScrollService {
     setTimeout(() => {
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }, 1000);
-  }
-
-  /**
-   * Scrollt zu einem spezifischen Element auf der Seite, das mit einer Fragment-ID identifiziert wird.
-   * @param fragment Die ID des Fragments, zu dem gescrollt werden soll.
-   */
-  private scrollToElement(fragment: string) {
-    const element = document.getElementById(fragment);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
   }
 
   /**

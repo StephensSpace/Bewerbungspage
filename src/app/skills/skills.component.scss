@@ -6,6 +6,7 @@
     align-items: center;
     padding: 0 100px;
     justify-content: space-between;
+    position: relative;
 }
 
 .dividingVector2 {
@@ -26,6 +27,7 @@
     height: auto;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .flexEnd {
@@ -41,6 +43,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 .textAndButton {
@@ -130,6 +133,10 @@
                 border: unset;
             }
         }
+    }
+
+    #skillsMobile {
+        scroll-margin-top: -250px;
     }
 
     .secondHeader {

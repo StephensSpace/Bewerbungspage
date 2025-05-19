@@ -1,27 +1,25 @@
 import { NgClass, NgIf, CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ScrollService } from '../services/scroll.service';
 import { LanguageService } from '../services/language.service';
 import { texts } from '../languageData/languageTexts';
-import { slideInOutRight, slideInOutLeft } from '../animations/slideInOut';
 import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-kontaktform',
   imports: [NgIf, FormsModule, NgClass, RouterModule, CommonModule],
   templateUrl: './kontaktform.component.html',
-  styleUrls: ['./kontaktform.component.scss', 'kontaktform.component.querrys.scss'],
-  animations: [slideInOutRight, slideInOutLeft]
+  styleUrls: ['./kontaktform.component.scss', 'kontaktform.component.querrys.scss']
 })
 /**
  * Kontaktformular-Komponente.
  * Ermöglicht Benutzern das Absenden einer Nachricht über ein Formular.
  * Inklusive Spracheinstellungen, Scroll-Trigger, HTTP-POST an externes Backend.
  */
-export class KontaktformComponent implements AfterViewInit {
+export class KontaktformComponent {
 
   /** Sichtbarkeit für die Animation des Headers */
   showLeftHeader: boolean = false;
@@ -35,17 +33,9 @@ export class KontaktformComponent implements AfterViewInit {
   constructor(public languageService: LanguageService, public scrollService: ScrollService,
     private cdr: ChangeDetectorRef) { }
 
-  /** Referenz zum sichtbarkeitsabhängigen Ankerpunkt für die Scroll-Animation */
-  @ViewChild('observerAnchor5', { static: true }) anchor!: ElementRef;
-
+  
   /** Beobachtet das Element beim Scrollen und löst Animation aus */
-  ngAfterViewInit(): void {
-    if (this.anchor?.nativeElement) {
-      this.scrollService.observeElement(this.anchor.nativeElement, () => {
-        this.tryStartAnimation();
-      });
-    }
-  }
+  
 
   private tryStartAnimation(): void {
     // Falls schon blockiert → versuche es später nochmal
