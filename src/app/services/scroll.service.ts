@@ -96,6 +96,17 @@ export class ScrollService {
    * Verwendet eine sanfte Scrollbewegung.
    */
   scrollToTop(): void {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const isStartseite = this.router.url === '/' || this.router.url.startsWith('/#');
+
+    if (isStartseite) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      this.router.navigateByUrl('/').then(() => {
+        // Etwas warten, bis DOM neu gerendert ist
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 50); // ggf. auf 100ms erhöhen bei Bedarf
+      });
+    }
   }
 }

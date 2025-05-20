@@ -4,9 +4,15 @@
     }
 }
 
-@media(min-width: 1440px) {
-    .vector2 {
-        display: block !important;
+@media (min-width: 1440px) and (max-height: 900px) {
+    .topPartWrapper {
+        .textboxAndBtn {
+            margin-top: 12vh !important;
+        }
+    }
+
+    svg {
+        top: 13.38vh !important;
     }
 }
 
@@ -27,6 +33,21 @@
         }
     }
 }
+
+
+@media (min-width: 1675px) and (max-height: 900px) {
+    svg {
+        top: 7vh !important;
+    }
+}
+
+@media(min-width: 1440px) {
+    .vector2 {
+        display: block !important;
+    }
+}
+
+
 
 @media (min-width: 1840px) {
     svg {
