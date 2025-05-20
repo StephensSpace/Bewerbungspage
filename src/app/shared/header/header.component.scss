@@ -180,27 +180,3 @@ button {
         padding-right: 25px !important;
     }
 }
-
-@media (min-width: 2600px) {
-    content {
-
-        nav {
-            gap: 120px;
-            max-width: 880px;
-            justify-content: space-between;
-        }
-
-        .links {
-            gap: 48px;
-
-            a {
-                font-size: 32px !important;
-            }
-        }
-
-        img {
-            width: 200px !important;
-            height: auto !important;
-        }
-    }
-}

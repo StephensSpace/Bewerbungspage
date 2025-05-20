@@ -1,88 +1,18 @@
-@media (max-width: 2068px) {
-    .textboxAndBtn {
-        width: 70% !important;
-        margin-top: calc(686px - 24vw) !important;
-        margin-right: calc(678px - 29vw) !important;
-        height: unset !important;
-
-        a {
-            margin-top: 61px;
-        }
-    }
-
-    .textWrapper {
-        margin-bottom: 50px !important;
-    }
-
-    .textbox {
-
-        .Iam {
-            font-size: 62px !important;
-            top: 20% !important;
-        }
-
-        .name {
-            font-size: 81px !important;
-        }
-
-        .job {
-            font-size: 59px !important;
-        }
-    }
-
+@media (min-width: 1700px) {
     svg {
-        top: 14.58vh;
-    }
-
-    .portraitImg {
-        max-width: 92%;
-    }
-}
-
-@media (max-width: 1890px) {
-    .textboxAndBtn {
-        margin-right: unset !important;
-        margin-top: 15vh !important;
-
-        a {
-            margin-inline-end: unset !important;
-        }
-    }
-
-    .portraitImg {
-        max-width: 90%;
-    }
-
-    .portraitImg {
-        margin-inline-end: unset !important;
-        margin-top: 3.8vh !important;
-    }
-
-    .textbox {
-        margin-inline-end: unset !important;
-    }
-
-    svg {
-        top: 19.38vh;
-    }
-}
-
-@media (max-width: 1640px) {
-    .textboxAndBtn a {
-        margin-top: 52.8px;
-    }
-}
-
-@media (max-width: 1600px) {
-    .portraitImg {
-        max-width: 100%;
+        top: 19.58vh !important;
     }
 }
 
 @media (max-width: 1435px) {
-
     svg {
-        top: 13vh;
+        top: calc((100vh - 760px) / 2);
+    }
+
+    .picAndTextWrap {
+        margin-top: 90px !important;
+        flex-direction: column;
+        align-items: center;
     }
 
     .topPartWrapper {
@@ -98,7 +28,7 @@
             margin-right: unset !important;
             margin-top: unset !important;
             position: absolute;
-            bottom: -24vh;
+            bottom: -20vh;
             flex-grow: 0;
             width: 100% !important;
             justify-content: center;
@@ -120,7 +50,7 @@
                 }
 
                 .Iam {
-                    right: calc(50% + 240px);
+                    right: calc(50% + 243px);
 
                 }
             }
@@ -143,21 +73,19 @@
             margin: 0 auto;
             flex-direction: column;
             align-items: center;
-            max-width: 62%;
+            max-width: 45%;
 
             .portraitImg {
                 margin-top: unset !important;
-                max-width: 85%;
-                min-width: unset !important;
+                max-width: 100%;
             }
         }
 
         .backgroundShades {
-            left: 0px !important;
-            top: -60px !important;
-            max-width: 96vw !important;
-            max-height: 730px;
-            height: 100%;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            top: 0 !important;
+
         }
     }
 
@@ -174,21 +102,66 @@
     }
 }
 
+@media (max-width: 1435px) and (min-height: 1225px) {
+    .mainPicture {
+        margin-top: calc((80vh - 929px) / 2) !important;
+    }
+}
+
 @media (max-width: 1435px) and (max-height: 940px) {
     svg {
-        top: 12vh;
+        top: 8.3vh;
+    }
+
+    .mainPicture {
+        max-width: 35% !important;
+    }
+
+    .textboxAndBtn {
+        bottom: -21vh !important;
+
+    }
+
+    .picAndTextWrap {
+        margin-top: 25px !important;
+    }
+
+    .textbox {
+
+        .nameBox {
+            padding-left: 29.8px !important;
+
+            .job {
+                font-size: 42px !important;
+            }
+
+            .name {
+                font-size: 58px !important;
+            }
+        }
+
+        .Iam {
+            font-size: 42px !important;
+            right: calc(50% + 174px) !important;
+            top: 22px !important;
+        }
     }
 }
 
 @media (max-width: 1435px) and (max-height: 850px) {
     svg {
-        top: 8vh;
+        top: 4vh !important;
+    }
+}
+
+
+@media (max-width: 1070px) and (max-height: 860px) {
+    svg {
+        top: calc((100vh - 600px) / 2);
     }
 
-    .mainPicture {
-        .portraitImg {
-            max-width: 65% !important;
-        }
+    .portraitImg {
+            min-width: 420px !important;
     }
 }
 
@@ -197,25 +170,20 @@
 @media (max-width: 1070px) {
 
     svg {
-        top: 20.1vh;
+        top: calc((100vh - 706px) / 2);
+    }
+
+    .portraitImg {
+        max-width: 100% !important;
+    }
+
+    .backgroundShades {
+        width: 88vw;
+
     }
 
     .topPartWrapper {
         margin-top: 50px !important;
-
-        .textboxAndBtn {
-            position: static;
-        }
-
-        .mainPicture {
-            max-width: 90% !important;
-
-            .portraitImg {
-                max-width: 600px;
-                width: 100%;
-                min-width: 487px !important;
-            }
-        }
 
         .textbox {
 
@@ -280,24 +248,15 @@
     }
 }
 
-@media (max-width: 400px) and (max-height: 850px) {
-    .topPartWrapper {
-        margin-top: 50px !important;
-    }
-}
+
 
 @media (max-width: 800px) {
 
     svg {
-        top: 23vh !important;
+        top: 21vh !important;
     }
 
     .topPartWrapper {
-
-        .textboxAndBtn {
-            margin-top: -30px !important;
-        }
-
         .mainPicture {
             .portraitImg {
                 min-width: 400px !important;
@@ -308,7 +267,7 @@
 
 @media (max-width: 535px) {
     svg {
-        top: 20vh !important;
+        top: 26vh !important;
     }
 
     .topPartWrapper {
@@ -373,7 +332,8 @@
 
 @media (max-width: 535px) and (max-height: 680px) {
     .topPartWrapper {
-        gap: 8px !important;
+        gap: 6px !important;
+
         .textboxAndBtn {
             margin-top: -21px !important;
         }
@@ -385,7 +345,7 @@
 @media(max-width: 440px) {
 
     svg {
-        top: 23vh !important;
+        top: 24vh !important;
     }
 
     .topPartWrapper {
@@ -401,6 +361,12 @@
     }
 }
 
+@media(max-width: 340px) and (max-height: 670px) {
+    svg {
+        top: 30.8vh !important;
+    }
+}
+
 @media(max-width: 440px) and (max-height: 740px) {
 
     .topPartWrapper {
@@ -409,8 +375,6 @@
     }
 
     svg {
-        top: 27vh !important;
+        top: 30vh !important;
     }
-
 }
-

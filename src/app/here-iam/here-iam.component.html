@@ -1,23 +1,27 @@
 <div class="topPartWrapper">
-    <div class="mainPicture">
-        <img src="/assets/People/SchazStephen1transparent.webp" alt="" class="portraitImg">
-        <img src="/assets/shadows/backgroundShadows.png" alt="" class="backgroundShades">
-    </div>
-    <div class="textboxAndBtn">
-        <div class="textbox">
-            <p class="Iam">I am</p>
-            <div class="nameBox">
-                <p class="name">Stephen Schaz</p>
-                <p class="job">FRONTEND DEVELOPER</p>
-            </div>
+    <div class="picAndTextWrap">
+        <div class="mainPicture">
+            <img src="/assets/People/SchazStephen1transparent.webp" alt="" class="portraitImg">
+            <img src="/assets/shadows/backgroundShadows.png" alt="" class="backgroundShades">
         </div>
-        <a href="#" (click)="scrollService.scrollToFragment2($event, 'contact')">
-            {{ (languageService.isGerman$ | async) ? texts.hereIAmBtn.de : texts.hereIAmBtn.en }}
-        </a>
+        <div class="textboxAndBtn">
+            <div class="textbox">
+                <p class="Iam">I am</p>
+                <div class="nameBox">
+                    <p class="name">Stephen Schaz</p>
+                    <p class="job">FRONTEND DEVELOPER</p>
+                </div>
+            </div>
+            <a href="#" (click)="scrollService.scrollToFragment2($event, 'contact')">
+                {{ (languageService.isGerman$ | async) ? texts.hereIAmBtn.de : texts.hereIAmBtn.en }}
+            </a>
+
+        </div>
 
     </div>
 
-    <svg width="100%" class="desktop" max-width="1440px" viewBox="0 0 1440 1080" fill="none"
+
+    <svg width="100%" class="desktop" max-width="100%" viewBox="0 0 1440 1080" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
             d="M1442 0V712.4C1417.8 724.3 1393 735.9 1367.7 747.3C1174.2 834.1 943.8 908.2 682.9 967.3C404.9 1030.3 152.1 1063 2 1078.6L0 421.5C236 441.5 353.4 434.372 569.5 385C984 290.3 1281.7 152.1 1442 0Z"
@@ -46,9 +50,6 @@
             </radialGradient>
         </defs>
     </svg>
-
-
-
 </div>
 
 
@@ -57,7 +58,9 @@
 
 
     <div class="socials">
-        <div class="vector1"><div class="vector2"></div></div>
+        <div class="vector1">
+            <div class="vector2"></div>
+        </div>
         <div class="links">
             <a href="https://github.com/StephensSpace" class="linkSymbols" target="_blank" rel="noopener noreferrer">
                 <img src="/assets/socials/githubButton.png" alt="GitHub">
@@ -65,7 +68,8 @@
             <a href="mailto:stephenschaz90@gmail.com" class="linkSymbols">
                 <img src="/assets/socials/emailButton.png" alt="E-Mail">
             </a>
-            <a href="https://www.linkedin.com/in/stephen-schaz-54a337345/" class="linkSymbols" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/stephen-schaz-54a337345/" class="linkSymbols" target="_blank"
+                rel="noopener noreferrer">
                 <img src="/assets/socials/linkedinButton.png" alt="LinkedIn">
             </a>
             <a href="mailto:stephenschaz90@gmail.com" class="mail">stephenschaz90&#64;gmail.com</a>

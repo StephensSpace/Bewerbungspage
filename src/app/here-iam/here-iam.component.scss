@@ -1,6 +1,6 @@
 svg {
     position: absolute;
-    top: 12.58vh;
+    top: 20.38vh;
     left: 0;
     height: auto;
     z-index: 2;
@@ -21,10 +21,19 @@ svg {
     height: clamp(450px, 80vh, 460px);
     width: 100%;
     margin: 0 auto;
-    margin-top: 90px;
+    margin-top: 50px;
     align-items: flex-start;
     position: relative;
-    margin-right: 52px;
+
+    .picAndTextWrap {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: calc((44vw - 612px) / 2);
+    }
 
     .mainPicture {
         position: relative;
@@ -35,22 +44,20 @@ svg {
         align-items: flex-start;
 
         .portraitImg {
-            max-width: 100%;
+            max-width: 90%;
+            margin-top: 8.8vh;
             width: 100%;
             min-width: 540px;
             height: 100%;
             position: relative;
             z-index: 1;
-            margin-inline-end: 100px;
         }
 
         .backgroundShades {
             position: absolute;
-            max-width: 100%;
-            width: 100%;
             z-index: 0;
-            top: 43px;
-            left: 0;
+            top: 71px;
+            left: -121px;
         }
     }
 
@@ -59,10 +66,10 @@ svg {
         flex-direction: column;
         align-items: center;
         z-index: 3;
-        margin-top: 112px;
+        margin-top: 15vh;
         width: 78%;
         justify-content: space-between;
-        height: 319px;
+        height: 245px;
 
         a {
             display: flex;
@@ -85,7 +92,7 @@ svg {
             z-index: 3;
             transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
             margin-left: -100px;
-            margin-inline-end: 90px;
+            margin-top: 48.8px;
 
             &:hover {
                 background: #9747FF;
@@ -97,24 +104,24 @@ svg {
     }
 
     .textbox {
-        width: fit-content;
+        width: 710px;
         z-index: 1;
         display: flex;
         position: relative;
-        margin-inline-end: 90px;
+        margin-right: 10px;
 
         .Iam {
             all: unset;
             font-family: 'Poppins';
             white-space: nowrap;
             color: white;
-            font-size: 72px;
+            font-size: 59px;
             font-weight: 300;
             display: inline-block;
             transform: rotate(-90deg);
             position: absolute;
             right: 94%;
-            top: 24%;
+            top: 22%;
         }
 
         .nameBox {
@@ -130,7 +137,7 @@ svg {
                 font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 800;
-                font-size: 100px;
+                font-size: 82px;
                 line-height: 120%;
                 color: #FFFFFF;
                 margin: -6px 0px;
@@ -141,7 +148,7 @@ svg {
                 font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 300;
-                font-size: 72px;
+                font-size: 59px;
                 line-height: 120%;
                 color: #9747FF;
                 flex: none;
@@ -155,7 +162,7 @@ svg {
 
 .textWrapper {
     flex-grow: 1;
-    max-width: 2400px;
+    max-width: 1440px;
     width: 100%;
     height: fit-content;
     display: flex;
@@ -164,6 +171,7 @@ svg {
     justify-content: space-between;
     padding: 0px;
     gap: 35px;
+    margin: 0 auto;
     margin-bottom: 20px;
 }
 
@@ -229,7 +237,7 @@ svg {
             height: 0px;
             border: 2px solid #9747FF;
             display: none;
-            width: calc((100dvw - 2400px) / 2);
+            width: calc((100dvw - 1440px) / 2);
             right: 100%;
             top: -2px;
         }
