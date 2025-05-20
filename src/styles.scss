@@ -127,3 +127,9 @@ app-footer {
     }
 }
 
+@media (min-width: 1800px) and (min-height: 1600px) {
+    app-here-iam {
+        justify-content: space-between;
+    }
+}
+

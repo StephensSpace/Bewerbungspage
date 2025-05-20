@@ -44,7 +44,7 @@ svg {
         align-items: flex-start;
 
         .portraitImg {
-            max-width: 90%;
+            max-width: 100%;
             margin-top: 8.8vh;
             width: 100%;
             min-width: 540px;
@@ -239,7 +239,7 @@ svg {
             display: none;
             width: calc((100dvw - 1440px) / 2);
             right: 100%;
-            top: -2px;
+            top: -1px;
         }
     }
 }

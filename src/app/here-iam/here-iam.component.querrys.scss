@@ -1,7 +1,256 @@
-@media (min-width: 1700px) {
+@media (min-width: 1675px) {
     svg {
-        top: 19.58vh !important;
+        top: calc((13vw + 154px) / 2) !important;
     }
+
+    .topPartWrapper {
+        margin-top: 3vh;
+
+        .picAndTextWrap {
+            margin-top: unset !important;
+        }
+
+        .textboxAndBtn {
+            margin-top: 8vh !important;
+        }
+    }
+}
+
+@media (min-width: 1840px) {
+    svg {
+        top: 10vh !important;
+    }
+}
+
+@media (min-width: 2170px) {
+    svg {
+        top: 0vh !important;
+    }
+}
+
+@media (min-width: 2560px) {
+    svg {
+        top: -5vh !important;
+    }
+}
+
+@media (min-width: 2950px) {
+    svg {
+        top: -10vh !important;
+    }
+}
+
+@media (min-width: 3290px) {
+    .desktop {
+        display: none !important;
+    }
+
+    svg {
+        top: -16vh !important;
+    }
+
+    .topPartWrapper .textboxAndBtn {
+        margin-top: 25vh !important;
+    }
+
+    .mobile {
+        display: block !important;
+    }
+}
+
+@media (min-width: 3630px) {
+    svg {
+        top: -25vh !important;
+    }
+}
+
+@media (min-width: 3950px) {
+    svg {
+        top: -33vh !important;
+    }
+}
+
+@media (min-width: 4270px) {
+    svg {
+        top: -40vh !important;
+    }
+}
+
+@media (min-width: 4640px) {
+    svg {
+        top: -48vh !important;
+    }
+}
+
+@media (min-width: 5040px) {
+    svg {
+        top: -54vh !important;
+    }
+}
+
+
+
+
+@media (min-width: 1800px) and (min-height: 1600px) {
+    svg {
+        top: 12vh !important;
+    }
+
+    .picAndTextWrap {
+        margin-top: 90px !important;
+        flex-direction: column;
+        align-items: center;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    .topPartWrapper {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        max-height: 59vh !important;
+        height: 100% !important;
+        margin-top: 15vh;
+
+        .textboxAndBtn {
+            margin-top: -300px !important;
+            width: 100% !important;
+
+
+            a {
+                margin-top: 32px !important;
+                margin-left: 121px;
+            }
+
+            .textbox {
+                .name {
+                    font-size: 112px !important;
+                }
+
+                .job {
+                    font-size: 81px !important;
+                }
+
+                .Iam {
+                    font-size: 81px !important;
+                    right: 92% !important;
+                }
+            }
+        }
+
+        .mobile {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
+        }
+
+        .mainPicture {
+            margin: 0 auto;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+
+            .portraitImg {
+                margin-top: unset !important;
+                max-width: 80%;
+            }
+        }
+
+        .backgroundShades {
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            top: -150px !important;
+            max-width: 100%;
+            width: 100%;
+
+        }
+    }
+
+    .textWrapper {
+        flex-grow: unset;
+
+        margin-bottom: 50px;
+
+    }
+}
+
+@media(min-width: 1800px) and (min-height: 2720px) {
+    svg {
+        top: 10vh !important;
+    }
+}
+
+@media (min-width: 2000px) and (min-height: 1700px) {
+    svg {
+        top: 8vh !important;
+    }
+
+    .topPartWrapper {
+        .textboxAndBtn {
+            margin-top: -170px !important;
+        }
+    }
+
+}
+
+@media (min-width: 2220px) and (min-height: 1600px) {
+    svg {
+        top: 9vh !important;
+    }
+
+    .topPartWrapper {
+        .textboxAndBtn {
+            margin-top: -238px !important;
+        }
+    }
+}
+
+@media (min-width: 3430px) and (min-height: 1600px) {
+    svg {
+        top: 0vh !important;
+    }
+
+    .topPartWrapper .textboxAndBtn {
+        margin-top: 0px !important;
+    }
+}
+
+@media (min-width: 3920px) and (min-height: 1600px) {
+    svg {
+        top: -6vh !important;
+    }
+
+    .topPartWrapper .textboxAndBtn {
+        margin-top: 0px !important;
+    }
+}
+
+@media (min-width: 4500px) and (min-height: 1600px) {
+    svg {
+        top: -10vh !important;
+    }
+
+    .topPartWrapper .textboxAndBtn {
+        margin-top: 50px !important;
+    }
+}
+
+@media (min-width: 4500px) and (min-height: 1600px) {
+    svg {
+        top: -10vh !important;
+    }
+
+    .topPartWrapper .textboxAndBtn {
+        margin-top: 50px !important;
+    }
+
+    .topPartWrapper .mainPicture .portraitImg {
+        margin-top: 105px !important;
+    }
+
 }
 
 @media (max-width: 1435px) {
@@ -154,18 +403,15 @@
     }
 }
 
-
 @media (max-width: 1070px) and (max-height: 860px) {
     svg {
         top: calc((100vh - 600px) / 2);
     }
 
     .portraitImg {
-            min-width: 420px !important;
+        min-width: 420px !important;
     }
 }
-
-
 
 @media (max-width: 1070px) {
 
@@ -247,8 +493,6 @@
         }
     }
 }
-
-
 
 @media (max-width: 800px) {
 
@@ -340,8 +584,6 @@
     }
 }
 
-
-
 @media(max-width: 440px) {
 
     svg {
@@ -375,6 +617,6 @@
     }
 
     svg {
-        top: 30vh !important;
+        top: 29vh !important;
     }
 }
