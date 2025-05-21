@@ -1,8 +1,13 @@
-<div class="portfolioHeader" [@slideInOutRight]="showRightHeadline ? 'in' : 'out'"
-    [class.invisible]="!showRightHeadline">
+<div class="portfolioHeaderWrapper">
+  <div
+    class="portfolioHeader"
+    [@slideInOutRight]="showRightHeadline ? 'in' : 'out'"
+    [class.invisible]="!showRightHeadline"
+  >
     <div class="purpleLine1"></div>
     <h1>Portfolio</h1>
     <div class="purpleLine2"></div>
+  </div>
 </div>
 <div id="portfolioAnchor" style="position: absolute; top: -80px;"></div>
 <div #observerAnchor4 id="observerAnchor4"></div>

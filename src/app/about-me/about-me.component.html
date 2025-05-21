@@ -41,7 +41,7 @@
             </p>
 
         </div>
-        <div class="picWithLine" *ngIf="showSkills" @slideInOutRight>
+        <div class="picWithLine" [@slideInOutRight]="showText ? 'in' : 'out'" [class.invisible]="!showText">
             <img src="/assets/SchazStephen2Rund.png" alt="facePicture" class="imgPortrait">
             <div class="greenLine"></div>
         </div>

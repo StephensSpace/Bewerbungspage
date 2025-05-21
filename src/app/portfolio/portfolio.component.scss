@@ -1,3 +1,8 @@
+.portfolioHeaderWrapper {
+  height: 108px; /* exakt die Höhe, die die animierte Box sonst hätte */
+  margin-bottom: 30px;
+}
+
 .portfolioHeader {
     margin-top: 36px;
     max-width: 100%;
@@ -251,7 +256,7 @@ p {
 
         .purpleLine2 {
             left: calc(50% + 170px) !important;
-            width: calc(50% - 174px);
+            width: calc(50% + 205px);
         }
     }
 
@@ -259,6 +264,11 @@ p {
         align-items: center !important;
         justify-content: center !important;
         gap: 50px !important;
+    }
+
+    .portfolioHeaderWrapper {
+        width: 100%;
+        overflow: hidden;
     }
 }
 
@@ -325,8 +335,7 @@ p {
         }
 
         .purpleLine1 {
-            width: calc(50% - 194px) !important;
-            left: 51px !important;
+            left: calc(50% - 211px) !important;
         }
 
         .purpleLine2 {
