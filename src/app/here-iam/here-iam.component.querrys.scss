@@ -251,7 +251,7 @@
 @media (max-width: 800px) {
 
     svg {
-        top: 21vh !important;
+        top: 21.5vh !important;
     }
 
     .topPartWrapper {
@@ -265,7 +265,7 @@
 
 @media (max-width: 535px) {
     svg {
-        top: 26vh !important;
+        top: 24vh !important;
     }
 
     .topPartWrapper {
@@ -341,7 +341,7 @@
 @media(max-width: 440px) {
 
     svg {
-        top: 26vh !important;
+        top: 25vh !important;
     }
 
     .topPartWrapper {
@@ -359,7 +359,7 @@
 
 @media(max-width: 440px) and (min-height: 1200px) {
     svg {
-        top: 25vh !important;
+        top: 23vh !important;
     }
 }
 
@@ -387,14 +387,15 @@
     }
 }
 
-@media(max-width: 535px) and (min-height: 1000px) {
-    svg {
-        top: 27vh !important;
-    }
-}
 
 @media (max-width: 350px) and (max-height: 640px) {
     svg {
+        top: 31vh !important;
+    }
+}
+
+@media (max-width: 340px) and (max-height: 620px) {
+        svg {
         top: 31vh !important;
     }
 }

@@ -8,4 +8,3 @@ export const routes: Routes = [
   { path: 'legal-notice', component: LegalNoticeComponent }, // Impressum
   { path: 'datenschutz', component: DatenschutzComponent }, 
 ];
-

@@ -75,7 +75,7 @@ private tryStartAnimation(): void {
   // Setze overflowX nach individueller Zeit zurück (z. B. 700ms)
   setTimeout(() => {
     document.body.style.overflowX = 'auto';
-  }, 990); // Oder deine Komponentenspezifische Zeit
+  }, 490); // Oder deine Komponentenspezifische Zeit
   document.body.style.overflowX = 'hidden';
   this.showSkills = true;
 }

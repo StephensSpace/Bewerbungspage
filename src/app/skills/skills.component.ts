@@ -3,7 +3,7 @@ import { NgClass, NgFor, NgIf, NgStyle, CommonModule } from '@angular/common';
 import { LanguageService } from '../services/language.service';
 import { texts } from '../languageData/languageTexts';
 import { ScrollService } from '../services/scroll.service';
-import { slideInOutRight } from '../animations/slideInOut';
+import { slideInOutLeft, slideInOutRight } from '../animations/slideInOut';
 
 /**
  * Die Skills-Komponente stellt eine Liste von Fähigkeiten (Skills) dar
@@ -16,7 +16,7 @@ import { slideInOutRight } from '../animations/slideInOut';
   imports: [NgFor, NgIf, NgClass, NgStyle, CommonModule],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss', 'skills.component.querry.scss'],
-  animations: [slideInOutRight]
+  animations: [slideInOutRight, slideInOutLeft]
 })
 export class SkillsComponent implements AfterViewInit {
   /** Übersetzte Texte für die Skills-Komponente */
@@ -49,7 +49,7 @@ export class SkillsComponent implements AfterViewInit {
 private tryStartAnimation(): void {
   // Falls schon blockiert → versuche es später nochmal
   if (document.body.style.overflowX === 'hidden') {
-    setTimeout(() => this.tryStartAnimation(), 450);
+    setTimeout(() => this.tryStartAnimation(), 0);
     return;
   }
 
@@ -60,7 +60,7 @@ private tryStartAnimation(): void {
   // Setze overflowX nach individueller Zeit zurück (z. B. 700ms)
   setTimeout(() => {
     document.body.style.overflowX = 'auto';
-  }, 990); // Oder deine Komponentenspezifische Zeit
+  }, 90); // Oder deine Komponentenspezifische Zeit
 }
 
   /** Liste der Fähigkeiten (Skills) mit Bild und Text */

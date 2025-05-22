@@ -1,4 +1,5 @@
-<div class="skillAndTextWrapDesktop">
+<div class="skillAndTextWrapDesktop" [@slideInOutRight]="showTextAndButton ? 'in' : 'out'"
+        [class.invisible2]="!showTextAndButton">
     <div id="skillsAnchor" style="position: absolute; top: -40px;"></div>
     <div class="skillSymbols" id="skills">
         <div *ngFor="let skill of skillset; let last = last" class="tooltip-container">
@@ -15,11 +16,13 @@
             </div>
         </div>
     </div>
-    <div class="textAndButton" [@slideInOutRight]="showTextAndButton ? 'in' : 'out'" [class.invisible]="!showTextAndButton">
-        
+
+    <div class="textAndButton">
+
         <div class="h1AndLine">
-            <h1>My Skills <div class="dividingVector2"></div></h1>
-            
+            <h1>My Skills <div class="dividingVector2"></div>
+            </h1>
+
 
         </div>
         <div class="undertitle">
@@ -68,7 +71,7 @@
 <div #observerAnchor></div>
 
 <div class="skillAndTextWrapMobile" id="skillsMobile">
-<div id="skillsMobileAnchor" style="position: absolute; top: -100px;"></div>
+    <div id="skillsMobileAnchor" style="position: absolute; top: -100px;"></div>
     <div class="textAndButton">
         <div class="flexEnd">
             <div class="h1AndLine">
@@ -85,7 +88,7 @@
             </div>
         </div>
 
-        <div class="skillSymbols" >
+        <div class="skillSymbols">
             <div *ngFor="let skill of skillset; let last = last" class="tooltip-container">
                 <div class="image-wrapper">
                     <img [src]="skill.img" alt="" [ngClass]="last ? 'last-image' : 'skill-image'"

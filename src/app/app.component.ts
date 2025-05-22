@@ -10,13 +10,14 @@ import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    // Hört auf NavigationEnd-Ereignisse
-    this.router.events.subscribe((event) => {
+    this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        window.scrollTo(0, 0); // Scrollt zum Anfang der Seite
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 0);
       }
     });
   }

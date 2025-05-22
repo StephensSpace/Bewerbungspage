@@ -7,6 +7,15 @@
     padding: 0 100px;
     justify-content: space-between;
     position: relative;
+    min-width: 20vw;
+    
+}
+
+.textAndBtnWrap {
+    
+    max-width: 40%;
+    width: 100%;
+    display: flex;
 }
 
 .dividingVector2 {
@@ -51,7 +60,7 @@
     display: flex;
     flex-direction: column;
     font-family: 'Poppins';
-    max-width: 40%;
+    max-width: 100%;
     width: 100%;
     margin-top: -50px;
     position: relative;

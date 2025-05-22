@@ -54,7 +54,7 @@ export class PortfolioComponent implements AfterViewInit {
 private tryStartAnimation(): void {
   // Falls schon blockiert → versuche es später nochmal
   if (document.body.style.overflowX === 'hidden') {
-    setTimeout(() => this.tryStartAnimation(), 400);
+    setTimeout(() => this.tryStartAnimation(), 50);
     return;
   }
   document.body.style.overflowX = 'hidden';

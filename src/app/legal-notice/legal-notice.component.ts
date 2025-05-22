@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { LanguageService } from '../services/language.service';
 import { CommonModule } from '@angular/common';
-
 
 @Component({
     selector: 'app-legal-notice',
@@ -12,9 +11,15 @@ import { CommonModule } from '@angular/common';
     templateUrl: './legal-notice.component.html',
     styleUrl: './legal-notice.component.scss'
 })
-export class LegalNoticeComponent {
+export class LegalNoticeComponent implements OnInit {
     constructor(public languageService: LanguageService) { }
 
+    ngOnInit() {
+        // Kleiner Timeout sorgt für zuverlässiges Scrollen in allen Browsern
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 100);
+    }
     /**
    Objekt fü das verwalten der Texte des Legal Notice auf deutsch 
    und englisch
